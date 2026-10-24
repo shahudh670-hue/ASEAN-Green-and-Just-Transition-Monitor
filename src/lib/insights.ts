@@ -220,7 +220,7 @@ function cleanFinance(ds: Dataset): Insight[] {
   return [
     {
       id: 'clean-finance',
-      pillar: 'transition',
+      pillar: 'climatefin',
       kind: 'finance',
       title: `${fmt(top2Share, { decimals: 0 })}% of international clean-energy finance went to two members`,
       body:
@@ -568,6 +568,191 @@ function youthAndGender(ds: Dataset): Insight[] {
   ];
 }
 
+
+/* ---------- Climate and transition finance, subsidies, coal pipeline, energy mix ---------- */
+function sumWindow(ds: Dataset, id: string, iso: Iso3, end: number, n = 3) {
+  let s = 0;
+  let seen = 0;
+  for (let y = end - n + 1; y <= end; y++) {
+    const v = value(ds, id, iso, y);
+    if (v !== undefined) {
+      s += v;
+      seen++;
+    }
+  }
+  return seen ? s : undefined;
+}
+const lastYearOf = (ds: Dataset, id: string) => Math.max(0, ...isoList(ds).flatMap((iso) => Object.keys(ds.indicators[id]?.values?.[iso] ?? {}).map(Number)));
+
+function climateFinanceTerms(ds: Dataset): Insight[] {
+  if (!has(ds, 'climate_fin') || !has(ds, 'climate_fin_grant')) return [];
+  const end = lastYearOf(ds, 'climate_fin');
+  if (!end) return [];
+  const rows = isoList(ds)
+    .map((iso) => {
+      const tot = sumWindow(ds, 'climate_fin', iso, end);
+      let grants = 0;
+      let energy = 0;
+      for (let y = end - 2; y <= end; y++) {
+        const t = value(ds, 'climate_fin', iso, y) ?? 0;
+        grants += (t * (value(ds, 'climate_fin_grant', iso, y) ?? 0)) / 100;
+        energy += (t * (value(ds, 'climate_fin_energy', iso, y) ?? 0)) / 100;
+      }
+      return tot ? { iso, tot, grant: (100 * grants) / tot, energy: (100 * energy) / tot } : null;
+    })
+    .filter((r): r is { iso: Iso3; tot: number; grant: number; energy: number } => Boolean(r && r.tot > 0));
+  if (rows.length < 4) return [];
+  const loanHeavy = rows.filter((r) => r.grant < 30).sort((a, b) => a.grant - b.grant);
+  const total = rows.reduce((s, r) => s + r.tot, 0);
+  const grantAll = (rows.reduce((s, r) => s + (r.tot * r.grant) / 100, 0) / total) * 100;
+  const energyAll = (rows.reduce((s, r) => s + (r.tot * r.energy) / 100, 0) / total) * 100;
+  return [
+    {
+      id: 'climate-finance-terms',
+      pillar: 'climatefin',
+      kind: loanHeavy.length ? 'risk' : 'finance',
+      title: `${fmt(100 - grantAll, { decimals: 0 })}% of climate-related development finance to ASEAN came as loans or other non-grant instruments`,
+      body:
+        `In ${end - 2} to ${end}, members received commitments of about US$${fmt(total / 1000, { decimals: 1 })} billion (2024 prices) for climate-related activities, of which ${fmt(grantAll, { decimals: 0 })}% were grants and ${fmt(energyAll, { decimals: 0 })}% went to the energy sector. ` +
+        (loanHeavy.length ? `Grants made up less than 30% for ${names(ds, loanHeavy.map((r) => r.iso))}, so most of ${vb(loanHeavy, 'its', 'their')} climate finance adds to debt that must be serviced. ` : '') +
+        `Read this alongside the fiscal space and external debt pillars before assuming more borrowing is affordable.`,
+      countries: loanHeavy.map((r) => r.iso),
+      indicators: ['climate_fin', 'climate_fin_grant', 'climate_fin_energy'],
+      evidence: [...rows].sort((a, b) => b.tot - a.tot).map((r) => ({ label: countryName(ds, r.iso), value: `US$${fmt(r.tot, { decimals: 0 })} m; grants ${fmt(r.grant, { decimals: 0 })}%; energy ${fmt(r.energy, { decimals: 0 })}%` })),
+      focus: { view: 'map', indicator: 'climate_fin_grant', countries: loanHeavy.slice(0, 4).map((r) => r.iso) },
+    },
+  ];
+}
+
+function mobilisation(ds: Dataset): Insight[] {
+  if (!has(ds, 'mob_ratio')) return [];
+  const rows = isoList(ds)
+    .map((iso) => ({ iso, l: latest(ds, 'mob_ratio', iso) }))
+    .filter((r): r is { iso: Iso3; l: NonNullable<ReturnType<typeof latest>> } => Boolean(r.l));
+  if (rows.length < 4) return [];
+  rows.sort((a, b) => b.l.value - a.l.value);
+  const med = median(rows.map((r) => r.l.value))!;
+  const lead = rows.slice(0, 2);
+  const low = rows.filter((r) => r.l.value < 10);
+  return [
+    {
+      id: 'mobilisation',
+      pillar: 'climatefin',
+      kind: 'finance',
+      title: `Official climate finance drew in a median US$${fmt(med, { decimals: 0 })} of private money per US$100`,
+      body:
+        `Over the latest three years, private climate finance mobilised by official interventions (guarantees, syndicated loans, equity funds and credit lines) was highest relative to official climate finance in ${names(ds, lead.map((r) => r.iso))} (US$${lead.map((r) => fmt(r.l.value, { decimals: 0 })).join(' and US$')} per US$100). ` +
+        (low.length ? `It was below US$10 per US$100 in ${names(ds, low.map((r) => r.iso))}. ` : '') +
+        `Amounts withheld for confidentiality are excluded, so the ratios are lower bounds.`,
+      countries: [...lead, ...low].map((r) => r.iso),
+      indicators: ['mob_ratio', 'priv_mob_climate', 'climate_fin'],
+      evidence: rows.map((r) => ({ label: `${countryName(ds, r.iso)} (three years to ${r.l.year})`, value: `US$${fmt(r.l.value, { decimals: 1 })}` })),
+      focus: { view: 'map', indicator: 'mob_ratio', countries: lead.map((r) => r.iso) },
+    },
+  ];
+}
+
+function fossilSubsidies(ds: Dataset): Insight[] {
+  if (!has(ds, 'ffs_gdp')) return [];
+  const rows = isoList(ds)
+    .map((iso) => {
+      const l = latest(ds, 'ffs_gdp', iso);
+      if (!l) return null;
+      const rev = value(ds, 'gg_rev', iso, l.year);
+      return { iso, l, ofRevenue: rev ? (100 * l.value) / rev : undefined };
+    })
+    .filter((r): r is { iso: Iso3; l: NonNullable<ReturnType<typeof latest>>; ofRevenue: number | undefined } => Boolean(r))
+    .sort((a, b) => b.l.value - a.l.value);
+  const big = rows.filter((r) => r.l.value >= 1);
+  if (!big.length) return [];
+  const year = Math.max(...big.map((r) => r.l.year));
+  return [
+    {
+      id: 'fossil-subsidies',
+      pillar: 'fiscal',
+      kind: 'risk',
+      title: `Fossil fuel subsidies cost ${names(ds, big.map((r) => r.iso))} at least 1% of GDP`,
+      body:
+        `In ${year}, explicit subsidies to fossil fuels were ${big.map((r) => `${fmt(r.l.value, { decimals: 1 })}% of GDP in ${inText(ds, r.iso)}${r.ofRevenue ? ` (${fmt(r.ofRevenue, { decimals: 0 })}% of government revenue)` : ''}`).join('; ')}. ` +
+        `Reform can free fiscal space for clean energy and social protection, but because poorer households spend a larger share of income on fuel and food, it works best when paired with targeted transfers.`,
+      countries: big.map((r) => r.iso),
+      indicators: ['ffs_gdp', 'gg_rev'],
+      evidence: rows.map((r) => ({ label: `${countryName(ds, r.iso)} (${r.l.year})`, value: `${fmt(r.l.value, { decimals: 2 })}% of GDP${r.ofRevenue ? `; ${fmt(r.ofRevenue, { decimals: 1 })}% of revenue` : ''}` })),
+      focus: { view: 'map', indicator: 'ffs_gdp', countries: big.map((r) => r.iso).slice(0, 4) },
+    },
+  ];
+}
+
+function coalPipeline(ds: Dataset): Insight[] {
+  const coal = ds.static.coal;
+  if (!coal) return [];
+  const rows = Object.entries(coal.rows).map(([iso, r]) => ({
+    iso,
+    r,
+    pipeline: r.construction + r.preConstruction,
+    retire: Object.entries(r.retirePlanned)
+      .filter(([y]) => Number(y) <= 2030)
+      .reduce((s, [, v]) => s + v, 0),
+  }));
+  const expanding = rows.filter((x) => x.pipeline > x.retire && x.pipeline >= 500).sort((a, b) => b.pipeline - a.pipeline);
+  if (!expanding.length) return [];
+  const gw = (mw: number) => `${fmt(mw / 1000, { decimals: 1 })} GW`;
+  return [
+    {
+      id: 'coal-pipeline',
+      pillar: 'workers',
+      kind: 'risk',
+      title: `Coal capacity is still being added in ${names(ds, expanding.map((x) => x.iso))}`,
+      body:
+        `In the ${coal.release ?? 'latest'} Global Coal Plant Tracker, ${expanding
+          .map((x) => `${inText(ds, x.iso)} had ${gw(x.r.construction)} under construction and ${gw(x.r.preConstruction)} in planning, against ${gw(x.retire)} of planned retirements by 2030`)
+          .join('; ')}. ` +
+        `New plants lock in emissions and jobs for decades; just transition planning for coal regions is easier before construction than after.`,
+      countries: expanding.map((x) => x.iso),
+      indicators: ['coal_elec'],
+      evidence: [...rows]
+        .sort((a, b) => b.r.operating - a.r.operating)
+        .map((x) => ({ label: countryName(ds, x.iso), value: `operating ${gw(x.r.operating)}; construction ${gw(x.r.construction)}; planned ${gw(x.r.preConstruction)}; retiring by 2030 ${gw(x.retire)}` })),
+      focus: { view: 'map', indicator: 'coal_elec', countries: expanding.map((x) => x.iso).slice(0, 4) },
+    },
+  ];
+}
+
+function energyMixRule(ds: Dataset): Insight[] {
+  const e = ds.static.energy;
+  if (!e) return [];
+  const rows = isoList(ds)
+    .map((iso) => {
+      const ys = Object.keys(e.tes[iso] ?? {}).sort();
+      const y = ys[ys.length - 1];
+      if (!y) return null;
+      const r = e.tes[iso][y];
+      return { iso, y, fossil: r.coal + r.oil + r.gas, coal: r.coal, clean: r.hydro + r.geothermal + r.solar + r.wind + r.nuclear + r.other };
+    })
+    .filter((r): r is { iso: Iso3; y: string; fossil: number; coal: number; clean: number } => Boolean(r));
+  if (rows.length < 6) return [];
+  rows.sort((a, b) => b.fossil - a.fossil);
+  const med = median(rows.map((r) => r.fossil))!;
+  const coalHeavy = rows.filter((r) => r.coal >= 30).sort((a, b) => b.coal - a.coal);
+  const cleanLead = [...rows].sort((a, b) => b.clean - a.clean).slice(0, 2);
+  return [
+    {
+      id: 'energy-mix',
+      pillar: 'transition',
+      kind: 'note',
+      title: `Fossil fuels supply a median ${fmt(med, { decimals: 0 })}% of ASEAN members' energy`,
+      body:
+        `On UN energy statistics for the latest year, coal, oil and gas made up between ${fmt(rows[rows.length - 1].fossil, { decimals: 0 })}% and ${fmt(rows[0].fossil, { decimals: 0 })}% of total energy supply. ` +
+        (coalHeavy.length ? `Coal alone supplied 30% or more in ${names(ds, coalHeavy.map((r) => r.iso))}. ` : '') +
+        `Hydro, geothermal, solar and wind contributed most in ${names(ds, cleanLead.map((r) => r.iso))} (${cleanLead.map((r) => `${fmt(r.clean, { decimals: 0 })}%`).join(' and ')}). Bioenergy, much of it traditional biomass for cooking, is shown separately.`,
+      countries: coalHeavy.map((r) => r.iso),
+      indicators: ['re_elec', 're_share'],
+      evidence: rows.map((r) => ({ label: `${countryName(ds, r.iso)} (${r.y})`, value: `fossil ${fmt(r.fossil, { decimals: 0 })}%; coal ${fmt(r.coal, { decimals: 0 })}%; hydro, geothermal, solar, wind ${fmt(r.clean, { decimals: 0 })}%` })),
+      focus: { view: 'map', indicator: 're_elec', countries: cleanLead.map((r) => r.iso) },
+    },
+  ];
+}
+
 export const RULES = [
   transitionLeaders,
   decarbonisation,
@@ -585,6 +770,11 @@ export const RULES = [
   financialDepth,
   graduation,
   odaReliance,
+  climateFinanceTerms,
+  mobilisation,
+  fossilSubsidies,
+  coalPipeline,
+  energyMixRule,
   dataRecency,
 ];
 

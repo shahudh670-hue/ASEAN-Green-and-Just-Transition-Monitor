@@ -3,6 +3,7 @@ import { openIndicator, useApp } from '../lib/context';
 import { fmt } from '../lib/format';
 import { DeltaText, Sparkline } from './KpiStrip';
 import { InsightCard } from './Insights';
+import { CountryEnergyMix } from './EnergyMix';
 
 export default function CountriesView() {
   const c = useApp();
@@ -76,6 +77,8 @@ export default function CountriesView() {
           )}
         </div>
       </section>
+
+      <CountryEnergyMix iso={ct.iso3} />
 
       {ds.meta.pillars.map((p) => {
         const inds = visibleIndicators(ds, p.id).filter((i) => latest(ds, i.id, ct.iso3));

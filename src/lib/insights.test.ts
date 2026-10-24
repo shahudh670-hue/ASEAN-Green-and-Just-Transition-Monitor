@@ -8,12 +8,12 @@ import type { CountrySeries, Dataset } from './types';
 
 // Synthetic values for unit tests only. They exercise the rule logic; they are
 // not, and must never be presented as, real statistics.
-function build(values: Record<string, CountrySeries>): Dataset {
+function build(values: Record<string, CountrySeries>, extra: Partial<Dataset['static']> = {}): Dataset {
   return {
     meta: { title: 't', generatedAt: '2026-10-24T00:00:00Z', status: [], checks: [], countries: config.countries, pillars: config.pillars },
     catalogue: config.indicators as Dataset['catalogue'],
     indicators: Object.fromEntries(Object.entries(values).map(([k, v]) => [k, { values: v }])),
-    static: { mpi: mpi as unknown as Dataset['static']['mpi'], income: income as unknown as Dataset['static']['income'] },
+    static: { mpi: mpi as unknown as Dataset['static']['mpi'], income: income as unknown as Dataset['static']['income'], ...extra },
   };
 }
 
@@ -97,6 +97,29 @@ describe('insight rules', () => {
     expect(i.countries).toEqual(['IDN', 'PHL']);
     expect(i.kind).toBe('risk');
     expect(i.body).toContain('Indonesia');
+  });
+
+  it('flags fossil fuel subsidies of 1% of GDP or more, with the revenue comparison', () => {
+    const ds = build({ ffs_gdp: { IDN: { 2023: 2.7 }, MYS: { 2023: 1.4 }, PHL: { 2023: 0.01 } }, gg_rev: { IDN: { 2023: 13.5 } } });
+    const i = generateInsights(ds).find((x) => x.id === 'fossil-subsidies')!;
+    expect(i.countries).toEqual(['IDN', 'MYS']);
+    expect(i.body).toContain('20% of government revenue');
+  });
+
+  it('flags members adding more coal than they plan to retire', () => {
+    const row = (operating: number, construction: number, pre: number, retire: Record<string, number>) => ({ operating, construction, preConstruction: pre, shelved: 0, cancelled: 0, retired: 0, mothballed: 0, retirePlanned: retire, retireTotal: 0 });
+    const coal = { source: 'GEM', release: 'July 2026', sourceUrl: 'x', unit: 'MW', note: '', rows: { IDN: row(60000, 5000, 13000, { 2030: 600 }), MYS: row(13000, 0, 0, { 2029: 1600, 2030: 2100 }) } };
+    const i = generateInsights(build({}, { coal })).find((x) => x.id === 'coal-pipeline')!;
+    expect(i.countries).toEqual(['IDN']);
+    expect(i.body).toContain('5.0 GW under construction');
+  });
+
+  it('summarises the energy mix from the supply shares', () => {
+    const mk = (coal: number, oil: number, gas: number, hydro: number) => ({ 2023: { coal, oil, gas, bioenergy: 100 - coal - oil - gas - hydro, hydro, geothermal: 0, solar: 0, wind: 0, nuclear: 0, other: 0, totalPJ: 100 } });
+    const energy = { source: 'UNSD', sourceUrl: 'x', dataUrl: 'y', note: '', netElectricityTrade: {}, electricity: {}, tes: { IDN: mk(45, 27, 14, 1), VNM: mk(46, 27, 7, 8), PHL: mk(31, 33, 5, 1), THA: mk(17, 36, 27, 0), MYS: mk(21, 28, 46, 3), LAO: mk(50, 8, 0, 30) } };
+    const i = generateInsights(build({}, { energy: energy as unknown as Dataset['static']['energy'] })).find((x) => x.id === 'energy-mix')!;
+    expect(i.countries).toEqual(['LAO', 'VNM', 'IDN', 'PHL']);
+    expect(i.body).toContain('Lao PDR');
   });
 
   it('writes without em dashes', () => {

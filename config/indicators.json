@@ -74,6 +74,11 @@
       "short": "Transition"
     },
     {
+      "id": "climatefin",
+      "label": "Climate and transition finance",
+      "short": "Transition finance"
+    },
+    {
       "id": "workers",
       "label": "Just transition for workers",
       "short": "Just transition"
@@ -172,6 +177,21 @@
       "sourceUrl": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS"
     },
     {
+      "id": "re_elec",
+      "source": "derived",
+      "code": "UNSD electricity production by source",
+      "pillar": "transition",
+      "label": "Hydro, geothermal, solar and wind share of electricity",
+      "unit": "% of gross electricity production",
+      "unitShort": "%",
+      "decimals": 1,
+      "polarity": "higher",
+      "agg": "gdp",
+      "description": "Electricity generated from hydro, geothermal, solar, wind and marine sources as a share of gross production. Bioenergy is not included because the UNSD data group it with other combustible fuels.",
+      "sourceName": "UN Statistics Division, Energy Statistics Database",
+      "sourceUrl": "https://unstats.un.org/unsd/energystats/api/"
+    },
+    {
       "id": "fdi",
       "source": "wb",
       "code": "BX.KLT.DINV.WD.GD.ZS",
@@ -206,7 +226,7 @@
       "id": "sdg7a1",
       "source": "sdg",
       "code": "EG_IFF_RANDN",
-      "pillar": "transition",
+      "pillar": "climatefin",
       "label": "International public finance for clean energy (SDG 7.a.1)",
       "unit": "US$ million, constant prices",
       "unitShort": "US$ m",
@@ -220,6 +240,147 @@
       "dims": {
         "Type of renewable technology": "ALL"
       }
+    },
+    {
+      "id": "climate_fin",
+      "source": "oecd_crdf",
+      "code": "total",
+      "pillar": "climatefin",
+      "label": "Climate-related development finance received",
+      "unit": "US$ million, 2024 prices",
+      "unitShort": "US$ m",
+      "decimals": 0,
+      "polarity": "neutral",
+      "agg": "sum",
+      "description": "Commitments from bilateral, multilateral and philanthropic providers to activities that target climate mitigation or adaptation (Rio markers), plus the climate components of multilateral development bank projects. Overlaps between mitigation and adaptation are counted once.",
+      "sourceName": "OECD, climate-related development finance, recipient perspective",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html",
+      "caveat": "Commitments, not disbursements, so single large loans make the series lumpy. Brunei and Singapore are not eligible recipients."
+    },
+    {
+      "id": "climate_fin_gdp",
+      "source": "derived",
+      "code": "climate_fin_cur / GDP",
+      "pillar": "climatefin",
+      "label": "Climate-related development finance received, share of GDP",
+      "unit": "% of GDP",
+      "unitShort": "%",
+      "decimals": 2,
+      "polarity": "neutral",
+      "agg": "gdp",
+      "description": "Climate-related development finance commitments in current US dollars divided by GDP in current US dollars.",
+      "sourceName": "OECD climate-related development finance; World Bank GDP (current US$)",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html"
+    },
+    {
+      "id": "climate_fin_energy",
+      "source": "oecd_crdf",
+      "code": "energy_share",
+      "pillar": "climatefin",
+      "label": "Energy sector share of climate-related development finance",
+      "unit": "% of climate-related development finance",
+      "unitShort": "%",
+      "decimals": 1,
+      "polarity": "neutral",
+      "agg": "pop",
+      "description": "Share of climate-related development finance committed to the energy sector (OECD sector II.3: policy, generation, transmission and distribution, efficiency).",
+      "sourceName": "OECD, climate-related development finance, recipient perspective",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html"
+    },
+    {
+      "id": "climate_fin_grant",
+      "source": "oecd_crdf",
+      "code": "grant_share",
+      "pillar": "climatefin",
+      "label": "Grant share of climate-related development finance",
+      "unit": "% of climate-related development finance",
+      "unitShort": "%",
+      "decimals": 1,
+      "polarity": "higher",
+      "agg": "pop",
+      "description": "Share of climate-related development finance committed as grants rather than loans, equity or other instruments. A lower share means more of the finance adds to debt.",
+      "sourceName": "OECD, climate-related development finance, recipient perspective",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html"
+    },
+    {
+      "id": "priv_mob_climate",
+      "source": "oecd_mob",
+      "code": "climate",
+      "pillar": "climatefin",
+      "label": "Private climate finance mobilised by official finance",
+      "unit": "US$ million, constant prices",
+      "unitShort": "US$ m",
+      "decimals": 0,
+      "polarity": "higher",
+      "agg": "sum",
+      "description": "Private finance mobilised for climate-related activities by official development finance interventions such as guarantees, syndicated loans, shares in collective investment vehicles and credit lines.",
+      "sourceName": "OECD, private finance mobilised by official development finance, recipient perspective",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/mobilisation-of-private-finance-for-development/recipient-perspective.html",
+      "caveat": "Some amounts are not published at recipient level for confidentiality, so totals are lower bounds."
+    },
+    {
+      "id": "mob_ratio",
+      "source": "derived",
+      "code": "3-year sums: mobilised private climate finance / climate-related development finance",
+      "pillar": "climatefin",
+      "label": "Private climate finance mobilised per US$100 of climate-related development finance",
+      "unit": "US$ per US$100, three-year sums",
+      "unitShort": "US$",
+      "decimals": 1,
+      "polarity": "higher",
+      "agg": "none",
+      "description": "A measure of how far official climate finance draws in private money. Both series in current US dollars, summed over the three years ending in the year shown to smooth lumpy commitments.",
+      "sourceName": "OECD mobilisation and climate-related development finance data",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/mobilisation-of-private-finance-for-development/recipient-perspective.html"
+    },
+    {
+      "id": "ppi_energy",
+      "source": "wb",
+      "code": "IE.PPI.ENGY.CD",
+      "scale": 1e-06,
+      "pillar": "climatefin",
+      "label": "Investment in energy projects with private participation",
+      "unit": "US$ million, current",
+      "unitShort": "US$ m",
+      "decimals": 0,
+      "polarity": "neutral",
+      "agg": "sum",
+      "description": "Commitments to energy (electricity and natural gas) projects with private participation that reached financial closure, including greenfield projects, concessions and divestitures.",
+      "sourceName": "World Bank, Private Participation in Infrastructure database, via World Development Indicators",
+      "sourceUrl": "https://data.worldbank.org/indicator/IE.PPI.ENGY.CD",
+      "caveat": "Covers low- and middle-income countries only; project-level detail is in the PPI database (ppi.worldbank.org)."
+    },
+    {
+      "id": "green_bonds",
+      "source": "imf_cid",
+      "code": "green",
+      "pillar": "climatefin",
+      "label": "Green bond issuance",
+      "unit": "US$ billion",
+      "unitShort": "US$ bn",
+      "decimals": 2,
+      "polarity": "higher",
+      "agg": "sum",
+      "description": "Green bonds issued by sovereigns, corporates and financial institutions domiciled in the country.",
+      "sourceName": "IMF Climate Change Indicators Dashboard (Refinitiv; country authorities; IMF staff)",
+      "sourceUrl": "https://climatedata.imf.org/datasets/8e2772e0b65f4e33a80183ce9583d062",
+      "caveat": "The IMF table lists issuers only; members with no recorded issuance in a year are shown as zero."
+    },
+    {
+      "id": "gss_bonds",
+      "source": "imf_cid",
+      "code": "gss",
+      "pillar": "climatefin",
+      "label": "Green, social, sustainability and sustainability-linked bond issuance",
+      "unit": "US$ billion",
+      "unitShort": "US$ bn",
+      "decimals": 2,
+      "polarity": "higher",
+      "agg": "sum",
+      "description": "All labelled sustainable bonds issued by entities domiciled in the country.",
+      "sourceName": "IMF Climate Change Indicators Dashboard (Refinitiv; country authorities; IMF staff)",
+      "sourceUrl": "https://climatedata.imf.org/datasets/8e2772e0b65f4e33a80183ce9583d062",
+      "caveat": "Members with no recorded issuance in a year are shown as zero."
     },
     {
       "id": "coal_elec",
@@ -686,6 +847,22 @@
       "caveat": "Singapore issues government securities to deepen its capital market and for investment, not to fund deficits; its debt is matched by assets."
     },
     {
+      "id": "ffs_gdp",
+      "source": "derived",
+      "code": "fossil fuel subsidies / GDP",
+      "pillar": "fiscal",
+      "label": "Fossil fuel subsidies",
+      "unit": "% of GDP",
+      "unitShort": "%",
+      "decimals": 2,
+      "polarity": "lower",
+      "agg": "gdp",
+      "description": "Explicit subsidies to fossil fuel production and consumption (coal, oil products, natural gas and fossil-based electricity), the basis of SDG 12.c.1, divided by GDP in current US dollars.",
+      "sourceName": "OECD and IISD Fossil Fuel Subsidy Tracker; World Bank GDP (current US$)",
+      "sourceUrl": "https://fossilfuelsubsidytracker.org/",
+      "caveat": "Each member's figure comes from one underlying estimate (IEA price-gap, IMF or national estimate), as chosen by the tracker; methods differ across members."
+    },
+    {
       "id": "ext_debt",
       "source": "wb",
       "code": "DT.DOD.DECT.GN.ZS",
@@ -918,6 +1095,50 @@
       "decimals": 0,
       "sourceName": "International Debt Statistics",
       "sourceUrl": "https://data.worldbank.org/indicator/DT.DOD.DPNG.CD"
+    },
+    {
+      "id": "aux_gdp_cur",
+      "source": "wb",
+      "code": "NY.GDP.MKTP.CD",
+      "hidden": true,
+      "label": "GDP, current US$",
+      "unit": "current US$",
+      "decimals": 0,
+      "sourceName": "World Development Indicators",
+      "sourceUrl": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
+    },
+    {
+      "id": "aux_crdf_cur",
+      "source": "oecd_crdf",
+      "code": "cur",
+      "hidden": true,
+      "label": "Climate-related development finance, current US$ million",
+      "unit": "US$ million, current",
+      "decimals": 1,
+      "sourceName": "OECD, climate-related development finance, recipient perspective",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html"
+    },
+    {
+      "id": "aux_mob_climate_cur",
+      "source": "oecd_mob",
+      "code": "climate_cur",
+      "hidden": true,
+      "label": "Private climate finance mobilised, current US$ million",
+      "unit": "US$ million, current",
+      "decimals": 1,
+      "sourceName": "OECD, private finance mobilised",
+      "sourceUrl": "https://www.oecd.org/en/data/dashboards/mobilisation-of-private-finance-for-development/recipient-perspective.html"
+    },
+    {
+      "id": "aux_ffs_usd",
+      "source": "ffs",
+      "code": "usd",
+      "hidden": true,
+      "label": "Fossil fuel subsidies, US$ million",
+      "unit": "US$ million, nominal",
+      "decimals": 0,
+      "sourceName": "OECD and IISD Fossil Fuel Subsidy Tracker",
+      "sourceUrl": "https://fossilfuelsubsidytracker.org/"
     }
   ]
 }

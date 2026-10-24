@@ -18,6 +18,11 @@ const RULES = [
   ['Financial depth', 'Deep: private credit of at least 100% of GDP or market capitalisation of at least 80%. Shallow: private credit below 50% and market capitalisation below 60% or absent.'],
   ['Graduation', 'Members whose World Bank income group moved up in the latest classification, read with their ODA trend.'],
   ['ODA reliance', 'Members where net ODA is at least 2% of GNI.'],
+  ['Climate finance terms', 'Three-year sums of climate-related development finance, with the shares committed as grants and to the energy sector; members with a grant share below 30% are flagged.'],
+  ['Mobilisation', 'Private climate finance mobilised by official interventions per US$100 of climate-related development finance, three-year sums in current US dollars; leaders and members below US$10.'],
+  ['Fossil fuel subsidies', 'Members whose explicit fossil fuel subsidies reach 1% of GDP, with the same amount as a share of general government revenue.'],
+  ['Coal pipeline', 'Members whose coal capacity under construction and in planning exceeds planned retirements to 2030, where the pipeline is at least 500 MW.'],
+  ['Energy mix', 'Fossil share of total energy supply in the latest UNSD year, members where coal supplies 30% or more, and the leaders on hydro, geothermal, solar and wind.'],
   ['Data recency', 'Flags any indicator whose latest observation is more than three years old.'],
   ['Poverty and energy: people', 'Poor people deprived in cooking fuel and electricity, from censored headcounts applied to the 2024 population; housing and sanitation deprivation among the poor in regions where at least a third of the poor lack electricity, against all other regions; gaps of 10 points or more between survey and SDG 7 figures.'],
   ['Poverty and energy: options by type', 'For each profile type, integrated access options where at least 40% of the poor lack electricity, clean-cooking options where at least 70% of the poor lack clean cooking, and the most common other deprivation where it affects at least 40% of the poor.'],
@@ -158,6 +163,47 @@ export default function MethodsView() {
                   <td className="px-3 py-2 text-ink-2">Regional or global</td>
                 </tr>
               ))}
+              {ds.static.energy && (
+                <tr className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">Country profiles; energy transition</td>
+                  <td className="px-3 py-2 text-ink">
+                    Energy mix: total energy supply and electricity generation by source
+                    <span className="mt-0.5 block text-xs text-ink-3">{ds.static.energy.note}</span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">% of total; PJ; TWh</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={ds.static.energy.sourceUrl} target="_blank" rel="noreferrer">
+                      {ds.static.energy.source}
+                    </a>
+                    <span className="block text-xs text-ink-3">
+                      Record view:{' '}
+                      <a className="text-brand underline underline-offset-2" href={ds.static.energy.dataUrl} target="_blank" rel="noreferrer">
+                        UNdata
+                      </a>
+                      . IRENA's statistics database asks automated tools not to access it, and IAEA data cover nuclear power, which no member generates; both draw on the same national energy statistics.
+                    </span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">{Math.max(...Object.values(ds.static.energy.tes).flatMap((y) => Object.keys(y).map(Number)))}</td>
+                  <td className="px-3 py-2 text-ink-2">{Object.keys(ds.static.energy.tes).length} of 11</td>
+                </tr>
+              )}
+              {ds.static.coal && (
+                <tr className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">{pillarName('workers')}</td>
+                  <td className="px-3 py-2 text-ink">
+                    Coal power capacity by status and planned retirements
+                    <span className="mt-0.5 block text-xs text-ink-3">{ds.static.coal.note}</span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">MW</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={ds.static.coal.sourceUrl} target="_blank" rel="noreferrer">
+                      {ds.static.coal.source}
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">{ds.static.coal.release ?? 'Latest release'}</td>
+                  <td className="px-3 py-2 text-ink-2">{Object.keys(ds.static.coal.rows).length} of 11</td>
+                </tr>
+              )}
               {ds.static.irena && (
                 <tr className="align-top odd:bg-surface even:bg-raised">
                   <td className="px-3 py-2 text-ink-2">{pillarName('workers')}</td>

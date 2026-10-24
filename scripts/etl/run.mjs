@@ -10,9 +10,11 @@
 //   imf   IMF DataMapper API (World Economic Outlook)
 //   sdg   UN SDG Global Database API (SDG 7.a.1)
 //   hdro  UNDP HDRO composite indices time series (CSV)
+//   ilo   ILOSTAT (employment by economic activity)
+//   oecd_crdf, oecd_mob, ffs, imf_cid, gem_coal, unsd: see extra.mjs
 //
 // If a source fails, the previous values for its indicators are kept from the
-// existing data.json (if any) and the failure is recorded in meta.status. The
+// existing data.json, or from the published site when run in CI and the failure is recorded in meta.status. The
 // run fails only if no data at all could be assembled.
 //
 // Usage: node scripts/etl/run.mjs
@@ -20,6 +22,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { makeExtra } from './extra.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const CONFIG = JSON.parse(readFileSync(resolve(ROOT, 'config/indicators.json'), 'utf8'));
@@ -66,7 +69,8 @@ const put = (series, iso, year, value) => {
 };
 
 // ---------- World Bank ----------
-async function fetchWB(code) {
+async function fetchWB(code, ind = {}) {
+  const scale = ind.scale ?? 1;
   const series = {};
   let unit = null;
   let page = 1;
@@ -79,7 +83,7 @@ async function fetchWB(code) {
     for (const r of body[1] || []) {
       const iso = r.countryiso3code || r.country?.id;
       if (!ISO.includes(iso)) continue;
-      put(series, iso, r.date, r.value);
+      put(series, iso, r.date, r.value === null ? null : r.value * scale);
       if (!unit && r.indicator?.value) unit = r.indicator.value;
     }
     page += 1;
@@ -206,7 +210,43 @@ async function fetchILO(code) {
   return { series };
 }
 
-const FETCHERS = { wb: fetchWB, imf: fetchIMF, sdg: fetchSDG, hdro: fetchHDRO, ilo: fetchILO };
+const EXTRA = makeExtra({ CONFIG, ISO, put, parseCSV, log });
+const FETCHERS = { wb: fetchWB, imf: fetchIMF, sdg: fetchSDG, hdro: fetchHDRO, ilo: fetchILO, ...EXTRA.FETCHERS };
+const PREVIOUS_URL = process.env.PREVIOUS_URL || 'https://shahudh670-hue.github.io/ASEAN-Green-and-Just-Transition-Monitor/data/data.json';
+
+async function loadPrevious() {
+  if (existsSync(OUT_JSON)) return JSON.parse(readFileSync(OUT_JSON, 'utf8'));
+  try {
+    const prev = await getWithRetry(PREVIOUS_URL, { tries: 2 });
+    if (prev?.meta?.testFixture) return null;
+    log('previous data loaded from the published site');
+    return prev;
+  } catch (e) {
+    log(`no previous data available (${e.message})`);
+    return null;
+  }
+}
+
+/** Sum of the last `span` years ending in each year, if all are present. */
+function rollingRatio(num, den, span = 3) {
+  const out = {};
+  for (const iso of ISO) {
+    const ys = Object.keys(den?.[iso] || {}).map(Number).sort((a, b) => a - b);
+    for (const y of ys) {
+      let n = 0;
+      let d = 0;
+      let ok = true;
+      for (let k = y - span + 1; k <= y; k++) {
+        const dv = den?.[iso]?.[k];
+        if (dv === undefined) { ok = false; break; }
+        d += dv;
+        n += num?.[iso]?.[k] ?? 0;
+      }
+      if (ok && d > 0) put(out, iso, y, (100 * n) / d);
+    }
+  }
+  return out;
+}
 
 // ---------- derived series ----------
 function ratio(num, den) {
@@ -215,6 +255,12 @@ function ratio(num, den) {
     const d = den?.[iso]?.[y];
     if (d) put(out, iso, y, (n / d) * 100);
   }
+  return out;
+}
+
+function scaled(series, factor) {
+  const out = {};
+  for (const [iso, ys] of Object.entries(series)) for (const [y, x] of Object.entries(ys)) put(out, iso, y, x * factor);
   return out;
 }
 
@@ -233,7 +279,7 @@ function shareOfTotal(abs, minReporters = 6) {
 
 // ---------- main ----------
 async function main() {
-  const previous = existsSync(OUT_JSON) ? JSON.parse(readFileSync(OUT_JSON, 'utf8')) : null;
+  const previous = await loadPrevious();
   const indicators = {};
   const status = [];
 
@@ -265,11 +311,41 @@ async function main() {
     ext_ppg_share: ratio(v('aux_ext_ppg'), v('aux_ext_total')),
     ext_png_share: ratio(v('aux_ext_png'), v('aux_ext_total')),
     oda_share: shareOfTotal(v('aux_oda_usd')),
+    climate_fin_gdp: scaled(ratio(v('aux_crdf_cur'), v('aux_gdp_cur')), 1e6),
+    ffs_gdp: scaled(ratio(v('aux_ffs_usd'), v('aux_gdp_cur')), 1e6),
+    mob_ratio: rollingRatio(v('aux_mob_climate_cur'), v('aux_crdf_cur')),
   };
   for (const [id, series] of Object.entries(derived)) {
     const n = Object.values(series).reduce((s, o) => s + Object.keys(o).length, 0);
     if (n) indicators[id] = { values: series };
     status.push({ id, ok: n > 0, observations: n, derived: true });
+  }
+
+  // Block sources: coal fleet and pipeline (GEM) and the energy mix (UNSD).
+  const blocks = {};
+  for (const [key, fn] of [
+    ['coal', EXTRA.fetchCoalFleet],
+    ['energy', EXTRA.fetchEnergyMix],
+  ]) {
+    try {
+      blocks[key] = await fn();
+      const n = Object.keys(blocks[key].rows ?? blocks[key].tes ?? {}).length;
+      status.push({ id: key, ok: true, observations: n });
+      log(`${key.padEnd(16)} block ${n} members`);
+    } catch (e) {
+      const prev = previous?.static?.[key];
+      if (prev) blocks[key] = { ...prev, stale: true };
+      status.push({ id: key, ok: false, error: String(e.message).slice(0, 300), keptPrevious: Boolean(prev) });
+      log(`${key.padEnd(16)} FAILED ${e.message}${prev ? ' (kept previous values)' : ''}`);
+    }
+  }
+  if (blocks.energy?.electricity) {
+    const s = {};
+    for (const [iso, ys] of Object.entries(blocks.energy.electricity))
+      for (const [y, e] of Object.entries(ys)) put(s, iso, y, e.hydro + e.geothermal + e.solar + e.wind + e.other);
+    const n = Object.values(s).reduce((a, o) => a + Object.keys(o).length, 0);
+    if (n) indicators.re_elec = { values: s, ...(blocks.energy.stale ? { stale: true } : {}) };
+    status.push({ id: 're_elec', ok: n > 0, observations: n, derived: true });
   }
 
   // Reference checks: values confirmed through the World Bank Data360 and UN
@@ -284,7 +360,7 @@ async function main() {
   checks.forEach((c) => log(`check ${c.ok ? 'ok  ' : 'WARN'} ${c.id} ${c.iso3} ${c.year}: expected ${c.value}, got ${c.got}`));
 
   // Link check: every source link shown on the site must resolve.
-  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl, IRENA.sourceUrl, MPI2026.pageUrl, MPI2026.hdroUrl, ...SUBREGIONAL.frameworks.map((f) => f.sourceUrl), ...Object.values(POVREFS).map((r) => r.url)])];
+  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl, IRENA.sourceUrl, MPI2026.pageUrl, MPI2026.hdroUrl, ...SUBREGIONAL.frameworks.map((f) => f.sourceUrl), ...Object.values(POVREFS).map((r) => r.url), blocks.coal?.sourceUrl, blocks.energy?.sourceUrl, blocks.energy?.dataUrl].filter(Boolean))];
   const links = await Promise.all(
     urls.map(async (url) => {
       try {
@@ -312,7 +388,7 @@ async function main() {
     },
     catalogue: CONFIG.indicators,
     indicators,
-    static: { mpi: MPI, income: INCOME, irena: IRENA, mpi2026: MPI2026, subregional: SUBREGIONAL, povrefs: POVREFS },
+    static: { mpi: MPI, income: INCOME, irena: IRENA, mpi2026: MPI2026, subregional: SUBREGIONAL, povrefs: POVREFS, coal: blocks.coal ?? null, energy: blocks.energy ?? null },
   };
 
   mkdirSync(OUT_DIR, { recursive: true });

@@ -20,7 +20,8 @@ export type AggMethod = 'gdp' | 'pop' | 'sum' | 'none';
 
 export interface IndicatorMeta {
   id: string;
-  source: 'wb' | 'imf' | 'sdg' | 'hdro' | 'ilo' | 'derived';
+  source: 'wb' | 'imf' | 'sdg' | 'hdro' | 'ilo' | 'derived' | 'oecd_crdf' | 'oecd_mob' | 'ffs' | 'imf_cid';
+  scale?: number;
   dims?: Record<string, string>;
   code: string;
   pillar?: string;
@@ -78,6 +79,8 @@ export interface Dataset {
     mpi2026?: Mpi2026;
     subregional?: { note: string; frameworks: Framework[] };
     povrefs?: Record<string, { name: string; url: string; facts?: string }>;
+    coal?: CoalFleet | null;
+    energy?: EnergyMix | null;
   };
 }
 
@@ -173,4 +176,51 @@ export interface Framework {
   sourceUrl: string;
   regions: Record<string, 'full' | 'partial'>;
   partialNote: string;
+}
+
+export interface CoalRow {
+  operating: number;
+  construction: number;
+  preConstruction: number;
+  shelved: number;
+  cancelled: number;
+  retired: number;
+  mothballed: number;
+  retirePlanned: Record<string, number>;
+  retireTotal: number;
+}
+
+export interface CoalFleet {
+  source: string;
+  release: string | null;
+  sourceUrl: string;
+  unit: string;
+  note: string;
+  rows: Record<Iso3, CoalRow>;
+  stale?: boolean;
+}
+
+export const TES_KEYS = ['coal', 'oil', 'gas', 'bioenergy', 'hydro', 'geothermal', 'solar', 'wind', 'nuclear', 'other'] as const;
+export type TesKey = (typeof TES_KEYS)[number];
+export type TesYear = Record<TesKey, number> & { totalPJ: number };
+export interface ElecYear {
+  combustible: number;
+  hydro: number;
+  geothermal: number;
+  solar: number;
+  wind: number;
+  nuclear: number;
+  other: number;
+  totalTWh: number;
+}
+
+export interface EnergyMix {
+  source: string;
+  sourceUrl: string;
+  dataUrl: string;
+  note: string;
+  tes: Record<Iso3, Record<string, TesYear>>;
+  netElectricityTrade: Record<Iso3, Record<string, number>>;
+  electricity: Record<Iso3, Record<string, ElecYear>>;
+  stale?: boolean;
 }

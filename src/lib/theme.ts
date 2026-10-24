@@ -16,6 +16,8 @@ export interface ChartTheme {
   axis: string;
   context: string;
   series: string[];
+  /** Eight-slot categorical order for compositions (energy mix); assigned in fixed order, never cycled. */
+  cat8: string[];
   seq: string[];
   aggregate: string;
   hover: string;
@@ -35,6 +37,7 @@ export function chartTheme(mode: Mode): ChartTheme {
         axis: '#383835',
         context: '#4a4945',
         series: ['#3987e5', '#d95926', '#199e70', '#c98500'],
+        cat8: ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#008300', '#9085e9', '#e66767'],
         seq: SEQ,
         aggregate: '#f0efec',
         hover: '#7dbbe8',
@@ -49,6 +52,7 @@ export function chartTheme(mode: Mode): ChartTheme {
         axis: '#c3c2b7',
         context: '#cfcec7',
         series: ['#2a78d6', '#eb6834', '#1baf7a', '#eda100'],
+        cat8: ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#6250d6', '#e34948'],
         seq: SEQ,
         aggregate: '#0b0b0b',
         hover: '#00528a',

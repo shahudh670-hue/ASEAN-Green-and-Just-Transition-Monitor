@@ -1,5 +1,5 @@
 {
-  "note": "Reference values retrieved on 24 October 2026 through the World Bank Data360 connector (WDI, IDS, IMF WEO) and the UN Data Commons connector (HDRO, UN SDG). The pipeline reports any difference beyond the tolerance; sources revise data, so a warning means 'look', not 'wrong'.",
+  "note": "Reference values retrieved on 24 October 2026 through the World Bank Data360 connector (WDI, IDS, IMF WEO) and the UN Data Commons connector (HDRO, UN SDG). The pipeline reports any difference beyond the tolerance; sources revise data, so a warning means 'look', not 'wrong'. The finance, subsidy and energy mix checks were computed on 24 October 2026 from the published OECD, OECD-IISD, IMF and UNSD files.",
   "checks": [
     {
       "id": "re_share",
@@ -168,6 +168,41 @@
       "year": 2024,
       "value": 0.4768,
       "tolerance": 0.05
+    },
+    {
+      "id": "climate_fin",
+      "iso3": "VNM",
+      "year": 2016,
+      "value": 2803,
+      "tolerance": 30
+    },
+    {
+      "id": "priv_mob_climate",
+      "iso3": "VNM",
+      "year": 2022,
+      "value": 824,
+      "tolerance": 10
+    },
+    {
+      "id": "aux_ffs_usd",
+      "iso3": "IDN",
+      "year": 2023,
+      "value": 36958,
+      "tolerance": 50
+    },
+    {
+      "id": "green_bonds",
+      "iso3": "IDN",
+      "year": 2024,
+      "value": 6.18,
+      "tolerance": 0.05
+    },
+    {
+      "id": "re_elec",
+      "iso3": "PHL",
+      "year": 2023,
+      "value": 21.1,
+      "tolerance": 0.3
     }
   ]
 }
