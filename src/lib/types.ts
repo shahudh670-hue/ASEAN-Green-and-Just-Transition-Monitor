@@ -20,7 +20,8 @@ export type AggMethod = 'gdp' | 'pop' | 'sum' | 'none';
 
 export interface IndicatorMeta {
   id: string;
-  source: 'wb' | 'imf' | 'sdg' | 'hdro' | 'derived';
+  source: 'wb' | 'imf' | 'sdg' | 'hdro' | 'ilo' | 'derived';
+  dims?: Record<string, string>;
   code: string;
   pillar?: string;
   label: string;
@@ -73,5 +74,6 @@ export interface Dataset {
   static: {
     mpi: { source: string; sourceUrl: string; tableUrl: string; note: string; notCovered: string[]; rows: Record<Iso3, MpiRow> };
     income: { source: string; sourceUrl: string; thresholds: Record<string, string>; groups: Record<string, string>; rows: Record<Iso3, IncomeRow> };
+    irena?: { source: string; sourceUrl: string; note: string; year: number; rows: Record<Iso3, { jobs: number; technology: string }> };
   };
 }

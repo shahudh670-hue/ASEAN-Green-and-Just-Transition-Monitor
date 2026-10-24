@@ -199,6 +199,8 @@ export default function ExplorerView() {
     { label: 'Revenue and public debt', x: 'gg_rev', y: 'gg_debt' },
     { label: 'Credit depth and market size', x: 'priv_credit', y: 'mkt_cap' },
     { label: 'Electricity access and income', x: 'gdppc_ppp', y: 'elec_access' },
+    { label: 'Coal power and vulnerable work', x: 'coal_elec', y: 'vuln_emp' },
+    { label: 'Youth and women in work', x: 'flfp_ratio', y: 'neet' },
   ];
 
   const table = {

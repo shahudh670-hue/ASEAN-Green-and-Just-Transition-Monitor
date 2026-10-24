@@ -486,6 +486,88 @@ function dataRecency(ds: Dataset): Insight[] {
   ];
 }
 
+
+function coalExposure(ds: Dataset): Insight[] {
+  if (!has(ds, 'coal_elec') || !has(ds, 'vuln_emp')) return [];
+  const rows = isoList(ds).map((iso) => ({ iso, coal: latest(ds, 'coal_elec', iso), vuln: latest(ds, 'vuln_emp', iso) }));
+  const mVuln = median(rows.map((r) => r.vuln?.value).filter((v): v is number => v !== undefined));
+  if (mVuln === undefined) return [];
+  const flagged = rows.filter((r) => (r.coal?.value ?? 0) >= 40 && (r.vuln?.value ?? 0) > mVuln).sort((a, b) => b.coal!.value - a.coal!.value);
+  const coalHeavy = rows.filter((r) => (r.coal?.value ?? 0) >= 40).sort((a, b) => b.coal!.value - a.coal!.value);
+  if (!coalHeavy.length) return [];
+  return [
+    {
+      id: 'coal-exposure',
+      pillar: 'workers',
+      kind: flagged.length ? 'risk' : 'note',
+      title: `Coal supplies at least 40% of electricity in ${coalHeavy.length} member${coalHeavy.length > 1 ? 's' : ''}`,
+      body:
+        `${names(ds, coalHeavy.map((r) => r.iso))} ${vb(coalHeavy, 'generates', 'generate')} at least 40% of ${vb(coalHeavy, 'its', 'their')} electricity from coal ` +
+        `(${coalHeavy.map((r) => `${fmt(r.coal!.value, { decimals: 0 })}%`).join(', ')}). ` +
+        (flagged.length
+          ? `In ${names(ds, flagged.map((r) => r.iso))}, vulnerable employment is also above the ASEAN median (${fmt(mVuln, { decimals: 1 })}% of workers), so a coal phase-down would land on a workforce with few contracts and little income protection. Retraining, wage support and regional development plans need to be financed alongside the clean power itself.`
+          : 'Vulnerable employment in these members is at or below the ASEAN median, which gives more room for managed, contract-based transitions.'),
+      countries: coalHeavy.map((r) => r.iso),
+      indicators: ['coal_elec', 'vuln_emp'],
+      evidence: coalHeavy.map((r) => ({ label: countryName(ds, r.iso), value: `coal ${fmt(r.coal!.value, { decimals: 1 })}% of electricity (${r.coal!.year}), vulnerable employment ${fmt(r.vuln?.value, { decimals: 1 })}%` })),
+      focus: { view: 'explorer', indicator: 'coal_elec', countries: coalHeavy.slice(0, 4).map((r) => r.iso), x: 'coal_elec', y: 'vuln_emp' },
+    },
+  ];
+}
+
+function protectionGap(ds: Dataset): Insight[] {
+  if (!has(ds, 'sp_cov') || !has(ds, 'coal_elec')) return [];
+  const rows = isoList(ds)
+    .map((iso) => ({ iso, coal: latest(ds, 'coal_elec', iso), sp: latest(ds, 'sp_cov', iso), rents: latest(ds, 'coal_rents', iso) }))
+    .filter((r) => r.sp && r.sp.value < 50 && ((r.coal?.value ?? 0) >= 40 || (r.rents?.value ?? 0) >= 1));
+  if (!rows.length) return [];
+  return [
+    {
+      id: 'protection-gap',
+      pillar: 'workers',
+      kind: 'gap',
+      title: 'Coal-dependent members have thin safety nets',
+      body:
+        `In ${names(ds, rows.map((r) => r.iso))}, coal is central to the power system or the economy, yet fewer than half of people receive any social protection benefit ` +
+        `(${rows.map((r) => `${fmt(r.sp!.value, { decimals: 0 })}% in ${inText(ds, r.iso)}, ${r.sp!.year}`).join('; ')}). ` +
+        'Without unemployment insurance and active labour market programmes in place, workers and communities would carry the cost of early coal retirement. Social protection is part of the transition package, not an add-on.',
+      countries: rows.map((r) => r.iso),
+      indicators: ['sp_cov', 'coal_elec', 'coal_rents'],
+      evidence: rows.map((r) => ({
+        label: countryName(ds, r.iso),
+        value: `social protection ${fmt(r.sp!.value, { decimals: 1 })}% (${r.sp!.year}), coal ${fmt(r.coal?.value, { decimals: 1 })}% of electricity, coal rents ${fmt(r.rents?.value, { decimals: 2 })}% of GDP (${r.rents?.year ?? 'n/a'})`,
+      })),
+      focus: { view: 'map', indicator: 'sp_cov', countries: rows.slice(0, 4).map((r) => r.iso) },
+    },
+  ];
+}
+
+function youthAndGender(ds: Dataset): Insight[] {
+  if (!has(ds, 'neet') || !has(ds, 'flfp_ratio')) return [];
+  const rows = isoList(ds).map((iso) => ({ iso, neet: latest(ds, 'neet', iso), ratio: latest(ds, 'flfp_ratio', iso) }));
+  const mNeet = median(rows.map((r) => r.neet?.value).filter((v): v is number => v !== undefined));
+  const mRatio = median(rows.map((r) => r.ratio?.value).filter((v): v is number => v !== undefined));
+  if (mNeet === undefined || mRatio === undefined) return [];
+  const flagged = rows.filter((r) => (r.neet?.value ?? 0) > mNeet && (r.ratio?.value ?? 100) < mRatio);
+  if (!flagged.length) return [];
+  return [
+    {
+      id: 'youth-gender',
+      pillar: 'workers',
+      kind: 'gap',
+      title: 'Young people and women risk missing the new green jobs',
+      body:
+        `${names(ds, flagged.map((r) => r.iso))} combine an above-median share of young people not in education, employment or training (ASEAN median ${fmt(mNeet, { decimals: 1 })}%) ` +
+        `with below-median female participation relative to men (median ratio ${fmt(mRatio, { decimals: 0 })}). ` +
+        'New jobs in solar, grids and efficiency will go to those with the right skills; targeted training and apprenticeships for young people and women decide whether the transition narrows or widens these gaps.',
+      countries: flagged.map((r) => r.iso),
+      indicators: ['neet', 'flfp_ratio'],
+      evidence: flagged.map((r) => ({ label: countryName(ds, r.iso), value: `NEET ${fmt(r.neet!.value, { decimals: 1 })}% (${r.neet!.year}), female-to-male participation ${fmt(r.ratio?.value, { decimals: 0 })}` })),
+      focus: { view: 'explorer', indicator: 'neet', countries: flagged.slice(0, 4).map((r) => r.iso), x: 'flfp_ratio', y: 'neet' },
+    },
+  ];
+}
+
 export const RULES = [
   transitionLeaders,
   decarbonisation,
@@ -493,6 +575,9 @@ export const RULES = [
   investmentGap,
   cleanFinance,
   accessGap,
+  coalExposure,
+  protectionGap,
+  youthAndGender,
   planetaryPressure,
   energyPoverty,
   fiscalSpace,

@@ -202,6 +202,48 @@ function MpiCards() {
   );
 }
 
+function IrenaTable() {
+  const { ds } = useApp();
+  const t = ds.static.irena;
+  if (!t) return null;
+  const rows = Object.entries(t.rows).sort((a, b) => b[1].jobs - a[1].jobs);
+  return (
+    <section className="card p-4 sm:p-5">
+      <h3 className="text-[17px] font-semibold text-ink">Renewable energy jobs reported for ASEAN members, {t.year}</h3>
+      <p className="mt-0.5 text-sm text-ink-2">{t.note}</p>
+      <div className="mt-3 overflow-auto rounded-lg border border-line">
+        <table className="tabular w-full text-sm">
+          <thead className="bg-raised">
+            <tr>
+              {['Country', 'Technology', 'Jobs'].map((h) => (
+                <th key={h} scope="col" className={`border-b border-line px-3 py-2 font-semibold text-ink ${h === 'Jobs' ? 'text-right' : 'text-left'}`}>
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map(([iso, r]) => (
+              <tr key={iso} className="odd:bg-surface even:bg-raised">
+                <td className="px-3 py-1.5 text-ink">{countryName(ds, iso, false)}</td>
+                <td className="px-3 py-1.5 text-ink-2">{r.technology}</td>
+                <td className="px-3 py-1.5 text-right text-ink-2">{fmt(r.jobs, { decimals: 0 })}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="mt-3 border-t border-line pt-2 text-xs text-ink-3">
+        <span className="font-semibold text-ink-2">Source:</span>{' '}
+        <a className="text-brand underline underline-offset-2" href={t.sourceUrl} target="_blank" rel="noreferrer">
+          {t.source}
+        </a>
+        .
+      </p>
+    </section>
+  );
+}
+
 export default function PillarDetail() {
   const c = useApp();
   const { ds, theme, state } = c;
@@ -209,6 +251,47 @@ export default function PillarDetail() {
   const lastActual = projectionStart(ds) - 1;
 
   if (state.pillar === 'people') return <MpiCards />;
+
+  if (state.pillar === 'workers') {
+    const pair = (a: string, b: string) =>
+      isos
+        .map((i) => ({ i, a: latest(ds, a, i), b: latest(ds, b, i) }))
+        .filter((r) => r.a || r.b)
+        .sort((x, y) => (y.a?.value ?? -1) - (x.a?.value ?? -1));
+    const exposure = pair('coal_elec', 'sp_cov');
+    const workforce = pair('emp_mining', 'emp_power');
+    return (
+      <div className="space-y-4">
+        <BarCard
+          title="Coal exposure and the social safety net"
+          subtitle="Share of electricity from coal (latest year) next to the share of people covered by at least one social protection benefit (latest available year, which differs by member). Both in %."
+          categories={exposure.map((r) => r.i)}
+          labels={exposure.map((r) => `coal ${r.a?.year ?? 'n/a'}, protection ${r.b?.year ?? 'n/a'}`)}
+          unit="%"
+          decimals={1}
+          series={[
+            { name: 'Electricity from coal', colour: theme.series[0], data: exposure.map((r) => r.a?.value ?? null) },
+            { name: 'Covered by social protection', colour: theme.series[1], data: exposure.map((r) => r.b?.value ?? null) },
+          ]}
+          sources={[refOf(meta(ds, 'coal_elec')), refOf(meta(ds, 'sp_cov'))]}
+        />
+        <BarCard
+          title="The mining and power-sector workforce"
+          subtitle="Share of total employment in mining and quarrying, and in electricity, gas and steam supply, latest survey year."
+          categories={workforce.map((r) => r.i)}
+          labels={workforce.map((r) => String(r.a?.year ?? r.b?.year ?? ''))}
+          unit="% of total employment"
+          decimals={2}
+          series={[
+            { name: 'Mining and quarrying', colour: theme.series[0], data: workforce.map((r) => r.a?.value ?? null) },
+            { name: 'Electricity, gas and steam', colour: theme.series[1], data: workforce.map((r) => r.b?.value ?? null) },
+          ]}
+          sources={[refOf(meta(ds, 'emp_mining')), refOf(meta(ds, 'emp_power'))]}
+        />
+        <IrenaTable />
+      </div>
+    );
+  }
   if (state.pillar === 'prosperity') return <IncomeTable />;
 
   if (state.pillar === 'transition') {

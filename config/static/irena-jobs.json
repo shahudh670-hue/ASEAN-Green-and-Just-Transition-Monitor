@@ -1,0 +1,20 @@
+{
+  "source": "IRENA and ILO, Renewable energy and jobs: Annual review 2025 (published January 2026), section 1.4",
+  "sourceUrl": "https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Jan/IRENA_SOC_RE_and_jobs_2026.pdf",
+  "note": "The review publishes country estimates for Southeast Asia only for liquid biofuels employment. It gives no country totals for other technologies or other members, so these are not totals of renewable energy jobs.",
+  "year": 2024,
+  "rows": {
+    "IDN": {
+      "jobs": 750600,
+      "technology": "Liquid biofuels"
+    },
+    "THA": {
+      "jobs": 120400,
+      "technology": "Liquid biofuels"
+    },
+    "MYS": {
+      "jobs": 106200,
+      "technology": "Liquid biofuels"
+    }
+  }
+}

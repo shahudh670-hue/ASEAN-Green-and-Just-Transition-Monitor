@@ -24,6 +24,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const CONFIG = JSON.parse(readFileSync(resolve(ROOT, 'config/indicators.json'), 'utf8'));
 const MPI = JSON.parse(readFileSync(resolve(ROOT, 'config/static/mpi.json'), 'utf8'));
 const INCOME = JSON.parse(readFileSync(resolve(ROOT, 'config/static/income.json'), 'utf8'));
+const IRENA = JSON.parse(readFileSync(resolve(ROOT, 'config/static/irena-jobs.json'), 'utf8'));
 const REFS = JSON.parse(readFileSync(resolve(ROOT, 'config/reference-checks.json'), 'utf8'));
 const OUT_DIR = resolve(ROOT, 'public/data');
 const OUT_JSON = resolve(OUT_DIR, 'data.json');
@@ -94,7 +95,10 @@ async function fetchIMF(code) {
 }
 
 // ---------- UN SDG Global Database ----------
-async function fetchSDG(code) {
+async function fetchSDG(code, ind = {}) {
+  // Keep only the rows whose dimensions match the indicator's `dims` (for
+  // example both sexes, all ages 15+, all activities), so one value per year.
+  const want = ind.dims || {};
   const areas = CONFIG.countries.map((c) => `areaCode=${c.m49}`).join('&');
   const series = {};
   let page = 1;
@@ -106,8 +110,7 @@ async function fetchSDG(code) {
     totalPages = body.totalPages || 1;
     for (const r of body.data || []) {
       const dims = r.dimensions || {};
-      const tech = dims['Type of renewable technology'];
-      if (tech && tech !== 'ALL') continue;
+      if (Object.entries(want).some(([k, v]) => k in dims && dims[k] !== v)) continue;
       const iso = M49_TO_ISO[String(Number(r.geoAreaCode))];
       if (!iso) continue;
       const y = Math.round(Number(r.timePeriodStart));
@@ -167,7 +170,39 @@ async function fetchHDRO(prefix) {
   return { series };
 }
 
-const FETCHERS = { wb: fetchWB, imf: fetchIMF, sdg: fetchSDG, hdro: fetchHDRO };
+// ---------- ILOSTAT (employment by economic activity) ----------
+// Code format: "ECO_ISIC4_B" (mining and quarrying) or "ECO_ISIC4_D" (electricity,
+// gas, steam). The share is computed against total employment from the same
+// survey and year. Labour force surveys (source codes starting "BA") are
+// preferred over other sources when both exist.
+let iloCache = null;
+async function fetchILO(code) {
+  if (!iloCache) {
+    const url = `https://rplumber.ilo.org/data/indicator/?id=EMP_TEMP_SEX_ECO_NB_A&ref_area=${ISO.join('+')}&sex=SEX_T&classif1=ECO_ISIC4_B+ECO_ISIC4_D+ECO_ISIC4_TOTAL&timefrom=${FIRST_YEAR}&format=.csv`;
+    const text = await getWithRetry(url, { as: 'text' });
+    const [header, ...rows] = parseCSV(text.replace(/^\uFEFF/, ''));
+    const col = (n) => header.indexOf(n);
+    const [ci, cs, cc, ct, cv] = ['ref_area', 'source', 'classif1', 'time', 'obs_value'].map(col);
+    if ([ci, cs, cc, ct, cv].some((x) => x < 0)) throw new Error('ILOSTAT: unexpected columns');
+    iloCache = {};
+    for (const r of rows) {
+      const key = `${r[ci]}|${r[ct]}|${r[cs]}`;
+      (iloCache[key] ??= { iso: r[ci], year: r[ct], source: r[cs] })[r[cc]] = Number(r[cv]);
+    }
+  }
+  const best = {};
+  for (const rec of Object.values(iloCache)) {
+    if (!(rec.ECO_ISIC4_TOTAL > 0) || !Number.isFinite(rec[code])) continue;
+    const k = `${rec.iso}|${rec.year}`;
+    const isLfs = rec.source.startsWith('BA');
+    if (!best[k] || (isLfs && !best[k].source.startsWith('BA'))) best[k] = rec;
+  }
+  const series = {};
+  for (const rec of Object.values(best)) put(series, rec.iso, rec.year, (rec[code] / rec.ECO_ISIC4_TOTAL) * 100);
+  return { series };
+}
+
+const FETCHERS = { wb: fetchWB, imf: fetchIMF, sdg: fetchSDG, hdro: fetchHDRO, ilo: fetchILO };
 
 // ---------- derived series ----------
 function ratio(num, den) {
@@ -205,7 +240,7 @@ async function main() {
     while (queue.length) {
       const ind = queue.shift();
       try {
-        const { series, sourceLabel } = await FETCHERS[ind.source](ind.code);
+        const { series, sourceLabel } = await FETCHERS[ind.source](ind.code, ind);
         const n = Object.values(series).reduce((s, o) => s + Object.keys(o).length, 0);
         if (n === 0) throw new Error('no observations returned');
         indicators[ind.id] = { values: series, apiLabel: sourceLabel ?? null };
@@ -245,7 +280,7 @@ async function main() {
   checks.forEach((c) => log(`check ${c.ok ? 'ok  ' : 'WARN'} ${c.id} ${c.iso3} ${c.year}: expected ${c.value}, got ${c.got}`));
 
   // Link check: every source link shown on the site must resolve.
-  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl])];
+  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl, IRENA.sourceUrl])];
   const links = await Promise.all(
     urls.map(async (url) => {
       try {
@@ -273,7 +308,7 @@ async function main() {
     },
     catalogue: CONFIG.indicators,
     indicators,
-    static: { mpi: MPI, income: INCOME },
+    static: { mpi: MPI, income: INCOME, irena: IRENA },
   };
 
   mkdirSync(OUT_DIR, { recursive: true });

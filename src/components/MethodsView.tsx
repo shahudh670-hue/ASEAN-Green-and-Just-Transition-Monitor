@@ -8,6 +8,9 @@ const RULES = [
   ['Investment and transition gap', 'Members above the ASEAN median for foreign direct investment or gross capital formation (three-year average) and below the median for renewable-share gains. Singapore is excluded because of its hub role.'],
   ['Concentration of clean-energy finance', 'Five-year sums of SDG 7.a.1 commitments, the share taken by the top two recipients, and a Herfindahl-Hirschman index (0 to 10,000).'],
   ['Electricity access gap', 'Members below 99% access; years to universal access at the average annual gain of the last five years; people without access from population data.'],
+  ['Coal exposure', 'Members where coal supplies at least 40% of electricity, flagged as a risk where vulnerable employment is also above the ASEAN median.'],
+  ['Social protection gap', 'Members where coal supplies at least 40% of electricity or coal rents are at least 1% of GDP, and fewer than half of people receive any social protection benefit (SDG 1.3.1).'],
+  ['Youth and gender', 'Members with an above-median youth NEET rate and a below-median ratio of female to male labour force participation.'],
   ['Planetary pressure', 'The percentage difference between the HDI and the planetary pressures-adjusted HDI, its level and its ten-year change, compared with the ten-year change in the HDI.'],
   ['Energy and poverty', 'Members where at least 10% of people are multidimensionally poor, with the share of poverty explained by living standards (which include electricity and cooking fuel).'],
   ['Fiscal space', 'Members with general government revenue below the ASEAN median and either above-median external debt service or public debt above 60% of GDP. Singapore is excluded (debt matched by assets).'],
@@ -96,6 +99,23 @@ export default function MethodsView() {
                 <td className="px-3 py-2 text-ink-2">Survey years vary</td>
                 <td className="px-3 py-2 text-ink-2">{Object.keys(ds.static.mpi.rows).length} of 11</td>
               </tr>
+              {ds.static.irena && (
+                <tr className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">{pillarName('workers')}</td>
+                  <td className="px-3 py-2 text-ink">
+                    Renewable energy jobs (liquid biofuels)
+                    <span className="mt-0.5 block text-xs text-ink-3">{ds.static.irena.note}</span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">Number of jobs</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={ds.static.irena.sourceUrl} target="_blank" rel="noreferrer">
+                      IRENA and ILO, Renewable energy and jobs: Annual review 2025
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">{ds.static.irena.year}</td>
+                  <td className="px-3 py-2 text-ink-2">{Object.keys(ds.static.irena.rows).length} of 11</td>
+                </tr>
+              )}
               <tr className="align-top odd:bg-surface even:bg-raised">
                 <td className="px-3 py-2 text-ink-2">{pillarName('prosperity')}</td>
                 <td className="px-3 py-2 text-ink">Income group and lending category</td>

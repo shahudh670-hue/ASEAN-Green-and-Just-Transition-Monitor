@@ -88,6 +88,17 @@ describe('insight rules', () => {
     expect(a.body.startsWith('The Philippines has not yet reached')).toBe(true);
   });
 
+  it('flags coal-heavy members with vulnerable workforces', () => {
+    const ds = build({
+      coal_elec: { IDN: { 2023: 70 }, PHL: { 2023: 62 }, THA: { 2023: 15 }, MMR: { 2023: 5 } },
+      vuln_emp: { IDN: { 2025: 50 }, PHL: { 2025: 34 }, THA: { 2025: 48 }, MMR: { 2025: 63 } },
+    });
+    const i = generateInsights(ds).find((x) => x.id === 'coal-exposure')!;
+    expect(i.countries).toEqual(['IDN', 'PHL']);
+    expect(i.kind).toBe('risk');
+    expect(i.body).toContain('Indonesia');
+  });
+
   it('writes without em dashes', () => {
     const ds = build({ re_share: { KHM: linear(40, 55), LAO: linear(45, 52), PHL: linear(25, 27), VNM: linear(25, 20) } });
     for (const i of generateInsights(ds)) expect(`${i.title} ${i.body}`).not.toMatch(/\u2014/);

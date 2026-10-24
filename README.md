@@ -11,6 +11,7 @@ The monitor asks one question: where can scarce public and concessional finance 
 | Pillar | Indicators | Primary source |
 | --- | --- | --- |
 | Energy transition and investment | Renewable share of final energy; carbon intensity of GDP; access to electricity; FDI net inflows; gross capital formation; international public finance for clean energy (SDG 7.a.1) | IEA, EDGAR, Tracking SDG7, IMF BoP, national accounts (via World Bank WDI); OECD and IRENA (via UN SDG Global Database) |
+| Just transition for workers | Coal share of electricity; fossil fuel share of energy; coal rents; employment in industry, agriculture, mining and power supply; vulnerable and informal employment; unemployment; youth NEET; female-to-male participation; social protection, unemployment benefit and work-injury coverage; renewable energy jobs | IEA, ILO and World Bank (via WDI); ILOSTAT; ILO (via UN SDG Global Database); IRENA and ILO |
 | Human development and planetary pressures | HDI; planetary pressures-adjusted HDI; HDI loss from planetary pressures; inequality-adjusted HDI; CO2 and material footprint per capita; 2026 global MPI | UNDP Human Development Report Office; UNDP and OPHI |
 | Income level and growth | GDP per capita (PPP and constant US$); GDP per capita growth; FY2027 income group and lending category | World Bank |
 | Fiscal space and domestic resource mobilisation | General government expenditure, revenue, net lending and gross debt; tax revenue | IMF Fiscal Monitor and World Economic Outlook; IMF GFS (via WDI) |
@@ -38,6 +39,7 @@ Every indicator, its code, unit and source link is listed in [`config/indicators
 - IMF DataMapper API (World Economic Outlook and Fiscal Monitor)
 - UN SDG Global Database API (SDG 7.a.1)
 - UNDP HDRO composite indices time series (CSV)
+- ILOSTAT API (employment by economic activity)
 
 The 2026 global MPI table and the FY2027 income classification are small published tables kept in `config/static/`, with their sources.
 
