@@ -1,0 +1,19 @@
+{
+  "source": "World Bank Country and Lending Groups, FY2027 (effective 1 July 2026; based on 2025 GNI per capita, Atlas method)",
+  "sourceUrl": "https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups",
+  "thresholds": { "LIC": "US$1,175 or less", "LMC": "US$1,176 to 4,635", "UMC": "US$4,636 to 14,375", "HIC": "above US$14,375" },
+  "groups": { "LIC": "Low income", "LMC": "Lower-middle income", "UMC": "Upper-middle income", "HIC": "High income" },
+  "rows": {
+    "BRN": { "group": "HIC", "lending": null, "changed": false },
+    "KHM": { "group": "LMC", "lending": "IDA", "changed": false },
+    "IDN": { "group": "UMC", "lending": "IBRD", "changed": false },
+    "LAO": { "group": "LMC", "lending": "IDA", "changed": false },
+    "MYS": { "group": "UMC", "lending": "IBRD", "changed": false },
+    "MMR": { "group": "LMC", "lending": "IDA", "changed": false },
+    "PHL": { "group": "UMC", "lending": "IBRD", "changed": true, "previous": "LMC" },
+    "SGP": { "group": "HIC", "lending": null, "changed": false },
+    "THA": { "group": "UMC", "lending": "IBRD", "changed": false },
+    "TLS": { "group": "LMC", "lending": "Blend", "changed": false },
+    "VNM": { "group": "UMC", "lending": "IBRD", "changed": true, "previous": "LMC" }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "note": "Reference values retrieved on 24 October 2026 through the World Bank Data360 connector (WDI, IDS, IMF WEO) and the UN Data Commons connector (HDRO, UN SDG). The pipeline reports any difference beyond the tolerance; sources revise data, so a warning means 'look', not 'wrong'.",
+  "checks": [
+    { "id": "re_share", "iso3": "PHL", "year": 2021, "value": 28.0, "tolerance": 0.6 },
+    { "id": "re_share", "iso3": "KHM", "year": 2021, "value": 52.4, "tolerance": 0.6 },
+    { "id": "re_share", "iso3": "MMR", "year": 2021, "value": 62.9, "tolerance": 0.6 },
+    { "id": "co2_intensity", "iso3": "LAO", "year": 2024, "value": 1.2327, "tolerance": 0.05 },
+    { "id": "co2_intensity", "iso3": "SGP", "year": 2024, "value": 0.1431, "tolerance": 0.02 },
+    { "id": "elec_access", "iso3": "PHL", "year": 2024, "value": 94.8, "tolerance": 1.0 },
+    { "id": "elec_access", "iso3": "KHM", "year": 2015, "value": 62.7, "tolerance": 1.0 },
+    { "id": "fdi", "iso3": "SGP", "year": 2024, "value": 23.5787, "tolerance": 1.5 },
+    { "id": "ext_debt", "iso3": "LAO", "year": 2024, "value": 115.4044, "tolerance": 3.0 },
+    { "id": "tax_rev", "iso3": "THA", "year": 2024, "value": 15.175, "tolerance": 0.5 },
+    { "id": "gg_debt", "iso3": "LAO", "year": 2025, "value": 88.7779, "tolerance": 6.0 },
+    { "id": "gg_debt", "iso3": "SGP", "year": 2025, "value": 165.744, "tolerance": 8.0 },
+    { "id": "hdi", "iso3": "PHL", "year": 2023, "value": 0.720, "tolerance": 0.005 },
+    { "id": "hdi", "iso3": "MMR", "year": 2023, "value": 0.609, "tolerance": 0.005 },
+    { "id": "phdi", "iso3": "PHL", "year": 2023, "value": 0.68, "tolerance": 0.01 },
+    { "id": "sdg7a1", "iso3": "PHL", "year": 2023, "value": 218.93, "tolerance": 5.0 },
+    { "id": "sdg7a1", "iso3": "LAO", "year": 2017, "value": 2299.54, "tolerance": 50.0 },
+    { "id": "mkt_cap", "iso3": "MYS", "year": 2024, "value": 106.4523, "tolerance": 3.0 },
+    { "id": "priv_credit", "iso3": "THA", "year": 2024, "value": 146.2951, "tolerance": 3.0 }
+  ]
+}

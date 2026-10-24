@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tokens. UNDP blue is the interface accent; chart colours follow a validated,
+   colour-vision-safe palette (see src/lib/theme.ts). */
+:root {
+  color-scheme: light;
+  --brand: #006eb5;
+  --brand-strong: #00528a;
+  --brand-soft: #e6f0f8;
+  --plane: #f6f6f3;
+  --surface: #fcfcfb;
+  --raised: #ffffff;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --ink-3: #6f6e69;
+  --line: #e1e0d9;
+  --good: #006300;
+  --risk: #b42d2d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --brand: #4fa3e0;
+    --brand-strong: #7dbbe8;
+    --brand-soft: #14283a;
+    --plane: #0d0d0d;
+    --surface: #1a1a19;
+    --raised: #222220;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --ink-3: #9a998f;
+    --line: #2c2c2a;
+    --good: #0ca30c;
+    --risk: #e66767;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --brand: #4fa3e0;
+  --brand-strong: #7dbbe8;
+  --brand-soft: #14283a;
+  --plane: #0d0d0d;
+  --surface: #1a1a19;
+  --raised: #222220;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --ink-3: #9a998f;
+  --line: #2c2c2a;
+  --good: #0ca30c;
+  --risk: #e66767;
+}
+
+html,
+body {
+  background: var(--plane);
+  color: var(--ink);
+}
+body {
+  font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  background: var(--raised);
+  color: var(--ink-2);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.chip:hover {
+  border-color: var(--ink-3);
+  color: var(--ink);
+}
+.chip[aria-pressed='true'],
+.chip[aria-selected='true'] {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.chip-focus[aria-pressed='true'] {
+  background: var(--raised);
+  color: var(--ink);
+}
+.select {
+  appearance: none;
+  background: var(--raised)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23898781' stroke-width='1.5'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 30px 6px 10px;
+  font-size: 14px;
+  color: var(--ink);
+  max-width: 100%;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: var(--raised);
+  color: var(--ink-2);
+}
+.btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-3);
+}
+.btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--brand-strong);
+  color: #fff;
+}
+input[type='range'] {
+  accent-color: var(--brand);
+}
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+{
+  "source": "UNDP and OPHI, 2026 Global Multidimensional Poverty Index: Statistical Update, Table 1 (released 12 October 2026)",
+  "sourceUrl": "https://hdr.undp.org/content/2026-global-multidimensional-poverty-index",
+  "tableUrl": "https://hdr.undp.org/sites/default/files/publications/additional-files/2026-10/2026_gMPI_Table1and2.pdf",
+  "note": "Values transcribed from Table 1. MPI = headcount x intensity; each row was checked against that identity and dimension contributions sum to 100. Survey years differ, so cross-country comparisons should be read with the survey year in view. D = Demographic and Health Survey; M = Multiple Indicator Cluster Survey.",
+  "notCovered": ["BRN", "MYS", "SGP"],
+  "rows": {
+    "KHM": { "survey": "D", "year": "2021/2022", "mpi": 0.070, "headcount": 16.6, "intensity": 42.3, "vulnerable": 20.5, "severe": 4.1, "health": 21.5, "education": 48.0, "living": 30.5 },
+    "IDN": { "survey": "D", "year": "2017", "mpi": 0.014, "headcount": 3.6, "intensity": 38.7, "vulnerable": 4.7, "severe": 0.4, "health": 34.7, "education": 26.8, "living": 38.5 },
+    "LAO": { "survey": "M", "year": "2023", "mpi": 0.082, "headcount": 17.8, "intensity": 46.3, "vulnerable": 25.3, "severe": 6.5, "health": 20.8, "education": 44.8, "living": 34.4 },
+    "MMR": { "survey": "D", "year": "2015/2016", "mpi": 0.176, "headcount": 38.3, "intensity": 45.9, "vulnerable": 21.9, "severe": 13.8, "health": 18.5, "education": 32.3, "living": 49.2 },
+    "PHL": { "survey": "D", "year": "2022", "mpi": 0.016, "headcount": 3.9, "intensity": 40.6, "vulnerable": 5.2, "severe": 0.7, "health": 24.6, "education": 32.7, "living": 42.7 },
+    "THA": { "survey": "M", "year": "2022", "mpi": 0.002, "headcount": 0.5, "intensity": 37.0, "vulnerable": 4.7, "severe": 0.0, "health": 31.2, "education": 54.0, "living": 14.7 },
+    "TLS": { "survey": "D", "year": "2016", "mpi": 0.222, "headcount": 48.3, "intensity": 45.9, "vulnerable": 26.8, "severe": 17.4, "health": 29.3, "education": 23.1, "living": 47.6 },
+    "VNM": { "survey": "M", "year": "2020/2021", "mpi": 0.008, "headcount": 1.9, "intensity": 40.3, "vulnerable": 3.5, "severe": 0.4, "health": 22.9, "education": 40.7, "living": 36.4 }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "asean-green-and-just-transition-monitor",
+  "version": "1.0.0",
+  "description": "ASEAN Green and Just Transition Monitor: an open, client-side dashboard on energy transition, human development, fiscal space, debt and finance in ASEAN.",
+  "scripts": {
+    "data": "node scripts/etl/run.mjs",
+    "geo": "node scripts/build-geo.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahudh670-hue/asean-green-and-just-transition-monitor.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shahudh670-hue/asean-green-and-just-transition-monitor/issues"
+  },
+  "homepage": "https://github.com/shahudh670-hue/asean-green-and-just-transition-monitor#readme",
+  "dependencies": {
+    "echarts": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/topojson-client": "^3.1.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  },
+  "private": true,
+  "type": "module"
+}
