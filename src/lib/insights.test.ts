@@ -82,6 +82,12 @@ describe('insight rules', () => {
     expect(g.countries).toEqual(['PHL', 'VNM']);
   });
 
+  it('uses the article for the Philippines and agrees verbs', () => {
+    const ds = build({ elec_access: { PHL: linear(90, 95) }, aux_pop: { PHL: { 2022: 115e6 } } });
+    const a = generateInsights(ds).find((i) => i.id === 'access-gap')!;
+    expect(a.body.startsWith('The Philippines has not yet reached')).toBe(true);
+  });
+
   it('writes without em dashes', () => {
     const ds = build({ re_share: { KHM: linear(40, 55), LAO: linear(45, 52), PHL: linear(25, 27), VNM: linear(25, 20) } });
     for (const i of generateInsights(ds)) expect(`${i.title} ${i.body}`).not.toMatch(/\u2014/);

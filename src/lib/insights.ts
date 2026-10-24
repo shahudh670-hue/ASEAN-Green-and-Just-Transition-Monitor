@@ -27,7 +27,12 @@ export interface Insight {
 
 const SPAN = 5;
 const isoList = (ds: Dataset) => ds.meta.countries.map((c) => c.iso3);
-const names = (ds: Dataset, isos: Iso3[]) => listJoin(isos.map((i) => countryName(ds, i)));
+// "the Philippines" in running text; capitalised at sentence starts by tidy().
+const inText = (ds: Dataset, iso: Iso3) => (iso === 'PHL' ? 'the Philippines' : countryName(ds, iso));
+const names = (ds: Dataset, isos: Iso3[]) => listJoin(isos.map((i) => inText(ds, i)));
+/** Verb agreement for a list of countries. */
+const vb = (isos: unknown[], singular: string, plural: string) => (isos.length === 1 ? singular : plural);
+const tidy = (t: string) => t.replace(/(^|[.;:]\s+|\(\s*)the Philippines/g, (_m, p) => `${p}The Philippines`);
 const has = (ds: Dataset, id: string) => Boolean(ds.indicators[id]);
 
 /** Latest actual (non-projection) year for an indicator, per country. */
@@ -139,7 +144,7 @@ function decoupling(ds: Dataset): Insight[] {
       kind: groups.absolute.length ? 'progress' : 'gap',
       title: `${groups.absolute.length} of ${total} members grew while cutting emissions`,
       body:
-        (groups.absolute.length ? `${names(ds, groups.absolute.map((g) => g.iso))} show absolute decoupling: real GDP rose while implied CO2 emissions fell. ` : 'No member shows absolute decoupling over the period. ') +
+        (groups.absolute.length ? `${names(ds, groups.absolute.map((g) => g.iso))} ${vb(groups.absolute, 'shows', 'show')} absolute decoupling: real GDP rose while implied CO2 emissions fell. ` : 'No member shows absolute decoupling over the period. ') +
         (groups.relative.length ? `${names(ds, groups.relative.map((g) => g.iso))} decoupled in relative terms: emissions grew, but more slowly than output. ` : '') +
         (groups.coupled.length ? `In ${names(ds, groups.coupled.map((g) => g.iso))}, emissions grew at least as fast as GDP.` : ''),
       countries: [...groups.absolute, ...groups.coupled].map((g) => g.iso),
@@ -181,8 +186,8 @@ function investmentGap(ds: Dataset): Insight[] {
       kind: 'gap',
       title: 'Capital is arriving, but not yet into the transition',
       body:
-        `${names(ds, flagged.map((f) => f.iso))} attract above-median investment (foreign direct investment or gross capital formation, three-year average) ` +
-        `while their renewable share has grown less than the ASEAN median. This is the pattern where instruments that change the risk-return of clean projects, ` +
+        `${names(ds, flagged.map((f) => f.iso))} ${vb(flagged, 'attracts', 'attract')} above-median investment (foreign direct investment or gross capital formation, three-year average) ` +
+        `while ${vb(flagged, 'its', 'their')} renewable share has grown less than the ASEAN median. This is the pattern where instruments that change the risk-return of clean projects, ` +
         `such as guarantees, first-loss tranches and project preparation support, are likely to have the most leverage.`,
       countries: flagged.map((f) => f.iso),
       indicators: ['fdi', 'gcf', 're_share'],
@@ -254,7 +259,7 @@ function accessGap(ds: Dataset): Insight[] {
       kind: 'gap',
       title: without > 0 ? `About ${fmt(without / 1e6, { decimals: 1 })} million people still lack electricity` : 'The last mile of electricity access',
       body:
-        `${names(ds, rows.map((r) => r.iso))} have not yet reached universal access. ` +
+        `${names(ds, rows.map((r) => r.iso))} ${vb(rows, 'has', 'have')} not yet reached universal access. ` +
         rows
           .map((r) => `${countryName(ds, r.iso)} stands at ${fmt(r.level, { decimals: 1 })}%` + (r.yearsTo !== undefined ? ` and would close the gap in about ${fmt(r.yearsTo, { decimals: 0 })} years at its recent pace` : ', with no recent gain to project'))
           .join('; ') +
@@ -345,9 +350,9 @@ function fiscalSpace(ds: Dataset): Insight[] {
       id: 'fiscal-space',
       pillar: 'fiscal',
       kind: 'risk',
-      title: 'Thin revenue meets heavy debt service',
+      title: 'Thin revenue meets heavy debt burdens',
       body:
-        `${names(ds, constrained.map((c) => c.iso))} combine general government revenue below the ASEAN median (${fmt(mRev, { decimals: 1 })}% of GDP) ` +
+        `${names(ds, constrained.map((c) => c.iso))} ${vb(constrained, 'combines', 'combine')} general government revenue below the ASEAN median (${fmt(mRev, { decimals: 1 })}% of GDP) ` +
         `with either above-median external debt service or public debt above 60% of GDP. Public budgets here have little room to co-finance transition investment, ` +
         `which raises the value of grant elements, concessional tenors and revenue reforms that widen the base.`,
       countries: constrained.map((c) => c.iso),
@@ -423,8 +428,8 @@ function financialDepth(ds: Dataset): Insight[] {
       kind: 'finance',
       title: 'Domestic capital pools are deep in some members, shallow in others',
       body:
-        (deep.length ? `${names(ds, deep.map((d) => d.iso))} have deep domestic markets (private credit of at least 100% of GDP or stock market capitalisation of at least 80%), where local-currency green bonds and loans can carry much of the financing. ` : '') +
-        (shallow.length ? `${names(ds, shallow.map((s) => s.iso))} have private credit below 50% of GDP and small or no equity markets, so transition projects there depend more on external and concessional capital, and on building local markets.` : ''),
+        (deep.length ? `${names(ds, deep.map((d) => d.iso))} ${vb(deep, 'has', 'have')} deep domestic markets (private credit of at least 100% of GDP or stock market capitalisation of at least 80%), where local-currency green bonds and loans can carry much of the financing. ` : '') +
+        (shallow.length ? `${names(ds, shallow.map((s) => s.iso))} ${vb(shallow, 'has', 'have')} private credit below 50% of GDP and small or no equity markets, so transition projects there depend more on external and concessional capital, and on building local markets.` : ''),
       countries: [...deep, ...shallow].map((r) => r.iso),
       indicators: ['priv_credit', 'mkt_cap'],
       evidence: rows
@@ -502,7 +507,7 @@ export function generateInsights(ds: Dataset): Insight[] {
   const out: Insight[] = [];
   for (const rule of RULES) {
     try {
-      out.push(...rule(ds));
+      out.push(...rule(ds).map((i) => ({ ...i, title: tidy(i.title), body: tidy(i.body) })));
     } catch (e) {
       // A failing rule must never take the dashboard down; it is simply omitted.
       console.warn(`Insight rule ${rule.name} failed`, e);
