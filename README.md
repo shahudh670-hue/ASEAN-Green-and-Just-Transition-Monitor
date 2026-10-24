@@ -13,7 +13,7 @@ The monitor asks one question: where can scarce public and concessional finance 
 | Energy transition and investment | Renewable share of final energy; carbon intensity of GDP; access to electricity; FDI net inflows; gross capital formation; international public finance for clean energy (SDG 7.a.1) | IEA, EDGAR, Tracking SDG7, IMF BoP, national accounts (via World Bank WDI); OECD and IRENA (via UN SDG Global Database) |
 | Human development and planetary pressures | HDI; planetary pressures-adjusted HDI; HDI loss from planetary pressures; inequality-adjusted HDI; CO2 and material footprint per capita; 2026 global MPI | UNDP Human Development Report Office; UNDP and OPHI |
 | Income level and growth | GDP per capita (PPP and constant US$); GDP per capita growth; FY2027 income group and lending category | World Bank |
-| Fiscal space and domestic resource mobilisation | General government expenditure, revenue, net lending and gross debt; tax revenue | IMF World Economic Outlook; IMF GFS (via WDI) |
+| Fiscal space and domestic resource mobilisation | General government expenditure, revenue, net lending and gross debt; tax revenue | IMF Fiscal Monitor and World Economic Outlook; IMF GFS (via WDI) |
 | External debt and its composition | External debt stocks; public, private non-guaranteed and short-term shares; debt service | World Bank International Debt Statistics |
 | Domestic financial and capital markets | Private credit (total and from banks); stock market capitalisation; value of stocks traded | IMF IFS and World Federation of Exchanges (via WDI) |
 | Official development assistance | Net ODA received (% of GNI); share of the ASEAN total | OECD DAC (via WDI) |
@@ -35,7 +35,7 @@ Every indicator, its code, unit and source link is listed in [`config/indicators
 `scripts/etl/run.mjs` pulls every series directly from its official interface:
 
 - World Bank Indicators API v2 (WDI and International Debt Statistics)
-- IMF DataMapper API (World Economic Outlook)
+- IMF DataMapper API (World Economic Outlook and Fiscal Monitor)
 - UN SDG Global Database API (SDG 7.a.1)
 - UNDP HDRO composite indices time series (CSV)
 

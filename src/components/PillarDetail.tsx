@@ -251,7 +251,7 @@ export default function PillarDetail() {
           { name: 'Revenue', colour: theme.series[0], data: rows.map((r) => r.rev?.value ?? null) },
           { name: 'Expenditure', colour: theme.series[1], data: rows.map((r) => r.exp?.value ?? null) },
         ]}
-        note="Source: IMF World Economic Outlook."
+        note="Source: IMF Fiscal Monitor."
       />
     );
   }
