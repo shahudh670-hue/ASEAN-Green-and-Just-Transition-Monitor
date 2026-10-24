@@ -6,8 +6,8 @@ import type { Mode } from '../lib/theme';
 const TABS: { id: Tab; label: string }[] = [
   { id: 'overview', label: 'Overview' },
   { id: 'countries', label: 'Country profiles' },
-  { id: 'insights', label: 'Policy insights' },
   { id: 'poverty', label: 'Poverty and energy' },
+  { id: 'insights', label: 'Policy insights' },
   { id: 'explorer', label: 'Relationship explorer' },
   { id: 'methods', label: 'Sources and methods' },
 ];
