@@ -323,8 +323,8 @@
       "polarity": "neutral",
       "agg": "pop",
       "description": "Share of total employment in mining and quarrying (ISIC Rev. 4 section B), including coal mining. Computed from ILOSTAT employment counts from the same survey and year.",
-      "sourceName": "ILOSTAT, International Labour Organization",
-      "sourceUrl": "https://ilostat.ilo.org/data/",
+      "sourceName": "ILOSTAT, International Labour Organization (employment by sex and economic activity)",
+      "sourceUrl": "https://rplumber.ilo.org/data/indicator/?id=EMP_TEMP_SEX_ECO_NB_A&ref_area=BRN+KHM+IDN+LAO+MYS+MMR+PHL+SGP+THA+TLS+VNM&sex=SEX_T&classif1=ECO_ISIC4_B+ECO_ISIC4_TOTAL&format=.csv",
       "caveat": "Survey years differ by country; labour force surveys are used where available."
     },
     {
@@ -339,8 +339,8 @@
       "polarity": "neutral",
       "agg": "pop",
       "description": "Share of total employment in electricity, gas, steam and air conditioning supply (ISIC Rev. 4 section D): the power-sector workforce that will change most as generation shifts.",
-      "sourceName": "ILOSTAT, International Labour Organization",
-      "sourceUrl": "https://ilostat.ilo.org/data/",
+      "sourceName": "ILOSTAT, International Labour Organization (employment by sex and economic activity)",
+      "sourceUrl": "https://rplumber.ilo.org/data/indicator/?id=EMP_TEMP_SEX_ECO_NB_A&ref_area=BRN+KHM+IDN+LAO+MYS+MMR+PHL+SGP+THA+TLS+VNM&sex=SEX_T&classif1=ECO_ISIC4_D+ECO_ISIC4_TOTAL&format=.csv",
       "caveat": "Survey years differ by country; labour force surveys are used where available."
     },
     {
