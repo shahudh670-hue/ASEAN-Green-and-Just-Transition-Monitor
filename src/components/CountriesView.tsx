@@ -40,6 +40,13 @@ export default function CountriesView() {
             {inc?.lending ? `; World Bank lending category: ${inc.lending}` : ''}.
             {inc?.changed && <span className="font-semibold text-brand"> Reclassified up from {ds.static.income.groups[inc.previous ?? '']?.toLowerCase()} in FY2027.</span>}
           </p>
+          <p className="mt-1 text-xs text-ink-3">
+            Source:{' '}
+            <a className="text-brand underline underline-offset-2" href={ds.static.income.sourceUrl} target="_blank" rel="noreferrer">
+              World Bank country and lending groups, FY2027
+            </a>
+            .
+          </p>
         </div>
         <div className="rounded-lg border border-line bg-raised p-4 lg:col-span-2">
           <p className="eyebrow">Multidimensional poverty (2026 global MPI)</p>
@@ -57,7 +64,11 @@ export default function CountriesView() {
                 </div>
               ))}
               <p className="col-span-full text-xs text-ink-3">
-                Survey: {mpi.survey === 'D' ? 'Demographic and Health Survey' : 'Multiple Indicator Cluster Survey'}, {mpi.year}. MPI value {fmt(mpi.mpi, { decimals: 3 })}.
+                Survey: {mpi.survey === 'D' ? 'Demographic and Health Survey' : 'Multiple Indicator Cluster Survey'}, {mpi.year}. MPI value {fmt(mpi.mpi, { decimals: 3 })}. Source:{' '}
+                <a className="text-brand underline underline-offset-2" href={ds.static.mpi.sourceUrl} target="_blank" rel="noreferrer">
+                  UNDP and OPHI, 2026 Global Multidimensional Poverty Index
+                </a>
+                .
               </p>
             </div>
           ) : (
@@ -81,15 +92,23 @@ export default function CountriesView() {
                 const ch = change(ds, m.id, ct.iso3, 5);
                 const pts = series(ds, m.id, ct.iso3).filter(([y]) => y >= 2000);
                 return (
-                  <button
+                  <div
                     key={m.id}
-                    className="grid w-full grid-cols-[1fr_auto] items-center gap-x-4 gap-y-1 py-2.5 text-left hover:bg-raised sm:grid-cols-[minmax(0,2.2fr)_1fr_1.4fr_auto_auto]"
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === 'Enter' && openIndicator(c, m.id, [ct.iso3])}
+                    className="grid w-full cursor-pointer grid-cols-[1fr_auto] items-center gap-x-4 gap-y-1 py-2.5 text-left hover:bg-raised sm:grid-cols-[minmax(0,2.2fr)_1fr_1.4fr_auto_auto]"
                     onClick={() => openIndicator(c, m.id, [ct.iso3])}
                     title="Open this indicator on the overview"
                   >
                     <span className="text-[15px] text-ink">
                       {m.label}
-                      <span className="block text-xs text-ink-3">{m.unit}</span>
+                      <span className="block text-xs text-ink-3">
+                        {m.unit}. Source:{' '}
+                        <a className="text-brand underline underline-offset-2" href={m.sourceUrl} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                          {m.sourceName}
+                        </a>
+                      </span>
                     </span>
                     <span className="tabular text-right text-[17px] font-semibold text-ink">
                       {fmt(l.value, m)}
@@ -102,7 +121,7 @@ export default function CountriesView() {
                     <span className="hidden sm:block">
                       <Sparkline points={pts} colour={theme.series[0]} width={110} height={28} label={`${m.label} trend for ${countryName(ds, ct.iso3)}`} />
                     </span>
-                  </button>
+                  </div>
                 );
               })}
             </div>

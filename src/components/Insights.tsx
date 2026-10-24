@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Insight, InsightKind } from '../lib/insights';
 import { openIndicator, useApp } from '../lib/context';
 import { countryName } from '../lib/data';
+import { SourceLine, refOf, type SourceRef } from './ChartCard';
 
 const KIND: Record<InsightKind, { label: string; icon: string; colour: string }> = {
   progress: { label: 'Progress', icon: '▲', colour: 'var(--good)' },
@@ -10,6 +11,14 @@ const KIND: Record<InsightKind, { label: string; icon: string; colour: string }>
   finance: { label: 'Finance', icon: '$', colour: 'var(--brand)' },
   note: { label: 'Note', icon: 'i', colour: 'var(--ink-2)' },
 };
+
+function insightSources(ds: ReturnType<typeof useApp>['ds'], ins: Insight): SourceRef[] {
+  const refs: SourceRef[] = ins.indicators.map((id) => ds.catalogue.find((m) => m.id === id)).filter((m): m is NonNullable<typeof m> => Boolean(m)).map(refOf);
+  if (ins.id === 'energy-poverty') refs.push({ label: '2026 global MPI, Table 1', name: 'UNDP and OPHI, 2026 Global Multidimensional Poverty Index', url: ds.static.mpi.sourceUrl });
+  if (ins.id === 'graduation') refs.push({ label: 'Income group, FY2027', name: 'World Bank country and lending groups', url: ds.static.income.sourceUrl });
+  if (ins.id === 'decoupling' || ins.id === 'access-gap') refs.push(refOf(ds.catalogue.find((m) => m.id === (ins.id === 'decoupling' ? 'aux_gdp' : 'aux_pop'))!));
+  return refs;
+}
 
 export function InsightCard({ ins, compact = false }: { ins: Insight; compact?: boolean }) {
   const c = useApp();
@@ -37,6 +46,7 @@ export function InsightCard({ ins, compact = false }: { ins: Insight; compact?: 
           ))}
         </dl>
       )}
+      <SourceLine refs={insightSources(c.ds, ins)} />
       <div className="mt-auto flex flex-wrap gap-2 pt-1">
         <button className="btn btn-primary" onClick={() => openIndicator(c, ins.focus.indicator, ins.focus.countries, ins.focus.view, ins.focus.x, ins.focus.y)}>
           Show the evidence

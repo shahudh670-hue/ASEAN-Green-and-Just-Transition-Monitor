@@ -206,6 +206,25 @@ export default function RegionalPanel({ year }: { year: number | undefined }) {
   return (
     <div id="regional" className="grid grid-cols-1 gap-4 xl:grid-cols-12">
       <ChartCard
+        className="xl:col-span-5"
+        title="Ranking"
+        subtitle={agg ? `Dashed line: ASEAN ${agg.method === 'sum' ? 'total' : agg.method} (${agg.n} members reporting)` : 'Members with data in the selected year'}
+        meta={m}
+        table={csvTable}
+        fileStem={`ranking-${m.id}-${year}`}
+        onPng={() => barInst.current?.getDataURL({ pixelRatio: 2, backgroundColor: theme.surface })}
+      >
+        <EChart
+          option={barOption}
+          height={Math.max(240, rows.length * 36 + 40)}
+          onClick={onClick}
+          onHover={onHover}
+          onOut={() => c.setHovered(null)}
+          ariaLabel={`Ranking of members on ${m.label} in ${year}`}
+          instanceRef={(i) => (barInst.current = i)}
+        />
+      </ChartCard>
+      <ChartCard
         className="xl:col-span-7"
         title={`${m.label}, ${year ?? ''}`}
         subtitle={`${m.unit}. Drag to pan, scroll to zoom, click a country to highlight it everywhere.`}
@@ -224,24 +243,6 @@ export default function RegionalPanel({ year }: { year: number | undefined }) {
           instanceRef={(i) => (mapInst.current = i)}
         />
         {missing.length > 0 && <p className="mt-1 text-xs text-ink-3">Hatched or absent: no {year} data for {missing.join(', ')}.</p>}
-      </ChartCard>
-      <ChartCard
-        className="xl:col-span-5"
-        title="Ranking"
-        subtitle={agg ? `Dashed line: ASEAN ${agg.method === 'sum' ? 'total' : agg.method} (${agg.n} members reporting)` : 'Members with data in the selected year'}
-        table={csvTable}
-        fileStem={`ranking-${m.id}-${year}`}
-        onPng={() => barInst.current?.getDataURL({ pixelRatio: 2, backgroundColor: theme.surface })}
-      >
-        <EChart
-          option={barOption}
-          height={Math.max(240, rows.length * 36 + 40)}
-          onClick={onClick}
-          onHover={onHover}
-          onOut={() => c.setHovered(null)}
-          ariaLabel={`Ranking of members on ${m.label} in ${year}`}
-          instanceRef={(i) => (barInst.current = i)}
-        />
       </ChartCard>
     </div>
   );

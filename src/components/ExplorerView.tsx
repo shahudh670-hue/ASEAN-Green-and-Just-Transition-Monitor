@@ -1,6 +1,6 @@
 import { useMemo, useRef } from 'react';
 import EChart, { echarts } from './EChart';
-import ChartCard from './ChartCard';
+import ChartCard, { refOf } from './ChartCard';
 import { YearSlider } from './Controls';
 import { CountryPicker } from './Controls';
 import { allYears, countryName, median, meta, value, visibleIndicators } from '../lib/data';
@@ -259,6 +259,7 @@ export default function ExplorerView() {
         title={`${my.label} against ${mx.label}, ${year ?? ''}`}
         subtitle={`${points.length} members with data. ${r !== undefined ? `Correlation across members: r = ${fmt(r, { decimals: 2 })}${logx || logy ? ' (on the log scale shown)' : ''}. With ${points.length} countries, treat this as descriptive only.` : ''}`}
         table={table}
+        sources={[refOf(mx), refOf(my), ...(ex.size === 'none' ? [] : [refOf(meta(ds, ex.size === 'pop' ? 'aux_pop' : 'aux_gdp'))]), { label: 'Income group, FY2027', name: 'World Bank country and lending groups', url: income.sourceUrl }]}
         fileStem={`explorer-${ex.x}-${ex.y}-${year}`}
         onPng={() => inst.current?.getDataURL({ pixelRatio: 2, backgroundColor: theme.surface })}
       >

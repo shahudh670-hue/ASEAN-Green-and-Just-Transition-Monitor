@@ -1,6 +1,7 @@
 import { aggregate, aggregateSeries, defaultYear, meta, visibleIndicators } from '../lib/data';
 import { useApp } from '../lib/context';
 import { fmt, fmtSigned } from '../lib/format';
+import { SourceLine, refOf } from './ChartCard';
 import type { IndicatorMeta } from '../lib/types';
 
 export function Sparkline({ points, colour, width = 120, height = 32, label }: { points: [number, number][]; colour: string; width?: number; height?: number; label: string }) {
@@ -51,16 +52,19 @@ export default function KpiStrip() {
       {inds.map((ind) => {
         const m = meta(c.ds, ind.id);
         const y = defaultYear(c.ds, ind.id);
-        const now = y ? aggregate(c.ds, ind.id, y) : undefined;
-        const then = y ? aggregate(c.ds, ind.id, y - 5) : undefined;
+        const now = y ? aggregate(c.ds, ind.id, y, 'median') : undefined;
+        const then = y ? aggregate(c.ds, ind.id, y - 5, 'median') : undefined;
         const diff = now && then ? now.value - then.value : undefined;
-        const spark = aggregateSeries(c.ds, ind.id, 'weighted').filter(([yy]) => yy >= 2000);
+        const spark = aggregateSeries(c.ds, ind.id, 'median').filter(([yy]) => yy >= 2000);
         const active = c.state.indicator === ind.id;
         return (
-          <button
+          <div
             key={ind.id}
+            role="button"
+            tabIndex={0}
             onClick={() => c.set({ indicator: ind.id, year: null })}
-            className={`card flex flex-col gap-1 p-4 text-left transition-shadow hover:shadow-card ${active ? 'ring-2 ring-brand' : ''}`}
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), c.set({ indicator: ind.id, year: null }))}
+            className={`card flex cursor-pointer flex-col gap-1 p-4 text-left transition-shadow hover:shadow-card ${active ? 'ring-2 ring-brand' : ''}`}
             aria-pressed={active}
           >
             <span className="text-sm font-semibold text-ink-2">{m.label}</span>
@@ -72,11 +76,12 @@ export default function KpiStrip() {
               <Sparkline points={spark} colour={c.theme.series[0]} label={`ASEAN trend for ${m.label}`} />
             </span>
             <span className="text-xs text-ink-3">
-              ASEAN {now?.method === 'sum' ? 'total' : now?.method === 'median' ? 'median' : `${now?.method ?? ''} average`}, {y ?? 'n/a'}
+              ASEAN median, {y ?? 'n/a'}
               {now ? `, ${now.n} of ${c.ds.meta.countries.length} members` : ''}
             </span>
             <DeltaText m={m} diff={diff} suffix={m.unitShort === '%' || m.unitShort?.startsWith('%') ? ' pp over 5 years' : ' over 5 years'} />
-          </button>
+            <SourceLine className="mt-1" refs={[refOf(m)]} />
+          </div>
         );
       })}
     </div>

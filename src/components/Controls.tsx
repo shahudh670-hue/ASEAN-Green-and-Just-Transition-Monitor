@@ -126,8 +126,8 @@ export default function Controls({ year, years }: { year: number | undefined; ye
         <label className="flex flex-col gap-1">
           <span className="eyebrow">ASEAN figure</span>
           <select className="select" value={c.state.agg} onChange={(e) => c.set({ agg: e.target.value as typeof c.state.agg })}>
-            <option value="weighted">{m.agg === 'sum' ? 'Regional total' : m.agg === 'none' ? 'Median' : `${m.agg === 'gdp' ? 'GDP' : 'Population'}-weighted average`}</option>
             <option value="median">Median member</option>
+            {m.agg !== 'none' && <option value="weighted">{m.agg === 'sum' ? 'Regional total' : `${m.agg === 'gdp' ? 'GDP' : 'Population'}-weighted average`}</option>}
             <option value="off">Hide</option>
           </select>
         </label>

@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react';
 import EChart, { echarts } from './EChart';
-import ChartCard, { type TableData } from './ChartCard';
+import ChartCard, { refOf, type SourceRef, type TableData } from './ChartCard';
+import { meta } from '../lib/data';
 import { countryName, latest, projectionStart, value } from '../lib/data';
 import { useApp } from '../lib/context';
 import { fmt } from '../lib/format';
@@ -16,6 +17,7 @@ interface Bars {
   max?: number;
   note?: string;
   labels?: (string | null)[];
+  sources: SourceRef[];
 }
 
 function BarCard(b: Bars) {
@@ -89,7 +91,7 @@ function BarCard(b: Bars) {
     rows: b.categories.map((iso, i) => [countryName(ds, iso, false) + (b.labels?.[i] ? ` (${b.labels[i]})` : ''), ...b.series.map((s) => (s.data[i] === null ? '' : fmt(s.data[i]!, { decimals: b.decimals })))]),
   };
   return (
-    <ChartCard title={b.title} subtitle={b.subtitle} table={table} fileStem={b.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')} onPng={() => inst.current?.getDataURL({ pixelRatio: 2, backgroundColor: theme.surface })}>
+    <ChartCard title={b.title} subtitle={b.subtitle} sources={b.sources} table={table} fileStem={b.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')} onPng={() => inst.current?.getDataURL({ pixelRatio: 2, backgroundColor: theme.surface })}>
       <div className="mb-2 flex flex-wrap gap-x-4 gap-y-1 text-sm text-ink-2" aria-label="Legend">
         {b.series.map((s) => (
           <span key={s.name} className="flex items-center gap-1.5">
@@ -177,6 +179,7 @@ function MpiCards() {
           { name: 'Multidimensionally poor', colour: theme.series[0], data: isos.map((i) => mpi.rows[i].headcount) },
           { name: 'In severe poverty', colour: theme.series[1], data: isos.map((i) => mpi.rows[i].severe) },
         ]}
+        sources={[{ label: '2026 global MPI, Table 1', name: 'UNDP and OPHI, 2026 Global Multidimensional Poverty Index', url: mpi.sourceUrl }]}
         note={`Not covered: ${mpi.notCovered.map((i) => countryName(ds, i)).join(', ')}. Survey years range from ${[...labels].sort()[0]} to ${[...labels].sort().slice(-1)[0]}.`}
       />
       <BarCard
@@ -193,7 +196,7 @@ function MpiCards() {
           { name: 'Education', colour: theme.series[1], data: isos.map((i) => mpi.rows[i].education) },
           { name: 'Living standards', colour: theme.series[2], data: isos.map((i) => mpi.rows[i].living) },
         ]}
-        note="Source: UNDP and OPHI, 2026 Global Multidimensional Poverty Index, Table 1."
+        sources={[{ label: '2026 global MPI, Table 1', name: 'UNDP and OPHI, 2026 Global Multidimensional Poverty Index', url: mpi.sourceUrl }]}
       />
     </div>
   );
@@ -229,7 +232,7 @@ export default function PillarDetail() {
           { name: `${end - 4} to ${end}`, colour: theme.series[0], data: rows.map((r) => r.now) },
           { name: `${end - 9} to ${end - 5}`, colour: theme.series[1], data: rows.map((r) => r.prev) },
         ]}
-        note="Source: OECD and IRENA, SDG indicator 7.a.1, via the UN SDG Global Database."
+        sources={[refOf(meta(ds, 'sdg7a1'))]}
       />
     );
   }
@@ -251,7 +254,7 @@ export default function PillarDetail() {
           { name: 'Revenue', colour: theme.series[0], data: rows.map((r) => r.rev?.value ?? null) },
           { name: 'Expenditure', colour: theme.series[1], data: rows.map((r) => r.exp?.value ?? null) },
         ]}
-        note="Source: IMF Fiscal Monitor."
+        sources={[refOf(meta(ds, 'gg_rev')), refOf(meta(ds, 'gg_exp'))]}
       />
     );
   }
@@ -286,7 +289,8 @@ export default function PillarDetail() {
           { name: 'Short-term', colour: theme.series[2], data: rows.map((r) => r.st) },
           { name: 'IMF credit and other', colour: theme.mode === 'dark' ? '#6b6a64' : '#a9a8a1', data: rows.map((r) => r.other) },
         ]}
-        note="Source: World Bank International Debt Statistics. Shares derived from stock values in current US$."
+        sources={[refOf(meta(ds, 'ext_ppg_share')), refOf(meta(ds, 'ext_png_share')), refOf(meta(ds, 'ext_st_share')), refOf(meta(ds, 'aux_ext_total'))]}
+        note="Shares derived from external debt stocks in current US$."
       />
     );
   }
@@ -314,7 +318,8 @@ export default function PillarDetail() {
           { name: 'From banks', colour: theme.series[0], data: rows.map((r) => r.bank) },
           { name: 'From other financial institutions', colour: theme.series[1], data: rows.map((r) => r.nonbank) },
         ]}
-        note="Source: IMF International Financial Statistics, via World Development Indicators. Non-bank credit is total private credit minus bank credit."
+        sources={[refOf(meta(ds, 'priv_credit')), refOf(meta(ds, 'bank_credit'))]}
+        note="Non-bank credit is total private credit minus bank credit."
       />
     );
   }
@@ -333,7 +338,7 @@ export default function PillarDetail() {
         unit="US$ million"
         decimals={0}
         series={[{ name: 'Net ODA received', colour: theme.series[0], data: rows.map((r) => r.l!.value / 1e6) }]}
-        note="Source: OECD Development Assistance Committee, via World Development Indicators."
+        sources={[refOf(meta(ds, 'aux_oda_usd'))]}
       />
     );
   }

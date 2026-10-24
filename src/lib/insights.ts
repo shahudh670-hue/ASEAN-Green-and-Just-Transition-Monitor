@@ -92,8 +92,8 @@ function decarbonisation(ds: Dataset): Insight[] {
   if (rows.length < 4) return [];
   rows.sort((a, b) => a.ch.cagr! - b.ch.cagr!);
   const end = Math.max(...rows.map((r) => r.ch.endYear));
-  const aggEnd = aggregate(ds, 'co2_intensity', end);
-  const aggStart = aggregate(ds, 'co2_intensity', end - SPAN);
+  const aggEnd = aggregate(ds, 'co2_intensity', end, 'median');
+  const aggStart = aggregate(ds, 'co2_intensity', end - SPAN, 'median');
   const regional = aggEnd && aggStart ? cagr(aggStart.value, aggEnd.value, SPAN) : undefined;
   const rising = rows.filter((r) => r.ch.cagr! > 0);
   const fastest = rows.slice(0, 2);
@@ -102,7 +102,7 @@ function decarbonisation(ds: Dataset): Insight[] {
       id: 'co2-pace',
       pillar: 'transition',
       kind: rising.length ? 'risk' : 'progress',
-      title: regional !== undefined ? `Regional carbon intensity is changing by ${fmtSigned(regional, 1, '%')} a year` : 'Carbon intensity of growth',
+      title: regional !== undefined ? `Median carbon intensity in ASEAN is changing by ${fmtSigned(regional, 1, '%')} a year` : 'Carbon intensity of growth',
       body:
         `${names(ds, fastest.map((f) => f.iso))} cut the carbon intensity of their GDP fastest over the five years to ${end} ` +
         `(${fastest.map((f) => fmtSigned(f.ch.cagr, 1, '% a year')).join(' and ')}). ` +

@@ -30,7 +30,7 @@ export const initialState: AppState = {
   indicator: 're_share',
   year: null,
   focus: [],
-  agg: 'weighted',
+  agg: 'median',
   rebase: false,
   proj: false,
   from: 2000,
@@ -74,7 +74,7 @@ function encode(s: AppState): string {
   p.set('i', s.indicator);
   if (s.year) p.set('y', String(s.year));
   if (s.focus.length) p.set('f', s.focus.map((f) => `${f.iso}:${f.slot}`).join(','));
-  if (s.agg !== 'weighted') p.set('a', s.agg);
+  if (s.agg !== 'median') p.set('a', s.agg);
   if (s.rebase) p.set('r', '1');
   if (s.proj) p.set('pr', '1');
   if (s.from !== 2000) p.set('fr', String(s.from));
@@ -107,7 +107,7 @@ function decode(hash: string): Partial<AppState> {
     indicator: p.get('i') || initialState.indicator,
     year: num('y'),
     focus,
-    agg: (p.get('a') as Agg) || 'weighted',
+    agg: (p.get('a') as Agg) || 'median',
     rebase: p.get('r') === '1',
     proj: p.get('pr') === '1',
     from: num('fr') ?? 2000,

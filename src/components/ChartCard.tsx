@@ -1,6 +1,42 @@
 import { useState, type ReactNode } from 'react';
 import type { IndicatorMeta } from '../lib/types';
 
+export interface SourceRef {
+  label: string;
+  name: string;
+  url: string;
+  code?: string;
+}
+
+export const refOf = (m: IndicatorMeta): SourceRef => ({ label: m.label, name: m.sourceName, url: m.sourceUrl, code: m.code });
+
+/** Visible indicator and source attribution, shown under every chart and box. */
+export function SourceLine({ refs, className = '' }: { refs: SourceRef[]; className?: string }) {
+  if (!refs.length) return null;
+  const bySource = refs.filter((r, i) => refs.findIndex((x) => x.url === r.url) === i);
+  return (
+    <p className={`text-xs leading-relaxed text-ink-3 ${className}`}>
+      <span className="font-semibold text-ink-2">{refs.length > 1 ? 'Indicators' : 'Indicator'}:</span>{' '}
+      {refs.map((r, i) => (
+        <span key={r.label + i}>
+          {r.label}
+          {r.code ? ` (${r.code})` : ''}
+          {i < refs.length - 1 ? '; ' : '. '}
+        </span>
+      ))}
+      <span className="font-semibold text-ink-2">Source:</span>{' '}
+      {bySource.map((r, i) => (
+        <span key={r.url}>
+          <a className="text-brand underline underline-offset-2" href={r.url} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+            {r.name}
+          </a>
+          {i < bySource.length - 1 ? '; ' : '.'}
+        </span>
+      ))}
+    </p>
+  );
+}
+
 export interface TableData {
   columns: string[];
   rows: (string | number)[][];
@@ -27,6 +63,7 @@ interface Props {
   title: string;
   subtitle?: string;
   meta?: IndicatorMeta;
+  sources?: SourceRef[];
   table?: TableData;
   fileStem?: string;
   onPng?: () => string | undefined;
@@ -35,7 +72,7 @@ interface Props {
   className?: string;
 }
 
-export default function ChartCard({ title, subtitle, meta, table, fileStem = 'chart', onPng, actions, children, className = '' }: Props) {
+export default function ChartCard({ title, subtitle, meta, sources, table, fileStem = 'chart', onPng, actions, children, className = '' }: Props) {
   const [view, setView] = useState<'chart' | 'table'>('chart');
   const [info, setInfo] = useState(false);
   return (
@@ -84,8 +121,8 @@ export default function ChartCard({ title, subtitle, meta, table, fileStem = 'ch
             </button>
           )}
           {meta && (
-            <button className="btn" aria-expanded={info} onClick={() => setInfo((x) => !x)} title="About this indicator">
-              Source
+            <button className="btn" aria-expanded={info} onClick={() => setInfo((x) => !x)} title="Definition and notes">
+              About
             </button>
           )}
         </div>
@@ -130,6 +167,7 @@ export default function ChartCard({ title, subtitle, meta, table, fileStem = 'ch
           </table>
         </div>
       )}
+      <SourceLine className="mt-3 border-t border-line pt-2" refs={sources ?? (meta ? [refOf(meta)] : [])} />
     </section>
   );
 }
