@@ -1,0 +1,9 @@
+{
+  "note": "Pages that refuse automated requests from the monthly refresh (they answer 403 or 404 to scripts) but open normally in a browser. Each was opened by hand on the date shown.",
+  "checked": {
+    "https://www.oecd.org/en/data/dashboards/development-finance-for-climate.html": "2026-10-24",
+    "https://www.oecd.org/en/data/dashboards/mobilisation-of-private-finance-for-development/recipient-perspective.html": "2026-10-24",
+    "https://aseanenergy.org/wp-content/uploads/2025/10/APAEC-2026-2030.pdf": "2026-10-24",
+    "https://aseanenergy.org/press-release/asean-ministers-endorse-apaec-2026-2030-to-advance-regional-energy-cooperation": "2026-10-24"
+  }
+}

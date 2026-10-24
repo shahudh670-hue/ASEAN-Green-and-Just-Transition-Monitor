@@ -33,6 +33,7 @@ const MPI2026 = JSON.parse(readFileSync(resolve(ROOT, 'config/static/mpi2026.jso
 const SUBREGIONAL = JSON.parse(readFileSync(resolve(ROOT, 'config/static/subregional.json'), 'utf8'));
 const POVREFS = JSON.parse(readFileSync(resolve(ROOT, 'config/static/poverty-refs.json'), 'utf8'));
 const REFS = JSON.parse(readFileSync(resolve(ROOT, 'config/reference-checks.json'), 'utf8'));
+const MANUAL_LINKS = JSON.parse(readFileSync(resolve(ROOT, 'config/manual-link-checks.json'), 'utf8')).checked;
 const OUT_DIR = resolve(ROOT, 'public/data');
 const OUT_JSON = resolve(OUT_DIR, 'data.json');
 
@@ -371,7 +372,8 @@ async function main() {
       }
     }),
   );
-  links.forEach((l) => log(`link ${l.ok ? 'ok  ' : 'FAIL'} ${l.status} ${l.url}`));
+  for (const l of links) if (!l.ok && MANUAL_LINKS[l.url]) l.manualCheck = MANUAL_LINKS[l.url];
+  links.forEach((l) => log(`link ${l.ok ? 'ok  ' : l.manualCheck ? 'BOT ' : 'FAIL'} ${l.status} ${l.url}`));
 
   const total = Object.values(indicators).reduce((s, i) => s + Object.values(i.values || {}).reduce((t, o) => t + Object.keys(o).length, 0), 0);
   if (total === 0) throw new Error('No data assembled from any source.');

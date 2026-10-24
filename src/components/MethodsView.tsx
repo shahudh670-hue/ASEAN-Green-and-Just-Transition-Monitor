@@ -274,8 +274,10 @@ export default function MethodsView() {
         )}
         {ds.meta.links && (
           <p className="mt-2 text-[15px] text-ink-2">
-            Source links: {ds.meta.links.filter((l) => l.ok).length} of {ds.meta.links.length} responded normally on the latest refresh.
-            {ds.meta.links.some((l) => !l.ok) && ` Not reachable: ${ds.meta.links.filter((l) => !l.ok).map((l) => l.url).join(', ')}.`}
+            Source links: {ds.meta.links.filter((l) => l.ok).length} of {ds.meta.links.length} responded normally to the automated check on the latest refresh.
+            {ds.meta.links.some((l) => !l.ok && l.manualCheck) &&
+              ` ${ds.meta.links.filter((l) => !l.ok && l.manualCheck).length} more refuse automated requests but open normally in a browser; they were last checked by hand on ${[...new Set(ds.meta.links.filter((l) => l.manualCheck).map((l) => l.manualCheck))].join(', ')}.`}
+            {ds.meta.links.some((l) => !l.ok && !l.manualCheck) && ` Not reachable: ${ds.meta.links.filter((l) => !l.ok && !l.manualCheck).map((l) => l.url).join(', ')}.`}
           </p>
         )}
       </section>

@@ -66,7 +66,7 @@ export interface Dataset {
     testFixture?: boolean;
     status: { id: string; ok: boolean; observations?: number; error?: string; keptPrevious?: boolean; derived?: boolean }[];
     checks: { id: string; iso3: string; year: number; value: number; tolerance: number; got: number | null; ok: boolean }[];
-    links?: { url: string; status: number; ok: boolean; error?: string }[];
+    links?: { url: string; status: number; ok: boolean; error?: string; manualCheck?: string }[];
     countries: Country[];
     pillars: Pillar[];
   };

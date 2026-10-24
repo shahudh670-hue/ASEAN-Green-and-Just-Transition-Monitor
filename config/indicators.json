@@ -363,7 +363,7 @@
       "agg": "sum",
       "description": "Green bonds issued by sovereigns, corporates and financial institutions domiciled in the country.",
       "sourceName": "IMF Climate Change Indicators Dashboard (Refinitiv; country authorities; IMF staff)",
-      "sourceUrl": "https://climatedata.imf.org/datasets/8e2772e0b65f4e33a80183ce9583d062",
+      "sourceUrl": "https://climatedata.imf.org/pages/fi-indicators",
       "caveat": "The IMF table lists issuers only; members with no recorded issuance in a year are shown as zero."
     },
     {
@@ -379,7 +379,7 @@
       "agg": "sum",
       "description": "All labelled sustainable bonds issued by entities domiciled in the country.",
       "sourceName": "IMF Climate Change Indicators Dashboard (Refinitiv; country authorities; IMF staff)",
-      "sourceUrl": "https://climatedata.imf.org/datasets/8e2772e0b65f4e33a80183ce9583d062",
+      "sourceUrl": "https://climatedata.imf.org/pages/fi-indicators",
       "caveat": "Members with no recorded issuance in a year are shown as zero."
     },
     {

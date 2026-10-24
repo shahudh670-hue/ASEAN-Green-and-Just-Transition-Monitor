@@ -306,31 +306,71 @@ export function makeExtra({ CONFIG, ISO, put, parseCSV, log }) {
     if (c === 'DS') return 'solar';
     return null;
   };
+  /** One member's energy records as {c, t, y, v, cf}; tries the documented CSV, the CSV media type, then SDMX-ML. */
+  async function unsdRecords(area, firstYear) {
+    const key = `A.${area}..GA+01+03+04/ALL/?startPeriod=${firstYear}`;
+    const root = 'https://data.un.org/ws/rest/data/UNSD,DF_UNDATA_ENERGY,1.2';
+    const attempts = [
+      ['csv', `${root}/${key}&format=csv`, {}],
+      ['csv', `${UNSD_API}/${key}`, { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0' }],
+      ['xml', `${root}/${key}`, { Accept: 'application/vnd.sdmx.genericdata+xml;version=2.1' }],
+    ];
+    const errors = [];
+    for (const [kind, url, headers] of attempts) {
+      try {
+        const text = await download(url, { as: 'text', timeout: 120_000, headers, tries: 2 });
+        if (kind === 'csv' && !text.trimStart().startsWith('<')) {
+          const [header, ...rows] = parseCSV(text);
+          const col = (n) => header.indexOf(n);
+          const [cC, cT, cY, cV, cF] = ['COMMODITY', 'TRANSACTION', 'TIME_PERIOD', 'OBS_VALUE', 'CONVERSION_FACTOR'].map(col);
+          if ([cC, cT, cY, cV].some((x) => x < 0)) throw new Error('unexpected columns');
+          return rows.map((r) => ({ c: r[cC], t: r[cT], y: r[cY], v: num(r[cV]), cf: num(r[cF]) }));
+        }
+        const out = [];
+        for (const s of text.matchAll(/<generic:Series>([\s\S]*?)<\/generic:Series>/g)) {
+          const keyPart = s[1].match(/<generic:SeriesKey>([\s\S]*?)<\/generic:SeriesKey>/)?.[1] ?? '';
+          const dim = Object.fromEntries([...keyPart.matchAll(/id="(\w+)" value="([^"]*)"/g)].map((m) => [m[1], m[2]]));
+          for (const o of s[1].matchAll(/<generic:Obs>([\s\S]*?)<\/generic:Obs>/g)) {
+            const y = o[1].match(/<generic:ObsDimension id="TIME_PERIOD" value="(\d{4})"/)?.[1];
+            const v = num(o[1].match(/<generic:ObsValue value="([^"]*)"/)?.[1]);
+            const cf = num(o[1].match(/id="CONVERSION_FACTOR" value="([^"]*)"/)?.[1]);
+            if (y) out.push({ c: dim.COMMODITY, t: dim.TRANSACTION, y, v, cf });
+          }
+        }
+        if (!out.length) throw new Error('no observations in SDMX-ML');
+        return out;
+      } catch (e) {
+        errors.push(`${kind}: ${String(e.message).replace(/https?:\/\/\S+ -> /, '')}`);
+      }
+    }
+    throw new Error(errors.join('; '));
+  }
+
   async function fetchEnergyMix() {
     const tes = {};
     const elec = {};
     const net = {};
+    const failed = [];
     const firstYear = 2000;
     for (const ct of CONFIG.countries) {
       const area = String(ct.m49).padStart(3, '0');
-      const text = await download(`${UNSD_API}/A.${area}..GA+01+03+04/ALL/?startPeriod=${firstYear}`, {
-        as: 'text',
-        timeout: 120_000,
-        headers: { Accept: 'application/vnd.sdmx.data+csv;version=1.0.0' },
-      });
-      const [header, ...rows] = parseCSV(text);
-      const col = (n) => header.indexOf(n);
-      const [cC, cT, cY, cV, cF] = ['COMMODITY', 'TRANSACTION', 'TIME_PERIOD', 'OBS_VALUE', 'CONVERSION_FACTOR'].map(col);
-      if ([cC, cT, cY, cV].some((x) => x < 0)) throw new Error('UNSD: unexpected columns');
+      let records;
+      try {
+        records = await unsdRecords(area, firstYear);
+      } catch (e) {
+        failed.push(`${ct.iso3} (${e.message})`);
+        log(`unsd ${ct.iso3} FAILED ${e.message}`);
+        continue;
+      }
       const byYear = {};
-      for (const r of rows) {
-        const y = r[cY];
-        const v = num(r[cV]);
+      for (const r of records) {
+        const y = r.y;
+        const v = r.v;
         if (!Number.isFinite(v)) continue;
-        const tj = v * (num(r[cF]) || 1);
+        const tj = v * (r.cf || 1);
         const rec = (byYear[y] ??= { GA: {}, P: {}, IM: 0, EX: 0, gwh: {} });
-        const c = r[cC];
-        const t = r[cT];
+        const c = r.c;
+        const t = r.t;
         if (t === 'GA') rec.GA[c] = tj;
         else if (t === '01') {
           rec.P[c] = tj;
@@ -379,13 +419,14 @@ export function makeExtra({ CONFIG, ISO, put, parseCSV, log }) {
       }
       log(`unsd ${ct.iso3}: ${Object.keys(tes[ct.iso3] ?? {}).length} supply years, ${Object.keys(elec[ct.iso3] ?? {}).length} electricity years`);
     }
-    if (Object.keys(tes).length < 8) throw new Error(`UNSD: supply mix for only ${Object.keys(tes).length} members`);
+    if (Object.keys(tes).length < 8) throw new Error(`UNSD: supply mix for only ${Object.keys(tes).length} members. ${failed.join(' | ')}`.slice(0, 900));
     return {
       source: 'UN Statistics Division, Energy Statistics Database (SDMX dataflow DF_UNDATA_ENERGY)',
       sourceUrl: 'https://unstats.un.org/unsd/energystats/api/',
       dataUrl: 'https://data.un.org/Data.aspx?d=EDATA&f=cmID%3aEL',
       note:
         'Total energy supply is built from the UNSD commodity data: primary products at their total energy supply, secondary products (oil and coal products, charcoal) at net trade only, and hydro, solar and wind electricity at their output (physical energy content method); geothermal includes heat used to generate power. Shares exclude net electricity trade, which is reported separately. Electricity generation is gross production; combustible fuels include coal, oil, gas and bioenergy.',
+      missing: failed.map((f) => f.slice(0, 3)),
       tes,
       netElectricityTrade: net,
       electricity: elec,
