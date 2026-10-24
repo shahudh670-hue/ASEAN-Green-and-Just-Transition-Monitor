@@ -1,0 +1,58 @@
+{
+  "note": "Survey regions are matched to the member territories each framework lists. Where a survey region is wider than the framework area, it is marked partial.",
+  "frameworks": [
+    {
+      "id": "clv",
+      "name": "Cambodia-Laos-Viet Nam Development Triangle Area",
+      "short": "CLV Development Triangle",
+      "members": "Stung Treng, Ratanakiri, Mondulkiri and Kratie (Cambodia); Sekong, Attapeu, Saravan and Champasak (Lao PDR); Kon Tum, Gia Lai, Dak Lak, Dak Nong and Binh Phuoc (Viet Nam)",
+      "sourceName": "Government of Viet Nam, Government News, CLV Development Triangle Area (9 December 2020)",
+      "sourceUrl": "https://en.baochinhphu.vn/infographic-cambodia-laos-viet-nam-development-triangle-area-11139950.htm",
+      "regions": {
+        "KHM|Stung Treng": "full",
+        "KHM|Ratanak Kiri": "full",
+        "KHM|Mondul Kiri": "full",
+        "KHM|Kratie": "full",
+        "LAO|Sekong": "full",
+        "LAO|Attapeu": "full",
+        "LAO|Saravane": "full",
+        "LAO|Champasack": "full",
+        "VNM|Central Highlands": "partial"
+      },
+      "partialNote": "Viet Nam's MICS reports the Central Highlands as one region, which contains four of the five Vietnamese provinces in the area plus Lam Dong; Binh Phuoc sits in the Southeast region."
+    },
+    {
+      "id": "bimp",
+      "name": "Brunei Darussalam-Indonesia-Malaysia-Philippines East ASEAN Growth Area",
+      "short": "BIMP-EAGA",
+      "members": "Brunei Darussalam; the provinces of Kalimantan and Sulawesi, Maluku and Papua (Indonesia); Sabah, Sarawak and Labuan (Malaysia); Mindanao and Palawan (Philippines)",
+      "sourceName": "BIMP-EAGA, member countries",
+      "sourceUrl": "https://www.bimp-eaga.asia/countries",
+      "regions": {
+        "IDN|West Kalimantan": "full",
+        "IDN|Central Kalimantan": "full",
+        "IDN|South Kalimantan": "full",
+        "IDN|East Kalimantan": "full",
+        "IDN|North Kalimantan": "full",
+        "IDN|North Sulawesi": "full",
+        "IDN|Gorontalo": "full",
+        "IDN|Central Sulawesi": "full",
+        "IDN|West Sulawesi": "full",
+        "IDN|South Sulawesi": "full",
+        "IDN|Southeast Sulawesi": "full",
+        "IDN|Maluku": "full",
+        "IDN|North Maluku": "full",
+        "IDN|Papua": "full",
+        "IDN|West Papua": "full",
+        "PHL|Zamboanga Peninsula": "full",
+        "PHL|Northern Mindanao": "full",
+        "PHL|Davao": "full",
+        "PHL|Soccsksargen": "full",
+        "PHL|Caraga": "full",
+        "PHL|ARMM": "full",
+        "PHL|Mimaropa": "partial"
+      },
+      "partialNote": "The Philippine survey reports Mimaropa as one region; only its Palawan province is in the growth area. Brunei Darussalam and the Malaysian states are not covered by the global MPI."
+    }
+  ]
+}

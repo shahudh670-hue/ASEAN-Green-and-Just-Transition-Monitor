@@ -157,6 +157,21 @@
       "sourceUrl": "https://data.worldbank.org/indicator/EG.ELC.ACCS.ZS"
     },
     {
+      "id": "clean_cooking",
+      "source": "wb",
+      "code": "EG.CFT.ACCS.ZS",
+      "pillar": "transition",
+      "label": "Access to clean cooking",
+      "unit": "% of population",
+      "unitShort": "%",
+      "decimals": 1,
+      "polarity": "higher",
+      "agg": "pop",
+      "description": "Share of the population relying primarily on clean fuels and technologies for cooking (SDG 7.1.2). Modelled by WHO from household surveys.",
+      "sourceName": "Tracking SDG7 (WHO), via World Development Indicators",
+      "sourceUrl": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS"
+    },
+    {
       "id": "fdi",
       "source": "wb",
       "code": "BX.KLT.DINV.WD.GD.ZS",

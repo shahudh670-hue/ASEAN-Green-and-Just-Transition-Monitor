@@ -1,0 +1,9208 @@
+{
+ "title": "2026 global Multidimensional Poverty Index, ASEAN members",
+ "publisher": "Oxford Poverty and Human Development Initiative (OPHI), University of Oxford, and UNDP Human Development Report Office",
+ "licence": "CC BY 4.0",
+ "pageUrl": "https://ophi.org.uk/publications/gMPI17-2026",
+ "hdroUrl": "https://hdr.undp.org/content/2026-global-multidimensional-poverty-index",
+ "citations": {
+  "national": "Alkire, S., Mishra, R. and Suppa, N. (2026). 'The global Multidimensional Poverty Index (MPI) 2026 country results and methodological note', OPHI MPI Methodological Note 64, OPHI, University of Oxford. Table 1.",
+  "regions": "Alkire, S., Mishra, R. and Suppa, N. (2026). 'The global Multidimensional Poverty Index (MPI) 2026: Disaggregation results and methodological note', OPHI MPI Methodological Note 65, OPHI, University of Oxford. Table 5.",
+  "changes": "Alkire, S., Mishra, R. and Suppa, N. (2026). 'A methodological note on the global Multidimensional Poverty Index (MPI) 2026: Changes over time results for 89 countries', OPHI MPI Methodological Note 66, OPHI, University of Oxford. Table 6.1."
+ },
+ "units": "mpi 0 to 1; headcount, intensity, vulnerable, severe, destitute, censored and raw in % of population; contributions in % of the MPI; population and poor in thousands. poor2024 applies the survey headcount to the 2024 population.",
+ "indicators": [
+  "nutrition",
+  "child_mortality",
+  "schooling",
+  "attendance",
+  "cooking",
+  "sanitation",
+  "water",
+  "electricity",
+  "housing",
+  "assets"
+ ],
+ "notCovered": [
+  "BRN",
+  "MYS",
+  "SGP"
+ ],
+ "national": {
+  "THA": {
+   "survey": "MICS",
+   "year": "2022",
+   "mpi": 0.00182,
+   "headcount": 0.491,
+   "intensity": 37.01,
+   "vulnerable": 4.692,
+   "severe": 0.032,
+   "destitute": 0.142,
+   "popSurvey": 71735.3,
+   "pop2024": 71668.0,
+   "poorSurvey": 352.2,
+   "poor2024": 351.9,
+   "nIndicators": 10,
+   "missing": "",
+   "censored": {
+    "nutrition": 0.258,
+    "child_mortality": 0.083,
+    "schooling": 0.335,
+    "attendance": 0.254,
+    "cooking": 0.181,
+    "sanitation": 0.068,
+    "water": 0.023,
+    "electricity": 0.026,
+    "housing": 0.102,
+    "assets": 0.082
+   },
+   "contribDims": {
+    "health": 31.25,
+    "education": 54.01,
+    "living": 14.74
+   },
+   "contrib": {
+    "nutrition": 23.65,
+    "child_mortality": 7.59,
+    "schooling": 30.7,
+    "attendance": 23.31,
+    "cooking": 5.53,
+    "sanitation": 2.07,
+    "water": 0.71,
+    "electricity": 0.81,
+    "housing": 3.12,
+    "assets": 2.51
+   },
+   "raw": {
+    "nutrition": 2.838,
+    "child_mortality": 0.828,
+    "schooling": 10.477,
+    "attendance": 1.726,
+    "cooking": 13.932,
+    "sanitation": 1.776,
+    "water": 0.372,
+    "electricity": 0.063,
+    "housing": 2.199,
+    "assets": 1.134
+   }
+  },
+  "VNM": {
+   "survey": "MICS",
+   "year": "2020/2021",
+   "mpi": 0.00773,
+   "headcount": 1.919,
+   "intensity": 40.276,
+   "vulnerable": 3.473,
+   "severe": 0.35,
+   "destitute": 0.752,
+   "popSurvey": 98935.1,
+   "pop2024": 100987.7,
+   "poorSurvey": 1898.7,
+   "poor2024": 1938.1,
+   "nIndicators": 9,
+   "missing": "Nutrition",
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.53,
+    "schooling": 1.292,
+    "attendance": 0.597,
+    "cooking": 1.46,
+    "sanitation": 1.307,
+    "water": 0.458,
+    "electricity": 0.099,
+    "housing": 1.177,
+    "assets": 0.565
+   },
+   "contribDims": {
+    "health": 22.86,
+    "education": 40.74,
+    "living": 36.4
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 22.86,
+    "schooling": 27.86,
+    "attendance": 12.88,
+    "cooking": 10.5,
+    "sanitation": 9.39,
+    "water": 3.29,
+    "electricity": 0.71,
+    "housing": 8.46,
+    "assets": 4.06
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.53,
+    "schooling": 6.339,
+    "attendance": 1.993,
+    "cooking": 11.907,
+    "sanitation": 9.945,
+    "water": 2.084,
+    "electricity": 0.177,
+    "housing": 8.09,
+    "assets": 1.559
+   }
+  },
+  "IDN": {
+   "survey": "DHS",
+   "year": "2017",
+   "mpi": 0.01401,
+   "headcount": 3.619,
+   "intensity": 38.714,
+   "vulnerable": 4.744,
+   "severe": 0.444,
+   "destitute": 1.844,
+   "popSurvey": 267346.7,
+   "pop2024": 283487.9,
+   "poorSurvey": 9675.3,
+   "poor2024": 10259.4,
+   "nIndicators": 9,
+   "missing": "Nutrition",
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.46,
+    "schooling": 1.552,
+    "attendance": 0.699,
+    "cooking": 2.38,
+    "sanitation": 2.182,
+    "water": 1.351,
+    "electricity": 0.771,
+    "housing": 1.309,
+    "assets": 1.715
+   },
+   "contribDims": {
+    "health": 34.74,
+    "education": 26.77,
+    "living": 38.49
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 34.74,
+    "schooling": 18.46,
+    "attendance": 8.31,
+    "cooking": 9.44,
+    "sanitation": 8.65,
+    "water": 5.36,
+    "electricity": 3.06,
+    "housing": 5.19,
+    "assets": 6.8
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.46,
+    "schooling": 4.13,
+    "attendance": 2.605,
+    "cooking": 22.361,
+    "sanitation": 19.017,
+    "water": 13.92,
+    "electricity": 2.647,
+    "housing": 10.345,
+    "assets": 5.865
+   }
+  },
+  "PHL": {
+   "survey": "DHS",
+   "year": "2022",
+   "mpi": 0.01579,
+   "headcount": 3.887,
+   "intensity": 40.621,
+   "vulnerable": 5.243,
+   "severe": 0.687,
+   "destitute": 1.695,
+   "popSurvey": 113964.3,
+   "pop2024": 115843.7,
+   "poorSurvey": 4429.4,
+   "poor2024": 4502.4,
+   "nIndicators": 9,
+   "missing": "Nutrition",
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.167,
+    "schooling": 1.669,
+    "attendance": 1.427,
+    "cooking": 3.367,
+    "sanitation": 2.093,
+    "water": 0.799,
+    "electricity": 1.466,
+    "housing": 2.485,
+    "assets": 1.922
+   },
+   "contribDims": {
+    "health": 24.63,
+    "education": 32.68,
+    "living": 42.69
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 24.63,
+    "schooling": 17.62,
+    "attendance": 15.06,
+    "cooking": 11.85,
+    "sanitation": 7.37,
+    "water": 2.81,
+    "electricity": 5.16,
+    "housing": 8.74,
+    "assets": 6.76
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.167,
+    "schooling": 2.499,
+    "attendance": 4.091,
+    "cooking": 41.394,
+    "sanitation": 17.497,
+    "water": 4.094,
+    "electricity": 5.097,
+    "housing": 23.616,
+    "assets": 8.979
+   }
+  },
+  "KHM": {
+   "survey": "DHS",
+   "year": "2021/2022",
+   "mpi": 0.07037,
+   "headcount": 16.645,
+   "intensity": 42.276,
+   "vulnerable": 20.521,
+   "severe": 4.093,
+   "destitute": 4.336,
+   "popSurvey": 17201.7,
+   "pop2024": 17638.8,
+   "poorSurvey": 2863.2,
+   "poor2024": 2935.9,
+   "nIndicators": 10,
+   "missing": "",
+   "censored": {
+    "nutrition": 8.584,
+    "child_mortality": 0.509,
+    "schooling": 10.478,
+    "attendance": 9.77,
+    "cooking": 12.075,
+    "sanitation": 8.632,
+    "water": 5.038,
+    "electricity": 4.583,
+    "housing": 4.595,
+    "assets": 3.714
+   },
+   "contribDims": {
+    "health": 21.54,
+    "education": 47.96,
+    "living": 30.5
+   },
+   "contrib": {
+    "nutrition": 20.33,
+    "child_mortality": 1.21,
+    "schooling": 24.82,
+    "attendance": 23.14,
+    "cooking": 9.53,
+    "sanitation": 6.81,
+    "water": 3.98,
+    "electricity": 3.62,
+    "housing": 3.63,
+    "assets": 2.93
+   },
+   "raw": {
+    "nutrition": 19.307,
+    "child_mortality": 0.89,
+    "schooling": 18.182,
+    "attendance": 23.023,
+    "cooking": 48.987,
+    "sanitation": 20.954,
+    "water": 12.46,
+    "electricity": 7.948,
+    "housing": 12.302,
+    "assets": 6.8
+   }
+  },
+  "LAO": {
+   "survey": "MICS",
+   "year": "2023",
+   "mpi": 0.08249,
+   "headcount": 17.823,
+   "intensity": 46.281,
+   "vulnerable": 25.303,
+   "severe": 6.486,
+   "destitute": 5.771,
+   "popSurvey": 7665.0,
+   "pop2024": 7769.8,
+   "poorSurvey": 1366.1,
+   "poor2024": 1384.8,
+   "nIndicators": 10,
+   "missing": "",
+   "censored": {
+    "nutrition": 9.203,
+    "child_mortality": 1.092,
+    "schooling": 12.593,
+    "attendance": 9.557,
+    "cooking": 17.684,
+    "sanitation": 9.97,
+    "water": 7.682,
+    "electricity": 2.975,
+    "housing": 7.752,
+    "assets": 5.08
+   },
+   "contribDims": {
+    "health": 20.8,
+    "education": 44.75,
+    "living": 34.44
+   },
+   "contrib": {
+    "nutrition": 18.59,
+    "child_mortality": 2.21,
+    "schooling": 25.44,
+    "attendance": 19.31,
+    "cooking": 11.91,
+    "sanitation": 6.71,
+    "water": 5.17,
+    "electricity": 2.0,
+    "housing": 5.22,
+    "assets": 3.42
+   },
+   "raw": {
+    "nutrition": 19.743,
+    "child_mortality": 1.558,
+    "schooling": 20.713,
+    "attendance": 15.906,
+    "cooking": 91.91,
+    "sanitation": 16.456,
+    "water": 14.011,
+    "electricity": 3.501,
+    "housing": 14.417,
+    "assets": 6.887
+   }
+  },
+  "MMR": {
+   "survey": "DHS",
+   "year": "2015/2016",
+   "mpi": 0.17585,
+   "headcount": 38.316,
+   "intensity": 45.894,
+   "vulnerable": 21.917,
+   "severe": 13.845,
+   "destitute": 8.492,
+   "popSurvey": 51495.7,
+   "pop2024": 54500.1,
+   "poorSurvey": 19731.0,
+   "poor2024": 20882.2,
+   "nIndicators": 10,
+   "missing": "",
+   "censored": {
+    "nutrition": 17.509,
+    "child_mortality": 2.005,
+    "schooling": 25.012,
+    "attendance": 9.043,
+    "cooking": 37.253,
+    "sanitation": 27.642,
+    "water": 13.596,
+    "electricity": 26.638,
+    "housing": 34.95,
+    "assets": 15.735
+   },
+   "contribDims": {
+    "health": 18.5,
+    "education": 32.28,
+    "living": 49.23
+   },
+   "contrib": {
+    "nutrition": 16.59,
+    "child_mortality": 1.9,
+    "schooling": 23.71,
+    "attendance": 8.57,
+    "cooking": 11.77,
+    "sanitation": 8.73,
+    "water": 4.3,
+    "electricity": 8.42,
+    "housing": 11.04,
+    "assets": 4.97
+   },
+   "raw": {
+    "nutrition": 23.995,
+    "child_mortality": 2.286,
+    "schooling": 28.789,
+    "attendance": 10.264,
+    "cooking": 77.741,
+    "sanitation": 51.1,
+    "water": 23.658,
+    "electricity": 43.438,
+    "housing": 73.136,
+    "assets": 20.324
+   }
+  },
+  "TLS": {
+   "survey": "DHS",
+   "year": "2016",
+   "mpi": 0.22151,
+   "headcount": 48.254,
+   "intensity": 45.906,
+   "vulnerable": 26.828,
+   "severe": 17.384,
+   "destitute": 19.21,
+   "popSurvey": 1228.3,
+   "pop2024": 1400.6,
+   "poorSurvey": 592.7,
+   "poor2024": 675.9,
+   "nIndicators": 10,
+   "missing": "",
+   "censored": {
+    "nutrition": 35.375,
+    "child_mortality": 3.557,
+    "schooling": 15.872,
+    "attendance": 14.896,
+    "cooking": 46.967,
+    "sanitation": 32.485,
+    "water": 19.063,
+    "electricity": 19.552,
+    "housing": 41.861,
+    "assets": 29.699
+   },
+   "contribDims": {
+    "health": 29.29,
+    "education": 23.15,
+    "living": 47.56
+   },
+   "contrib": {
+    "nutrition": 26.62,
+    "child_mortality": 2.68,
+    "schooling": 11.94,
+    "attendance": 11.21,
+    "cooking": 11.78,
+    "sanitation": 8.15,
+    "water": 4.78,
+    "electricity": 4.9,
+    "housing": 10.5,
+    "assets": 7.45
+   },
+   "raw": {
+    "nutrition": 56.079,
+    "child_mortality": 4.093,
+    "schooling": 17.022,
+    "attendance": 16.274,
+    "cooking": 86.476,
+    "sanitation": 46.218,
+    "water": 25.898,
+    "electricity": 23.63,
+    "housing": 65.198,
+    "assets": 37.712
+   }
+  }
+ },
+ "regions": [
+  {
+   "iso": "IDN",
+   "name": "Aceh",
+   "year": "2017",
+   "mpi": 0.01179,
+   "headcount": 3.038,
+   "intensity": 38.814,
+   "vulnerable": 5.014,
+   "severe": 0.412,
+   "popShare": 1.856,
+   "pop2024": 5262.9,
+   "poor2024": 159.9,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.55,
+    "schooling": 0.876,
+    "attendance": 0.543,
+    "cooking": 1.767,
+    "sanitation": 1.745,
+    "water": 1.535,
+    "electricity": 0.345,
+    "housing": 1.135,
+    "assets": 1.144
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.55,
+    "schooling": 2.98,
+    "attendance": 2.512,
+    "cooking": 17.127,
+    "sanitation": 26.417,
+    "water": 21.628,
+    "electricity": 1.896,
+    "housing": 10.246,
+    "assets": 5.448
+   },
+   "contribDims": {
+    "health": 43.8,
+    "education": 20.06,
+    "living": 36.14
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 43.8,
+    "schooling": 12.38,
+    "attendance": 7.68,
+    "cooking": 8.32,
+    "sanitation": 8.22,
+    "water": 7.23,
+    "electricity": 1.62,
+    "housing": 5.35,
+    "assets": 5.39
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Bali",
+   "year": "2017",
+   "mpi": 0.00788,
+   "headcount": 2.191,
+   "intensity": 35.971,
+   "vulnerable": 3.924,
+   "severe": 0.0,
+   "popShare": 1.882,
+   "pop2024": 5335.3,
+   "poor2024": 116.9,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.004,
+    "schooling": 0.907,
+    "attendance": 0.28,
+    "cooking": 1.347,
+    "sanitation": 1.239,
+    "water": 0.264,
+    "electricity": 0.027,
+    "housing": 0.644,
+    "assets": 1.079
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.004,
+    "schooling": 4.619,
+    "attendance": 1.601,
+    "cooking": 23.391,
+    "sanitation": 11.23,
+    "water": 7.815,
+    "electricity": 0.027,
+    "housing": 3.794,
+    "assets": 3.449
+   },
+   "contribDims": {
+    "health": 42.48,
+    "education": 25.1,
+    "living": 32.43
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 42.48,
+    "schooling": 19.17,
+    "attendance": 5.92,
+    "cooking": 9.49,
+    "sanitation": 8.74,
+    "water": 1.86,
+    "electricity": 0.19,
+    "housing": 4.54,
+    "assets": 7.6
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Bangka Belitung",
+   "year": "2017",
+   "mpi": 0.01465,
+   "headcount": 3.94,
+   "intensity": 37.192,
+   "vulnerable": 4.051,
+   "severe": 0.305,
+   "popShare": 0.558,
+   "pop2024": 1581.4,
+   "poor2024": 62.3,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.844,
+    "schooling": 1.064,
+    "attendance": 0.337,
+    "cooking": 0.957,
+    "sanitation": 1.653,
+    "water": 1.811,
+    "electricity": 0.138,
+    "housing": 0.08,
+    "assets": 0.47
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.844,
+    "schooling": 5.012,
+    "attendance": 3.741,
+    "cooking": 6.504,
+    "sanitation": 10.461,
+    "water": 24.413,
+    "electricity": 2.141,
+    "housing": 1.433,
+    "assets": 1.698
+   },
+   "contribDims": {
+    "health": 64.69,
+    "education": 15.94,
+    "living": 19.37
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 64.69,
+    "schooling": 12.1,
+    "attendance": 3.83,
+    "cooking": 3.63,
+    "sanitation": 6.26,
+    "water": 6.87,
+    "electricity": 0.52,
+    "housing": 0.3,
+    "assets": 1.78
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Banten",
+   "year": "2017",
+   "mpi": 0.01524,
+   "headcount": 3.913,
+   "intensity": 38.946,
+   "vulnerable": 4.4,
+   "severe": 0.607,
+   "popShare": 4.292,
+   "pop2024": 12166.8,
+   "poor2024": 476.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.738,
+    "schooling": 1.49,
+    "attendance": 0.986,
+    "cooking": 2.672,
+    "sanitation": 2.318,
+    "water": 1.87,
+    "electricity": 0.378,
+    "housing": 1.101,
+    "assets": 1.236
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.738,
+    "schooling": 3.13,
+    "attendance": 3.379,
+    "cooking": 18.859,
+    "sanitation": 15.692,
+    "water": 12.711,
+    "electricity": 2.391,
+    "housing": 5.577,
+    "assets": 3.842
+   },
+   "contribDims": {
+    "health": 38.02,
+    "education": 27.07,
+    "living": 34.9
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 38.02,
+    "schooling": 16.29,
+    "attendance": 10.78,
+    "cooking": 9.74,
+    "sanitation": 8.45,
+    "water": 6.82,
+    "electricity": 1.38,
+    "housing": 4.01,
+    "assets": 4.5
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Bengkulu",
+   "year": "2017",
+   "mpi": 0.00795,
+   "headcount": 2.198,
+   "intensity": 36.175,
+   "vulnerable": 4.106,
+   "severe": 0.233,
+   "popShare": 0.735,
+   "pop2024": 2084.4,
+   "poor2024": 45.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.229,
+    "schooling": 1.017,
+    "attendance": 0.787,
+    "cooking": 2.022,
+    "sanitation": 1.554,
+    "water": 1.767,
+    "electricity": 0.87,
+    "housing": 0.374,
+    "assets": 0.941
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.229,
+    "schooling": 3.367,
+    "attendance": 2.225,
+    "cooking": 19.291,
+    "sanitation": 19.289,
+    "water": 34.218,
+    "electricity": 2.542,
+    "housing": 10.462,
+    "assets": 3.188
+   },
+   "contribDims": {
+    "health": 9.59,
+    "education": 37.82,
+    "living": 52.6
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 9.59,
+    "schooling": 21.32,
+    "attendance": 16.5,
+    "cooking": 14.13,
+    "sanitation": 10.86,
+    "water": 12.34,
+    "electricity": 6.08,
+    "housing": 2.61,
+    "assets": 6.57
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Central Java",
+   "year": "2017",
+   "mpi": 0.00999,
+   "headcount": 2.761,
+   "intensity": 36.203,
+   "vulnerable": 4.222,
+   "severe": 0.111,
+   "popShare": 13.56,
+   "pop2024": 38441.5,
+   "poor2024": 1061.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.097,
+    "schooling": 1.47,
+    "attendance": 0.282,
+    "cooking": 1.531,
+    "sanitation": 1.35,
+    "water": 0.456,
+    "electricity": 0.198,
+    "housing": 1.473,
+    "assets": 1.142
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.097,
+    "schooling": 4.901,
+    "attendance": 1.436,
+    "cooking": 27.033,
+    "sanitation": 15.108,
+    "water": 6.883,
+    "electricity": 1.328,
+    "housing": 17.997,
+    "assets": 3.989
+   },
+   "contribDims": {
+    "health": 36.6,
+    "education": 29.22,
+    "living": 34.18
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 36.6,
+    "schooling": 24.52,
+    "attendance": 4.7,
+    "cooking": 8.51,
+    "sanitation": 7.5,
+    "water": 2.53,
+    "electricity": 1.1,
+    "housing": 8.19,
+    "assets": 6.35
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Central Kalimantan",
+   "year": "2017",
+   "mpi": 0.01729,
+   "headcount": 4.677,
+   "intensity": 36.96,
+   "vulnerable": 7.451,
+   "severe": 0.0,
+   "popShare": 0.862,
+   "pop2024": 2444.5,
+   "poor2024": 114.3,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.822,
+    "schooling": 2.009,
+    "attendance": 1.007,
+    "cooking": 3.212,
+    "sanitation": 2.731,
+    "water": 2.474,
+    "electricity": 1.067,
+    "housing": 0.562,
+    "assets": 1.088
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.822,
+    "schooling": 4.13,
+    "attendance": 3.808,
+    "cooking": 23.089,
+    "sanitation": 35.376,
+    "water": 43.401,
+    "electricity": 3.524,
+    "housing": 2.734,
+    "assets": 4.569
+   },
+   "contribDims": {
+    "health": 35.14,
+    "education": 29.08,
+    "living": 35.79
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 35.14,
+    "schooling": 19.37,
+    "attendance": 9.71,
+    "cooking": 10.32,
+    "sanitation": 8.78,
+    "water": 7.95,
+    "electricity": 3.43,
+    "housing": 1.81,
+    "assets": 3.5
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Central Sulawesi",
+   "year": "2017",
+   "mpi": 0.0251,
+   "headcount": 6.626,
+   "intensity": 37.879,
+   "vulnerable": 7.674,
+   "severe": 0.451,
+   "popShare": 1.113,
+   "pop2024": 3155.1,
+   "poor2024": 209.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.038,
+    "schooling": 2.23,
+    "attendance": 2.042,
+    "cooking": 5.111,
+    "sanitation": 4.536,
+    "water": 2.993,
+    "electricity": 0.996,
+    "housing": 3.578,
+    "assets": 2.914
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.038,
+    "schooling": 3.227,
+    "attendance": 3.726,
+    "cooking": 45.387,
+    "sanitation": 36.886,
+    "water": 19.037,
+    "electricity": 5.581,
+    "housing": 14.843,
+    "assets": 11.551
+   },
+   "contribDims": {
+    "health": 27.07,
+    "education": 28.37,
+    "living": 44.55
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 27.07,
+    "schooling": 14.81,
+    "attendance": 13.56,
+    "cooking": 11.31,
+    "sanitation": 10.04,
+    "water": 6.62,
+    "electricity": 2.2,
+    "housing": 7.92,
+    "assets": 6.45
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "East Java",
+   "year": "2017",
+   "mpi": 0.01084,
+   "headcount": 2.949,
+   "intensity": 36.759,
+   "vulnerable": 4.616,
+   "severe": 0.104,
+   "popShare": 15.43,
+   "pop2024": 43743.3,
+   "poor2024": 1290.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.077,
+    "schooling": 1.749,
+    "attendance": 0.235,
+    "cooking": 1.929,
+    "sanitation": 1.687,
+    "water": 0.496,
+    "electricity": 0.426,
+    "housing": 1.105,
+    "assets": 1.456
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.077,
+    "schooling": 5.722,
+    "attendance": 1.686,
+    "cooking": 23.449,
+    "sanitation": 19.182,
+    "water": 8.403,
+    "electricity": 1.475,
+    "housing": 10.538,
+    "assets": 3.671
+   },
+   "contribDims": {
+    "health": 33.11,
+    "education": 30.51,
+    "living": 36.38
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 33.11,
+    "schooling": 26.89,
+    "attendance": 3.62,
+    "cooking": 9.89,
+    "sanitation": 8.64,
+    "water": 2.54,
+    "electricity": 2.18,
+    "housing": 5.66,
+    "assets": 7.46
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "East Kalimantan",
+   "year": "2017",
+   "mpi": 0.00876,
+   "headcount": 2.364,
+   "intensity": 37.04,
+   "vulnerable": 1.815,
+   "severe": 0.154,
+   "popShare": 1.18,
+   "pop2024": 3344.0,
+   "poor2024": 79.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.604,
+    "schooling": 0.499,
+    "attendance": 0.561,
+    "cooking": 0.628,
+    "sanitation": 0.59,
+    "water": 0.885,
+    "electricity": 0.091,
+    "housing": 0.389,
+    "assets": 0.371
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.604,
+    "schooling": 2.426,
+    "attendance": 2.301,
+    "cooking": 5.941,
+    "sanitation": 6.996,
+    "water": 23.983,
+    "electricity": 0.587,
+    "housing": 6.519,
+    "assets": 0.803
+   },
+   "contribDims": {
+    "health": 61.08,
+    "education": 20.17,
+    "living": 18.75
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 61.08,
+    "schooling": 9.5,
+    "attendance": 10.67,
+    "cooking": 3.98,
+    "sanitation": 3.75,
+    "water": 5.62,
+    "electricity": 0.58,
+    "housing": 2.47,
+    "assets": 2.36
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "East Nusa Tenggara",
+   "year": "2017",
+   "mpi": 0.06557,
+   "headcount": 16.115,
+   "intensity": 40.691,
+   "vulnerable": 21.751,
+   "severe": 3.124,
+   "popShare": 1.989,
+   "pop2024": 5638.3,
+   "poor2024": 908.6,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.133,
+    "schooling": 6.293,
+    "attendance": 3.301,
+    "cooking": 15.77,
+    "sanitation": 12.671,
+    "water": 11.22,
+    "electricity": 10.628,
+    "housing": 12.513,
+    "assets": 13.652
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.133,
+    "schooling": 7.059,
+    "attendance": 4.855,
+    "cooking": 81.559,
+    "sanitation": 34.78,
+    "water": 40.012,
+    "electricity": 24.614,
+    "housing": 42.432,
+    "assets": 40.08
+   },
+   "contribDims": {
+    "health": 10.84,
+    "education": 24.38,
+    "living": 64.77
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 10.84,
+    "schooling": 15.99,
+    "attendance": 8.39,
+    "cooking": 13.36,
+    "sanitation": 10.74,
+    "water": 9.51,
+    "electricity": 9.0,
+    "housing": 10.6,
+    "assets": 11.57
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Gorontalo",
+   "year": "2017",
+   "mpi": 0.0355,
+   "headcount": 8.876,
+   "intensity": 39.996,
+   "vulnerable": 7.868,
+   "severe": 1.368,
+   "popShare": 0.439,
+   "pop2024": 1244.0,
+   "poor2024": 110.4,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 3.814,
+    "schooling": 3.95,
+    "attendance": 3.423,
+    "cooking": 5.177,
+    "sanitation": 5.825,
+    "water": 2.639,
+    "electricity": 0.304,
+    "housing": 2.171,
+    "assets": 2.785
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 3.814,
+    "schooling": 7.2,
+    "attendance": 7.152,
+    "cooking": 31.871,
+    "sanitation": 43.112,
+    "water": 12.744,
+    "electricity": 1.044,
+    "housing": 9.85,
+    "assets": 10.025
+   },
+   "contribDims": {
+    "health": 35.81,
+    "education": 34.61,
+    "living": 29.58
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 35.81,
+    "schooling": 18.54,
+    "attendance": 16.07,
+    "cooking": 8.1,
+    "sanitation": 9.12,
+    "water": 4.13,
+    "electricity": 0.48,
+    "housing": 3.4,
+    "assets": 4.36
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Jakarta",
+   "year": "2017",
+   "mpi": 0.00523,
+   "headcount": 1.495,
+   "intensity": 35.011,
+   "vulnerable": 0.541,
+   "severe": 0.125,
+   "popShare": 3.662,
+   "pop2024": 10380.8,
+   "poor2024": 155.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.313,
+    "schooling": 0.074,
+    "attendance": 0.234,
+    "cooking": 0.0,
+    "sanitation": 0.182,
+    "water": 0.075,
+    "electricity": 0.112,
+    "housing": 0.128,
+    "assets": 0.128
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.313,
+    "schooling": 1.023,
+    "attendance": 1.669,
+    "cooking": 0.145,
+    "sanitation": 7.986,
+    "water": 3.144,
+    "electricity": 1.096,
+    "housing": 3.197,
+    "assets": 1.244
+   },
+   "contribDims": {
+    "health": 83.6,
+    "education": 9.78,
+    "living": 6.62
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 83.6,
+    "schooling": 2.35,
+    "attendance": 7.44,
+    "cooking": 0.0,
+    "sanitation": 1.94,
+    "water": 0.79,
+    "electricity": 1.18,
+    "housing": 1.35,
+    "assets": 1.35
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Jambi",
+   "year": "2017",
+   "mpi": 0.00666,
+   "headcount": 1.813,
+   "intensity": 36.754,
+   "vulnerable": 3.694,
+   "severe": 0.0,
+   "popShare": 1.318,
+   "pop2024": 3735.0,
+   "poor2024": 67.7,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.191,
+    "schooling": 0.306,
+    "attendance": 0.367,
+    "cooking": 0.388,
+    "sanitation": 1.026,
+    "water": 0.86,
+    "electricity": 0.048,
+    "housing": 0.316,
+    "assets": 0.192
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.191,
+    "schooling": 3.042,
+    "attendance": 3.043,
+    "cooking": 17.143,
+    "sanitation": 18.553,
+    "water": 22.773,
+    "electricity": 0.871,
+    "housing": 3.391,
+    "assets": 3.283
+   },
+   "contribDims": {
+    "health": 59.59,
+    "education": 16.83,
+    "living": 23.58
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 59.59,
+    "schooling": 7.65,
+    "attendance": 9.17,
+    "cooking": 3.23,
+    "sanitation": 8.55,
+    "water": 7.17,
+    "electricity": 0.4,
+    "housing": 2.63,
+    "assets": 1.6
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Lampung",
+   "year": "2017",
+   "mpi": 0.01271,
+   "headcount": 3.389,
+   "intensity": 37.486,
+   "vulnerable": 5.734,
+   "severe": 0.202,
+   "popShare": 3.093,
+   "pop2024": 8767.2,
+   "poor2024": 297.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.207,
+    "schooling": 2.071,
+    "attendance": 0.186,
+    "cooking": 2.556,
+    "sanitation": 2.422,
+    "water": 1.177,
+    "electricity": 0.153,
+    "housing": 1.279,
+    "assets": 1.269
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.207,
+    "schooling": 5.758,
+    "attendance": 1.941,
+    "cooking": 30.42,
+    "sanitation": 19.921,
+    "water": 27.452,
+    "electricity": 1.092,
+    "housing": 12.995,
+    "assets": 3.242
+   },
+   "contribDims": {
+    "health": 31.67,
+    "education": 29.61,
+    "living": 38.72
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 31.67,
+    "schooling": 27.16,
+    "attendance": 2.45,
+    "cooking": 11.18,
+    "sanitation": 10.59,
+    "water": 5.15,
+    "electricity": 0.67,
+    "housing": 5.59,
+    "assets": 5.55
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Maluku",
+   "year": "2017",
+   "mpi": 0.02098,
+   "headcount": 5.361,
+   "intensity": 39.136,
+   "vulnerable": 9.961,
+   "severe": 0.565,
+   "popShare": 0.653,
+   "pop2024": 1850.0,
+   "poor2024": 99.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.334,
+    "schooling": 0.909,
+    "attendance": 1.66,
+    "cooking": 4.092,
+    "sanitation": 3.863,
+    "water": 1.935,
+    "electricity": 1.527,
+    "housing": 1.814,
+    "assets": 2.82
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.334,
+    "schooling": 1.298,
+    "attendance": 3.188,
+    "cooking": 51.44,
+    "sanitation": 34.521,
+    "water": 13.19,
+    "electricity": 9.412,
+    "housing": 15.736,
+    "assets": 24.204
+   },
+   "contribDims": {
+    "health": 37.08,
+    "education": 20.41,
+    "living": 42.5
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 37.08,
+    "schooling": 7.22,
+    "attendance": 13.19,
+    "cooking": 10.84,
+    "sanitation": 10.23,
+    "water": 5.12,
+    "electricity": 4.04,
+    "housing": 4.8,
+    "assets": 7.47
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "North Kalimantan",
+   "year": "2017",
+   "mpi": 0.02421,
+   "headcount": 6.193,
+   "intensity": 39.094,
+   "vulnerable": 3.157,
+   "severe": 0.821,
+   "popShare": 0.21,
+   "pop2024": 596.7,
+   "poor2024": 37.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.507,
+    "schooling": 1.876,
+    "attendance": 3.176,
+    "cooking": 4.058,
+    "sanitation": 4.165,
+    "water": 2.301,
+    "electricity": 0.417,
+    "housing": 1.259,
+    "assets": 1.183
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.507,
+    "schooling": 3.419,
+    "attendance": 5.636,
+    "cooking": 20.167,
+    "sanitation": 23.35,
+    "water": 14.902,
+    "electricity": 1.264,
+    "housing": 6.083,
+    "assets": 4.394
+   },
+   "contribDims": {
+    "health": 34.52,
+    "education": 34.77,
+    "living": 30.71
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 34.52,
+    "schooling": 12.91,
+    "attendance": 21.86,
+    "cooking": 9.31,
+    "sanitation": 9.56,
+    "water": 5.28,
+    "electricity": 0.96,
+    "housing": 2.89,
+    "assets": 2.71
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "North Maluku",
+   "year": "2017",
+   "mpi": 0.03331,
+   "headcount": 7.745,
+   "intensity": 43.008,
+   "vulnerable": 12.557,
+   "severe": 2.023,
+   "popShare": 0.428,
+   "pop2024": 1214.7,
+   "poor2024": 94.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 3.727,
+    "schooling": 1.69,
+    "attendance": 2.459,
+    "cooking": 6.649,
+    "sanitation": 5.665,
+    "water": 3.766,
+    "electricity": 2.282,
+    "housing": 2.357,
+    "assets": 4.427
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 3.727,
+    "schooling": 2.526,
+    "attendance": 4.494,
+    "cooking": 65.424,
+    "sanitation": 36.938,
+    "water": 25.751,
+    "electricity": 7.357,
+    "housing": 12.825,
+    "assets": 21.052
+   },
+   "contribDims": {
+    "health": 37.3,
+    "education": 20.76,
+    "living": 41.94
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 37.3,
+    "schooling": 8.46,
+    "attendance": 12.31,
+    "cooking": 11.09,
+    "sanitation": 9.45,
+    "water": 6.28,
+    "electricity": 3.81,
+    "housing": 3.93,
+    "assets": 7.38
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "North Sulawesi",
+   "year": "2017",
+   "mpi": 0.00788,
+   "headcount": 2.067,
+   "intensity": 38.122,
+   "vulnerable": 3.069,
+   "severe": 0.198,
+   "popShare": 0.901,
+   "pop2024": 2555.2,
+   "poor2024": 52.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.503,
+    "schooling": 0.69,
+    "attendance": 0.072,
+    "cooking": 0.598,
+    "sanitation": 1.078,
+    "water": 0.37,
+    "electricity": 0.0,
+    "housing": 0.362,
+    "assets": 0.472
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.503,
+    "schooling": 2.253,
+    "attendance": 1.345,
+    "cooking": 15.63,
+    "sanitation": 17.467,
+    "water": 7.846,
+    "electricity": 1.189,
+    "housing": 4.743,
+    "assets": 6.522
+   },
+   "contribDims": {
+    "health": 63.57,
+    "education": 16.12,
+    "living": 20.31
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 63.57,
+    "schooling": 14.61,
+    "attendance": 1.52,
+    "cooking": 4.22,
+    "sanitation": 7.6,
+    "water": 2.61,
+    "electricity": 0.0,
+    "housing": 2.55,
+    "assets": 3.33
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "North Sumatera",
+   "year": "2017",
+   "mpi": 0.02085,
+   "headcount": 4.954,
+   "intensity": 42.085,
+   "vulnerable": 4.922,
+   "severe": 1.598,
+   "popShare": 5.354,
+   "pop2024": 15178.4,
+   "poor2024": 752.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.958,
+    "schooling": 1.677,
+    "attendance": 0.648,
+    "cooking": 3.705,
+    "sanitation": 3.625,
+    "water": 3.557,
+    "electricity": 2.486,
+    "housing": 2.174,
+    "assets": 3.255
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.958,
+    "schooling": 2.705,
+    "attendance": 1.828,
+    "cooking": 18.921,
+    "sanitation": 19.865,
+    "water": 17.583,
+    "electricity": 5.038,
+    "housing": 11.239,
+    "assets": 9.325
+   },
+   "contribDims": {
+    "health": 31.31,
+    "education": 18.59,
+    "living": 50.1
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 31.31,
+    "schooling": 13.41,
+    "attendance": 5.18,
+    "cooking": 9.87,
+    "sanitation": 9.66,
+    "water": 9.48,
+    "electricity": 6.63,
+    "housing": 5.79,
+    "assets": 8.67
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Papua",
+   "year": "2017",
+   "mpi": 0.08286,
+   "headcount": 17.933,
+   "intensity": 46.206,
+   "vulnerable": 16.315,
+   "severe": 5.842,
+   "popShare": 1.251,
+   "pop2024": 3547.5,
+   "poor2024": 636.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 6.201,
+    "schooling": 7.479,
+    "attendance": 8.014,
+    "cooking": 17.377,
+    "sanitation": 13.919,
+    "water": 4.549,
+    "electricity": 7.386,
+    "housing": 9.515,
+    "assets": 12.718
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 6.201,
+    "schooling": 8.852,
+    "attendance": 11.358,
+    "cooking": 61.85,
+    "sanitation": 35.301,
+    "water": 14.388,
+    "electricity": 16.499,
+    "housing": 31.742,
+    "assets": 31.602
+   },
+   "contribDims": {
+    "health": 24.95,
+    "education": 31.16,
+    "living": 43.89
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 24.95,
+    "schooling": 15.04,
+    "attendance": 16.12,
+    "cooking": 11.65,
+    "sanitation": 9.33,
+    "water": 3.05,
+    "electricity": 4.95,
+    "housing": 6.38,
+    "assets": 8.53
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Riau",
+   "year": "2017",
+   "mpi": 0.00899,
+   "headcount": 2.31,
+   "intensity": 38.913,
+   "vulnerable": 2.938,
+   "severe": 0.488,
+   "popShare": 2.475,
+   "pop2024": 7015.9,
+   "poor2024": 162.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.631,
+    "schooling": 0.491,
+    "attendance": 0.732,
+    "cooking": 1.226,
+    "sanitation": 0.683,
+    "water": 0.225,
+    "electricity": 0.278,
+    "housing": 0.13,
+    "assets": 0.183
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.631,
+    "schooling": 2.732,
+    "attendance": 4.381,
+    "cooking": 11.013,
+    "sanitation": 14.974,
+    "water": 12.659,
+    "electricity": 3.538,
+    "housing": 7.704,
+    "assets": 2.012
+   },
+   "contribDims": {
+    "health": 60.49,
+    "education": 22.67,
+    "living": 16.84
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 60.49,
+    "schooling": 9.1,
+    "attendance": 13.57,
+    "cooking": 7.58,
+    "sanitation": 4.22,
+    "water": 1.39,
+    "electricity": 1.72,
+    "housing": 0.8,
+    "assets": 1.13
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Riau Islands",
+   "year": "2017",
+   "mpi": 0.00518,
+   "headcount": 1.412,
+   "intensity": 36.688,
+   "vulnerable": 1.242,
+   "severe": 0.0,
+   "popShare": 0.681,
+   "pop2024": 1929.9,
+   "poor2024": 27.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.055,
+    "schooling": 0.356,
+    "attendance": 0.11,
+    "cooking": 0.174,
+    "sanitation": 0.815,
+    "water": 0.246,
+    "electricity": 0.0,
+    "housing": 0.11,
+    "assets": 0.246
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.055,
+    "schooling": 2.138,
+    "attendance": 1.427,
+    "cooking": 3.06,
+    "sanitation": 8.906,
+    "water": 17.752,
+    "electricity": 1.927,
+    "housing": 4.317,
+    "assets": 0.771
+   },
+   "contribDims": {
+    "health": 67.92,
+    "education": 15.02,
+    "living": 17.07
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 67.92,
+    "schooling": 11.47,
+    "attendance": 3.55,
+    "cooking": 1.86,
+    "sanitation": 8.74,
+    "water": 2.64,
+    "electricity": 0.0,
+    "housing": 1.18,
+    "assets": 2.64
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "South Kalimantan",
+   "year": "2017",
+   "mpi": 0.01862,
+   "headcount": 4.949,
+   "intensity": 37.627,
+   "vulnerable": 5.673,
+   "severe": 0.358,
+   "popShare": 1.562,
+   "pop2024": 4429.0,
+   "poor2024": 219.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.198,
+    "schooling": 2.522,
+    "attendance": 0.86,
+    "cooking": 2.433,
+    "sanitation": 2.676,
+    "water": 2.375,
+    "electricity": 0.327,
+    "housing": 0.753,
+    "assets": 1.621
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.198,
+    "schooling": 6.244,
+    "attendance": 3.242,
+    "cooking": 18.292,
+    "sanitation": 26.0,
+    "water": 35.878,
+    "electricity": 1.821,
+    "housing": 6.292,
+    "assets": 4.289
+   },
+   "contribDims": {
+    "health": 39.34,
+    "education": 30.27,
+    "living": 30.38
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 39.34,
+    "schooling": 22.57,
+    "attendance": 7.7,
+    "cooking": 7.26,
+    "sanitation": 7.98,
+    "water": 7.09,
+    "electricity": 0.97,
+    "housing": 2.25,
+    "assets": 4.84
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "South Sulawesi",
+   "year": "2017",
+   "mpi": 0.01092,
+   "headcount": 2.885,
+   "intensity": 37.86,
+   "vulnerable": 4.945,
+   "severe": 0.104,
+   "popShare": 3.091,
+   "pop2024": 8761.9,
+   "poor2024": 252.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.082,
+    "schooling": 1.571,
+    "attendance": 0.685,
+    "cooking": 1.494,
+    "sanitation": 1.625,
+    "water": 0.951,
+    "electricity": 0.44,
+    "housing": 0.798,
+    "assets": 1.088
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.082,
+    "schooling": 5.427,
+    "attendance": 3.961,
+    "cooking": 21.958,
+    "sanitation": 17.394,
+    "water": 15.511,
+    "electricity": 1.336,
+    "housing": 9.995,
+    "assets": 5.121
+   },
+   "contribDims": {
+    "health": 33.04,
+    "education": 34.43,
+    "living": 32.54
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 33.04,
+    "schooling": 23.97,
+    "attendance": 10.45,
+    "cooking": 7.6,
+    "sanitation": 8.27,
+    "water": 4.84,
+    "electricity": 2.24,
+    "housing": 4.06,
+    "assets": 5.53
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "South Sumatera",
+   "year": "2017",
+   "mpi": 0.01516,
+   "headcount": 3.735,
+   "intensity": 40.595,
+   "vulnerable": 4.748,
+   "severe": 0.674,
+   "popShare": 3.068,
+   "pop2024": 8697.7,
+   "poor2024": 324.9,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.251,
+    "schooling": 2.199,
+    "attendance": 0.737,
+    "cooking": 2.335,
+    "sanitation": 2.571,
+    "water": 2.212,
+    "electricity": 0.957,
+    "housing": 1.282,
+    "assets": 1.622
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.251,
+    "schooling": 4.373,
+    "attendance": 2.61,
+    "cooking": 16.771,
+    "sanitation": 26.17,
+    "water": 20.892,
+    "electricity": 1.824,
+    "housing": 12.064,
+    "assets": 4.185
+   },
+   "contribDims": {
+    "health": 27.51,
+    "education": 32.26,
+    "living": 40.23
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 27.51,
+    "schooling": 24.17,
+    "attendance": 8.1,
+    "cooking": 8.55,
+    "sanitation": 9.42,
+    "water": 8.11,
+    "electricity": 3.51,
+    "housing": 4.7,
+    "assets": 5.94
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Southeast Sulawesi",
+   "year": "2017",
+   "mpi": 0.02086,
+   "headcount": 5.175,
+   "intensity": 40.318,
+   "vulnerable": 5.39,
+   "severe": 1.1,
+   "popShare": 0.933,
+   "pop2024": 2643.7,
+   "poor2024": 136.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.766,
+    "schooling": 1.418,
+    "attendance": 1.203,
+    "cooking": 3.829,
+    "sanitation": 3.714,
+    "water": 1.392,
+    "electricity": 1.006,
+    "housing": 1.085,
+    "assets": 2.069
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.766,
+    "schooling": 3.476,
+    "attendance": 3.37,
+    "cooking": 41.029,
+    "sanitation": 28.577,
+    "water": 7.241,
+    "electricity": 3.557,
+    "housing": 10.739,
+    "assets": 9.894
+   },
+   "contribDims": {
+    "health": 44.19,
+    "education": 20.94,
+    "living": 34.87
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 44.19,
+    "schooling": 11.33,
+    "attendance": 9.61,
+    "cooking": 10.2,
+    "sanitation": 9.89,
+    "water": 3.71,
+    "electricity": 2.68,
+    "housing": 2.89,
+    "assets": 5.51
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Java",
+   "year": "2017",
+   "mpi": 0.00885,
+   "headcount": 2.392,
+   "intensity": 37.015,
+   "vulnerable": 3.119,
+   "severe": 0.135,
+   "popShare": 19.245,
+   "pop2024": 54557.0,
+   "poor2024": 1305.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.394,
+    "schooling": 0.819,
+    "attendance": 0.313,
+    "cooking": 1.038,
+    "sanitation": 1.053,
+    "water": 0.725,
+    "electricity": 0.147,
+    "housing": 0.33,
+    "assets": 0.884
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.394,
+    "schooling": 2.833,
+    "attendance": 2.367,
+    "cooking": 13.897,
+    "sanitation": 16.789,
+    "water": 11.57,
+    "electricity": 1.655,
+    "housing": 5.002,
+    "assets": 4.359
+   },
+   "contribDims": {
+    "health": 52.48,
+    "education": 21.31,
+    "living": 26.21
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 52.48,
+    "schooling": 15.41,
+    "attendance": 5.9,
+    "cooking": 6.51,
+    "sanitation": 6.61,
+    "water": 4.55,
+    "electricity": 0.92,
+    "housing": 2.07,
+    "assets": 5.54
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Kalimantan",
+   "year": "2017",
+   "mpi": 0.02103,
+   "headcount": 5.346,
+   "intensity": 39.338,
+   "vulnerable": 8.419,
+   "severe": 0.587,
+   "popShare": 1.87,
+   "pop2024": 5301.0,
+   "poor2024": 283.4,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.954,
+    "schooling": 2.967,
+    "attendance": 2.171,
+    "cooking": 4.005,
+    "sanitation": 4.283,
+    "water": 2.987,
+    "electricity": 1.765,
+    "housing": 0.94,
+    "assets": 2.739
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.954,
+    "schooling": 5.582,
+    "attendance": 9.992,
+    "cooking": 25.021,
+    "sanitation": 27.543,
+    "water": 24.768,
+    "electricity": 6.643,
+    "housing": 6.206,
+    "assets": 9.812
+   },
+   "contribDims": {
+    "health": 15.12,
+    "education": 40.72,
+    "living": 44.16
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 15.12,
+    "schooling": 23.51,
+    "attendance": 17.2,
+    "cooking": 10.58,
+    "sanitation": 11.31,
+    "water": 7.89,
+    "electricity": 4.66,
+    "housing": 2.48,
+    "assets": 7.24
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Nusa Tenggara",
+   "year": "2017",
+   "mpi": 0.01678,
+   "headcount": 4.53,
+   "intensity": 37.045,
+   "vulnerable": 4.328,
+   "severe": 0.377,
+   "popShare": 1.993,
+   "pop2024": 5650.9,
+   "poor2024": 256.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.581,
+    "schooling": 2.195,
+    "attendance": 0.804,
+    "cooking": 3.19,
+    "sanitation": 3.064,
+    "water": 0.514,
+    "electricity": 0.764,
+    "housing": 1.254,
+    "assets": 2.942
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.581,
+    "schooling": 6.259,
+    "attendance": 1.972,
+    "cooking": 26.931,
+    "sanitation": 22.872,
+    "water": 6.376,
+    "electricity": 2.263,
+    "housing": 11.024,
+    "assets": 11.612
+   },
+   "contribDims": {
+    "health": 31.39,
+    "education": 29.78,
+    "living": 38.83
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 31.39,
+    "schooling": 21.8,
+    "attendance": 7.99,
+    "cooking": 10.56,
+    "sanitation": 10.14,
+    "water": 1.7,
+    "electricity": 2.53,
+    "housing": 4.15,
+    "assets": 9.74
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Papua",
+   "year": "2017",
+   "mpi": 0.04143,
+   "headcount": 9.579,
+   "intensity": 43.249,
+   "vulnerable": 4.252,
+   "severe": 2.862,
+   "popShare": 0.275,
+   "pop2024": 779.1,
+   "poor2024": 74.6,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 6.538,
+    "schooling": 0.77,
+    "attendance": 4.362,
+    "cooking": 6.722,
+    "sanitation": 3.013,
+    "water": 4.574,
+    "electricity": 0.478,
+    "housing": 0.752,
+    "assets": 4.41
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 6.538,
+    "schooling": 1.441,
+    "attendance": 6.347,
+    "cooking": 42.521,
+    "sanitation": 25.583,
+    "water": 27.834,
+    "electricity": 1.189,
+    "housing": 3.126,
+    "assets": 15.407
+   },
+   "contribDims": {
+    "health": 52.6,
+    "education": 20.64,
+    "living": 26.75
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 52.6,
+    "schooling": 3.1,
+    "attendance": 17.55,
+    "cooking": 9.01,
+    "sanitation": 4.04,
+    "water": 6.13,
+    "electricity": 0.64,
+    "housing": 1.01,
+    "assets": 5.91
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Sulawesi",
+   "year": "2017",
+   "mpi": 0.02806,
+   "headcount": 7.126,
+   "intensity": 39.37,
+   "vulnerable": 11.06,
+   "severe": 0.727,
+   "popShare": 0.487,
+   "pop2024": 1381.3,
+   "poor2024": 98.4,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.469,
+    "schooling": 3.072,
+    "attendance": 1.899,
+    "cooking": 5.36,
+    "sanitation": 4.986,
+    "water": 4.622,
+    "electricity": 1.169,
+    "housing": 1.235,
+    "assets": 3.4
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.469,
+    "schooling": 5.352,
+    "attendance": 5.934,
+    "cooking": 35.407,
+    "sanitation": 34.194,
+    "water": 35.525,
+    "electricity": 3.843,
+    "housing": 12.235,
+    "assets": 13.736
+   },
+   "contribDims": {
+    "health": 29.33,
+    "education": 29.53,
+    "living": 41.13
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 29.33,
+    "schooling": 18.25,
+    "attendance": 11.28,
+    "cooking": 10.61,
+    "sanitation": 9.87,
+    "water": 9.15,
+    "electricity": 2.32,
+    "housing": 2.45,
+    "assets": 6.73
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "West Sumatera",
+   "year": "2017",
+   "mpi": 0.01244,
+   "headcount": 3.417,
+   "intensity": 36.414,
+   "vulnerable": 4.863,
+   "severe": 0.383,
+   "popShare": 1.976,
+   "pop2024": 5602.7,
+   "poor2024": 191.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.644,
+    "schooling": 1.498,
+    "attendance": 1.418,
+    "cooking": 2.663,
+    "sanitation": 2.627,
+    "water": 1.953,
+    "electricity": 0.494,
+    "housing": 1.176,
+    "assets": 0.874
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.644,
+    "schooling": 3.07,
+    "attendance": 2.913,
+    "cooking": 23.533,
+    "sanitation": 22.313,
+    "water": 24.887,
+    "electricity": 1.229,
+    "housing": 10.292,
+    "assets": 3.745
+   },
+   "contribDims": {
+    "health": 17.25,
+    "education": 39.05,
+    "living": 43.7
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 17.25,
+    "schooling": 20.06,
+    "attendance": 18.99,
+    "cooking": 11.89,
+    "sanitation": 11.73,
+    "water": 8.72,
+    "electricity": 2.21,
+    "housing": 5.25,
+    "assets": 3.9
+   }
+  },
+  {
+   "iso": "IDN",
+   "name": "Yogyakarta",
+   "year": "2017",
+   "mpi": 0.00811,
+   "headcount": 2.293,
+   "intensity": 35.396,
+   "vulnerable": 1.364,
+   "severe": 0.0,
+   "popShare": 1.577,
+   "pop2024": 4470.8,
+   "poor2024": 102.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.987,
+    "schooling": 1.066,
+    "attendance": 0.24,
+    "cooking": 1.606,
+    "sanitation": 1.052,
+    "water": 0.44,
+    "electricity": 0.032,
+    "housing": 0.551,
+    "assets": 1.088
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.987,
+    "schooling": 2.802,
+    "attendance": 0.54,
+    "cooking": 28.429,
+    "sanitation": 11.491,
+    "water": 3.945,
+    "electricity": 0.95,
+    "housing": 6.101,
+    "assets": 2.325
+   },
+   "contribDims": {
+    "health": 40.52,
+    "education": 26.82,
+    "living": 32.65
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 40.52,
+    "schooling": 21.9,
+    "attendance": 4.92,
+    "cooking": 10.99,
+    "sanitation": 7.2,
+    "water": 3.02,
+    "electricity": 0.22,
+    "housing": 3.77,
+    "assets": 7.45
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Banteay Meanchay",
+   "year": "2021/2022",
+   "mpi": 0.04113,
+   "headcount": 10.359,
+   "intensity": 39.699,
+   "vulnerable": 24.511,
+   "severe": 2.012,
+   "popShare": 4.337,
+   "pop2024": 765.1,
+   "poor2024": 79.3,
+   "censored": {
+    "nutrition": 5.185,
+    "child_mortality": 0.0,
+    "schooling": 8.364,
+    "attendance": 2.522,
+    "cooking": 9.352,
+    "sanitation": 6.298,
+    "water": 1.203,
+    "electricity": 2.495,
+    "housing": 3.907,
+    "assets": 2.555
+   },
+   "raw": {
+    "nutrition": 19.297,
+    "child_mortality": 0.0,
+    "schooling": 20.501,
+    "attendance": 5.733,
+    "cooking": 70.808,
+    "sanitation": 17.665,
+    "water": 6.877,
+    "electricity": 4.812,
+    "housing": 10.723,
+    "assets": 5.476
+   },
+   "contribDims": {
+    "health": 21.01,
+    "education": 44.12,
+    "living": 34.87
+   },
+   "contrib": {
+    "nutrition": 21.01,
+    "child_mortality": 0.0,
+    "schooling": 33.9,
+    "attendance": 10.22,
+    "cooking": 12.63,
+    "sanitation": 8.51,
+    "water": 1.63,
+    "electricity": 3.37,
+    "housing": 5.28,
+    "assets": 3.45
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Battambang",
+   "year": "2021/2022",
+   "mpi": 0.04635,
+   "headcount": 10.663,
+   "intensity": 43.47,
+   "vulnerable": 23.345,
+   "severe": 2.419,
+   "popShare": 7.222,
+   "pop2024": 1273.9,
+   "poor2024": 135.8,
+   "censored": {
+    "nutrition": 4.9,
+    "child_mortality": 0.636,
+    "schooling": 7.097,
+    "attendance": 5.812,
+    "cooking": 8.458,
+    "sanitation": 6.794,
+    "water": 2.834,
+    "electricity": 4.32,
+    "housing": 2.917,
+    "assets": 2.772
+   },
+   "raw": {
+    "nutrition": 20.145,
+    "child_mortality": 2.068,
+    "schooling": 16.645,
+    "attendance": 11.868,
+    "cooking": 62.645,
+    "sanitation": 18.19,
+    "water": 12.861,
+    "electricity": 8.595,
+    "housing": 13.823,
+    "assets": 6.66
+   },
+   "contribDims": {
+    "health": 19.91,
+    "education": 46.42,
+    "living": 33.68
+   },
+   "contrib": {
+    "nutrition": 17.62,
+    "child_mortality": 2.29,
+    "schooling": 25.52,
+    "attendance": 20.9,
+    "cooking": 10.14,
+    "sanitation": 8.14,
+    "water": 3.4,
+    "electricity": 5.18,
+    "housing": 3.5,
+    "assets": 3.32
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kampong Cham",
+   "year": "2021/2022",
+   "mpi": 0.09265,
+   "headcount": 22.071,
+   "intensity": 41.977,
+   "vulnerable": 31.288,
+   "severe": 4.811,
+   "popShare": 6.884,
+   "pop2024": 1214.3,
+   "poor2024": 268.0,
+   "censored": {
+    "nutrition": 10.733,
+    "child_mortality": 1.709,
+    "schooling": 13.482,
+    "attendance": 18.374,
+    "cooking": 17.071,
+    "sanitation": 7.592,
+    "water": 3.367,
+    "electricity": 1.136,
+    "housing": 3.478,
+    "assets": 1.23
+   },
+   "raw": {
+    "nutrition": 15.668,
+    "child_mortality": 1.86,
+    "schooling": 20.974,
+    "attendance": 50.118,
+    "cooking": 62.684,
+    "sanitation": 21.704,
+    "water": 7.65,
+    "electricity": 1.405,
+    "housing": 8.334,
+    "assets": 3.82
+   },
+   "contribDims": {
+    "health": 22.38,
+    "education": 57.31,
+    "living": 20.31
+   },
+   "contrib": {
+    "nutrition": 19.31,
+    "child_mortality": 3.07,
+    "schooling": 24.25,
+    "attendance": 33.05,
+    "cooking": 10.24,
+    "sanitation": 4.55,
+    "water": 2.02,
+    "electricity": 0.68,
+    "housing": 2.09,
+    "assets": 0.74
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kampong Chhnang",
+   "year": "2021/2022",
+   "mpi": 0.09031,
+   "headcount": 21.189,
+   "intensity": 42.622,
+   "vulnerable": 25.229,
+   "severe": 6.151,
+   "popShare": 3.488,
+   "pop2024": 615.3,
+   "poor2024": 130.4,
+   "censored": {
+    "nutrition": 11.632,
+    "child_mortality": 0.995,
+    "schooling": 15.655,
+    "attendance": 3.608,
+    "cooking": 20.027,
+    "sanitation": 14.174,
+    "water": 10.848,
+    "electricity": 7.261,
+    "housing": 9.789,
+    "assets": 4.789
+   },
+   "raw": {
+    "nutrition": 30.487,
+    "child_mortality": 1.578,
+    "schooling": 21.836,
+    "attendance": 6.137,
+    "cooking": 72.946,
+    "sanitation": 32.0,
+    "water": 25.253,
+    "electricity": 11.948,
+    "housing": 19.627,
+    "assets": 6.388
+   },
+   "contribDims": {
+    "health": 23.3,
+    "education": 35.55,
+    "living": 41.15
+   },
+   "contrib": {
+    "nutrition": 21.47,
+    "child_mortality": 1.84,
+    "schooling": 28.89,
+    "attendance": 6.66,
+    "cooking": 12.32,
+    "sanitation": 8.72,
+    "water": 6.67,
+    "electricity": 4.47,
+    "housing": 6.02,
+    "assets": 2.95
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kampong Speu",
+   "year": "2021/2022",
+   "mpi": 0.0987,
+   "headcount": 23.022,
+   "intensity": 42.871,
+   "vulnerable": 23.201,
+   "severe": 6.825,
+   "popShare": 5.67,
+   "pop2024": 1000.2,
+   "poor2024": 230.3,
+   "censored": {
+    "nutrition": 12.758,
+    "child_mortality": 0.557,
+    "schooling": 12.582,
+    "attendance": 17.359,
+    "cooking": 13.504,
+    "sanitation": 11.049,
+    "water": 7.983,
+    "electricity": 4.01,
+    "housing": 6.513,
+    "assets": 4.825
+   },
+   "raw": {
+    "nutrition": 20.539,
+    "child_mortality": 1.113,
+    "schooling": 19.025,
+    "attendance": 40.316,
+    "cooking": 46.132,
+    "sanitation": 22.902,
+    "water": 21.758,
+    "electricity": 5.935,
+    "housing": 12.399,
+    "assets": 9.103
+   },
+   "contribDims": {
+    "health": 22.49,
+    "education": 50.56,
+    "living": 26.95
+   },
+   "contrib": {
+    "nutrition": 21.54,
+    "child_mortality": 0.94,
+    "schooling": 21.25,
+    "attendance": 29.31,
+    "cooking": 7.6,
+    "sanitation": 6.22,
+    "water": 4.49,
+    "electricity": 2.26,
+    "housing": 3.67,
+    "assets": 2.72
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kampong Thom",
+   "year": "2021/2022",
+   "mpi": 0.07476,
+   "headcount": 17.11,
+   "intensity": 43.691,
+   "vulnerable": 29.843,
+   "severe": 4.517,
+   "popShare": 4.463,
+   "pop2024": 787.2,
+   "poor2024": 134.7,
+   "censored": {
+    "nutrition": 10.429,
+    "child_mortality": 0.232,
+    "schooling": 11.839,
+    "attendance": 8.948,
+    "cooking": 14.431,
+    "sanitation": 7.397,
+    "water": 7.482,
+    "electricity": 5.09,
+    "housing": 2.019,
+    "assets": 3.803
+   },
+   "raw": {
+    "nutrition": 21.135,
+    "child_mortality": 0.445,
+    "schooling": 27.179,
+    "attendance": 17.332,
+    "cooking": 67.627,
+    "sanitation": 24.044,
+    "water": 16.893,
+    "electricity": 10.783,
+    "housing": 7.975,
+    "assets": 6.113
+   },
+   "contribDims": {
+    "health": 23.77,
+    "education": 46.34,
+    "living": 29.89
+   },
+   "contrib": {
+    "nutrition": 23.25,
+    "child_mortality": 0.52,
+    "schooling": 26.39,
+    "attendance": 19.95,
+    "cooking": 10.72,
+    "sanitation": 5.5,
+    "water": 5.56,
+    "electricity": 3.78,
+    "housing": 1.5,
+    "assets": 2.83
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kampot",
+   "year": "2021/2022",
+   "mpi": 0.07857,
+   "headcount": 19.355,
+   "intensity": 40.592,
+   "vulnerable": 16.607,
+   "severe": 4.997,
+   "popShare": 4.104,
+   "pop2024": 723.8,
+   "poor2024": 140.1,
+   "censored": {
+    "nutrition": 10.254,
+    "child_mortality": 0.569,
+    "schooling": 10.02,
+    "attendance": 12.804,
+    "cooking": 10.847,
+    "sanitation": 8.67,
+    "water": 8.109,
+    "electricity": 1.21,
+    "housing": 6.168,
+    "assets": 5.473
+   },
+   "raw": {
+    "nutrition": 23.485,
+    "child_mortality": 1.017,
+    "schooling": 16.672,
+    "attendance": 23.782,
+    "cooking": 38.759,
+    "sanitation": 21.148,
+    "water": 25.196,
+    "electricity": 2.29,
+    "housing": 9.863,
+    "assets": 8.59
+   },
+   "contribDims": {
+    "health": 22.96,
+    "education": 48.42,
+    "living": 28.62
+   },
+   "contrib": {
+    "nutrition": 21.75,
+    "child_mortality": 1.21,
+    "schooling": 21.26,
+    "attendance": 27.16,
+    "cooking": 7.67,
+    "sanitation": 6.13,
+    "water": 5.73,
+    "electricity": 0.86,
+    "housing": 4.36,
+    "assets": 3.87
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kandal",
+   "year": "2021/2022",
+   "mpi": 0.05144,
+   "headcount": 12.836,
+   "intensity": 40.077,
+   "vulnerable": 19.653,
+   "severe": 1.933,
+   "popShare": 7.203,
+   "pop2024": 1270.5,
+   "poor2024": 163.1,
+   "censored": {
+    "nutrition": 7.371,
+    "child_mortality": 0.0,
+    "schooling": 8.699,
+    "attendance": 10.341,
+    "cooking": 4.255,
+    "sanitation": 5.117,
+    "water": 0.489,
+    "electricity": 0.0,
+    "housing": 1.539,
+    "assets": 1.965
+   },
+   "raw": {
+    "nutrition": 17.896,
+    "child_mortality": 0.124,
+    "schooling": 16.348,
+    "attendance": 37.517,
+    "cooking": 26.612,
+    "sanitation": 18.352,
+    "water": 4.281,
+    "electricity": 0.0,
+    "housing": 8.829,
+    "assets": 3.465
+   },
+   "contribDims": {
+    "health": 23.88,
+    "education": 61.68,
+    "living": 14.43
+   },
+   "contrib": {
+    "nutrition": 23.88,
+    "child_mortality": 0.0,
+    "schooling": 28.18,
+    "attendance": 33.5,
+    "cooking": 4.6,
+    "sanitation": 5.53,
+    "water": 0.53,
+    "electricity": 0.0,
+    "housing": 1.66,
+    "assets": 2.12
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kep",
+   "year": "2021/2022",
+   "mpi": 0.07504,
+   "headcount": 19.199,
+   "intensity": 39.083,
+   "vulnerable": 18.553,
+   "severe": 2.569,
+   "popShare": 0.273,
+   "pop2024": 48.2,
+   "poor2024": 9.3,
+   "censored": {
+    "nutrition": 9.483,
+    "child_mortality": 1.081,
+    "schooling": 10.932,
+    "attendance": 13.582,
+    "cooking": 7.009,
+    "sanitation": 7.506,
+    "water": 4.843,
+    "electricity": 2.0,
+    "housing": 4.794,
+    "assets": 3.681
+   },
+   "raw": {
+    "nutrition": 23.873,
+    "child_mortality": 1.41,
+    "schooling": 17.148,
+    "attendance": 35.192,
+    "cooking": 24.122,
+    "sanitation": 16.963,
+    "water": 18.236,
+    "electricity": 3.226,
+    "housing": 12.525,
+    "assets": 6.675
+   },
+   "contribDims": {
+    "health": 23.46,
+    "education": 54.45,
+    "living": 22.09
+   },
+   "contrib": {
+    "nutrition": 21.06,
+    "child_mortality": 2.4,
+    "schooling": 24.28,
+    "attendance": 30.17,
+    "cooking": 5.19,
+    "sanitation": 5.56,
+    "water": 3.59,
+    "electricity": 1.48,
+    "housing": 3.55,
+    "assets": 2.73
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Koh Kong",
+   "year": "2021/2022",
+   "mpi": 0.09924,
+   "headcount": 22.558,
+   "intensity": 43.993,
+   "vulnerable": 21.384,
+   "severe": 9.133,
+   "popShare": 0.77,
+   "pop2024": 135.8,
+   "poor2024": 30.6,
+   "censored": {
+    "nutrition": 11.19,
+    "child_mortality": 0.356,
+    "schooling": 15.246,
+    "attendance": 13.952,
+    "cooking": 15.309,
+    "sanitation": 13.991,
+    "water": 9.923,
+    "electricity": 7.896,
+    "housing": 1.837,
+    "assets": 7.441
+   },
+   "raw": {
+    "nutrition": 20.348,
+    "child_mortality": 0.356,
+    "schooling": 25.122,
+    "attendance": 28.134,
+    "cooking": 37.3,
+    "sanitation": 31.945,
+    "water": 24.072,
+    "electricity": 12.002,
+    "housing": 3.488,
+    "assets": 19.169
+   },
+   "contribDims": {
+    "health": 19.39,
+    "education": 49.04,
+    "living": 31.57
+   },
+   "contrib": {
+    "nutrition": 18.79,
+    "child_mortality": 0.6,
+    "schooling": 25.61,
+    "attendance": 23.43,
+    "cooking": 8.57,
+    "sanitation": 7.83,
+    "water": 5.55,
+    "electricity": 4.42,
+    "housing": 1.03,
+    "assets": 4.17
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Kratie",
+   "year": "2021/2022",
+   "mpi": 0.11035,
+   "headcount": 26.069,
+   "intensity": 42.331,
+   "vulnerable": 16.851,
+   "severe": 5.06,
+   "popShare": 2.445,
+   "pop2024": 431.2,
+   "poor2024": 112.4,
+   "censored": {
+    "nutrition": 11.078,
+    "child_mortality": 1.021,
+    "schooling": 16.349,
+    "attendance": 8.804,
+    "cooking": 24.008,
+    "sanitation": 17.891,
+    "water": 11.202,
+    "electricity": 17.354,
+    "housing": 10.351,
+    "assets": 6.076
+   },
+   "raw": {
+    "nutrition": 16.454,
+    "child_mortality": 1.021,
+    "schooling": 25.771,
+    "attendance": 11.155,
+    "cooking": 75.813,
+    "sanitation": 34.275,
+    "water": 20.657,
+    "electricity": 31.922,
+    "housing": 19.136,
+    "assets": 8.345
+   },
+   "contribDims": {
+    "health": 18.27,
+    "education": 37.99,
+    "living": 43.74
+   },
+   "contrib": {
+    "nutrition": 16.73,
+    "child_mortality": 1.54,
+    "schooling": 24.69,
+    "attendance": 13.3,
+    "cooking": 12.09,
+    "sanitation": 9.01,
+    "water": 5.64,
+    "electricity": 8.74,
+    "housing": 5.21,
+    "assets": 3.06
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Mondul Kiri",
+   "year": "2021/2022",
+   "mpi": 0.15706,
+   "headcount": 34.888,
+   "intensity": 45.017,
+   "vulnerable": 19.363,
+   "severe": 12.502,
+   "popShare": 0.562,
+   "pop2024": 99.1,
+   "poor2024": 34.6,
+   "censored": {
+    "nutrition": 14.754,
+    "child_mortality": 1.234,
+    "schooling": 20.224,
+    "attendance": 20.281,
+    "cooking": 31.597,
+    "sanitation": 27.187,
+    "water": 17.338,
+    "electricity": 22.021,
+    "housing": 7.846,
+    "assets": 7.234
+   },
+   "raw": {
+    "nutrition": 24.146,
+    "child_mortality": 1.859,
+    "schooling": 25.355,
+    "attendance": 31.072,
+    "cooking": 66.348,
+    "sanitation": 47.024,
+    "water": 25.613,
+    "electricity": 34.547,
+    "housing": 14.019,
+    "assets": 9.053
+   },
+   "contribDims": {
+    "health": 16.97,
+    "education": 42.98,
+    "living": 40.05
+   },
+   "contrib": {
+    "nutrition": 15.66,
+    "child_mortality": 1.31,
+    "schooling": 21.46,
+    "attendance": 21.52,
+    "cooking": 11.18,
+    "sanitation": 9.62,
+    "water": 6.13,
+    "electricity": 7.79,
+    "housing": 2.78,
+    "assets": 2.56
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Otdar Meanchey",
+   "year": "2021/2022",
+   "mpi": 0.10012,
+   "headcount": 24.984,
+   "intensity": 40.074,
+   "vulnerable": 26.949,
+   "severe": 4.261,
+   "popShare": 1.278,
+   "pop2024": 225.4,
+   "poor2024": 56.3,
+   "censored": {
+    "nutrition": 8.808,
+    "child_mortality": 1.02,
+    "schooling": 14.041,
+    "attendance": 11.353,
+    "cooking": 23.749,
+    "sanitation": 13.672,
+    "water": 12.606,
+    "electricity": 14.673,
+    "housing": 3.226,
+    "assets": 6.627
+   },
+   "raw": {
+    "nutrition": 16.663,
+    "child_mortality": 1.02,
+    "schooling": 23.38,
+    "attendance": 19.755,
+    "cooking": 90.154,
+    "sanitation": 28.48,
+    "water": 26.657,
+    "electricity": 34.073,
+    "housing": 4.8,
+    "assets": 11.291
+   },
+   "contribDims": {
+    "health": 16.36,
+    "education": 42.27,
+    "living": 41.37
+   },
+   "contrib": {
+    "nutrition": 14.66,
+    "child_mortality": 1.7,
+    "schooling": 23.37,
+    "attendance": 18.9,
+    "cooking": 13.18,
+    "sanitation": 7.59,
+    "water": 6.99,
+    "electricity": 8.14,
+    "housing": 1.79,
+    "assets": 3.68
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Pailin",
+   "year": "2021/2022",
+   "mpi": 0.06047,
+   "headcount": 14.64,
+   "intensity": 41.305,
+   "vulnerable": 13.523,
+   "severe": 3.587,
+   "popShare": 0.502,
+   "pop2024": 88.5,
+   "poor2024": 13.0,
+   "censored": {
+    "nutrition": 7.458,
+    "child_mortality": 0.811,
+    "schooling": 8.241,
+    "attendance": 6.408,
+    "cooking": 12.257,
+    "sanitation": 6.338,
+    "water": 3.89,
+    "electricity": 8.888,
+    "housing": 5.263,
+    "assets": 3.455
+   },
+   "raw": {
+    "nutrition": 13.905,
+    "child_mortality": 1.583,
+    "schooling": 16.903,
+    "attendance": 11.399,
+    "cooking": 46.516,
+    "sanitation": 20.103,
+    "water": 8.779,
+    "electricity": 20.787,
+    "housing": 16.091,
+    "assets": 6.508
+   },
+   "contribDims": {
+    "health": 22.79,
+    "education": 40.37,
+    "living": 36.83
+   },
+   "contrib": {
+    "nutrition": 20.56,
+    "child_mortality": 2.23,
+    "schooling": 22.71,
+    "attendance": 17.66,
+    "cooking": 11.26,
+    "sanitation": 5.82,
+    "water": 3.57,
+    "electricity": 8.17,
+    "housing": 4.84,
+    "assets": 3.17
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Phnom Penh",
+   "year": "2021/2022",
+   "mpi": 0.02219,
+   "headcount": 5.751,
+   "intensity": 38.583,
+   "vulnerable": 2.975,
+   "severe": 0.693,
+   "popShare": 13.842,
+   "pop2024": 2441.6,
+   "poor2024": 140.4,
+   "censored": {
+    "nutrition": 4.593,
+    "child_mortality": 0.0,
+    "schooling": 2.836,
+    "attendance": 4.766,
+    "cooking": 0.0,
+    "sanitation": 1.824,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.221,
+    "assets": 1.311
+   },
+   "raw": {
+    "nutrition": 15.412,
+    "child_mortality": 0.308,
+    "schooling": 7.214,
+    "attendance": 11.448,
+    "cooking": 2.027,
+    "sanitation": 6.798,
+    "water": 0.24,
+    "electricity": 0.0,
+    "housing": 1.725,
+    "assets": 5.722
+   },
+   "contribDims": {
+    "health": 34.5,
+    "education": 57.1,
+    "living": 8.4
+   },
+   "contrib": {
+    "nutrition": 34.5,
+    "child_mortality": 0.0,
+    "schooling": 21.3,
+    "attendance": 35.8,
+    "cooking": 0.0,
+    "sanitation": 4.57,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.55,
+    "assets": 3.28
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Preah Sihanouk",
+   "year": "2021/2022",
+   "mpi": 0.03073,
+   "headcount": 7.239,
+   "intensity": 42.447,
+   "vulnerable": 17.374,
+   "severe": 2.274,
+   "popShare": 1.257,
+   "pop2024": 221.6,
+   "poor2024": 16.0,
+   "censored": {
+    "nutrition": 3.822,
+    "child_mortality": 0.29,
+    "schooling": 5.454,
+    "attendance": 4.17,
+    "cooking": 2.981,
+    "sanitation": 2.991,
+    "water": 1.432,
+    "electricity": 0.979,
+    "housing": 1.665,
+    "assets": 4.049
+   },
+   "raw": {
+    "nutrition": 18.677,
+    "child_mortality": 0.613,
+    "schooling": 16.496,
+    "attendance": 12.896,
+    "cooking": 18.723,
+    "sanitation": 18.086,
+    "water": 7.398,
+    "electricity": 4.137,
+    "housing": 9.891,
+    "assets": 10.801
+   },
+   "contribDims": {
+    "health": 22.31,
+    "education": 52.2,
+    "living": 25.49
+   },
+   "contrib": {
+    "nutrition": 20.73,
+    "child_mortality": 1.57,
+    "schooling": 29.59,
+    "attendance": 22.62,
+    "cooking": 5.39,
+    "sanitation": 5.41,
+    "water": 2.59,
+    "electricity": 1.77,
+    "housing": 3.01,
+    "assets": 7.32
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Preah Vihear",
+   "year": "2021/2022",
+   "mpi": 0.12516,
+   "headcount": 28.715,
+   "intensity": 43.587,
+   "vulnerable": 24.257,
+   "severe": 8.398,
+   "popShare": 1.669,
+   "pop2024": 294.3,
+   "poor2024": 84.5,
+   "censored": {
+    "nutrition": 13.824,
+    "child_mortality": 1.072,
+    "schooling": 16.767,
+    "attendance": 15.745,
+    "cooking": 27.279,
+    "sanitation": 19.977,
+    "water": 6.95,
+    "electricity": 17.58,
+    "housing": 3.522,
+    "assets": 7.753
+   },
+   "raw": {
+    "nutrition": 23.227,
+    "child_mortality": 1.434,
+    "schooling": 22.078,
+    "attendance": 24.96,
+    "cooking": 87.469,
+    "sanitation": 38.999,
+    "water": 17.046,
+    "electricity": 31.113,
+    "housing": 5.499,
+    "assets": 12.765
+   },
+   "contribDims": {
+    "health": 19.84,
+    "education": 43.29,
+    "living": 36.87
+   },
+   "contrib": {
+    "nutrition": 18.41,
+    "child_mortality": 1.43,
+    "schooling": 22.33,
+    "attendance": 20.97,
+    "cooking": 12.11,
+    "sanitation": 8.87,
+    "water": 3.08,
+    "electricity": 7.8,
+    "housing": 1.56,
+    "assets": 3.44
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Prey Veng",
+   "year": "2021/2022",
+   "mpi": 0.04671,
+   "headcount": 11.604,
+   "intensity": 40.257,
+   "vulnerable": 23.413,
+   "severe": 2.119,
+   "popShare": 7.044,
+   "pop2024": 1242.5,
+   "poor2024": 144.2,
+   "censored": {
+    "nutrition": 6.819,
+    "child_mortality": 0.832,
+    "schooling": 6.175,
+    "attendance": 8.228,
+    "cooking": 7.41,
+    "sanitation": 4.196,
+    "water": 0.914,
+    "electricity": 0.992,
+    "housing": 3.147,
+    "assets": 1.263
+   },
+   "raw": {
+    "nutrition": 18.161,
+    "child_mortality": 1.563,
+    "schooling": 13.076,
+    "attendance": 23.271,
+    "cooking": 56.489,
+    "sanitation": 13.862,
+    "water": 4.98,
+    "electricity": 4.499,
+    "housing": 11.469,
+    "assets": 3.023
+   },
+   "contribDims": {
+    "health": 27.3,
+    "education": 51.39,
+    "living": 21.31
+   },
+   "contrib": {
+    "nutrition": 24.33,
+    "child_mortality": 2.97,
+    "schooling": 22.03,
+    "attendance": 29.36,
+    "cooking": 8.81,
+    "sanitation": 4.99,
+    "water": 1.09,
+    "electricity": 1.18,
+    "housing": 3.74,
+    "assets": 1.5
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Pursat",
+   "year": "2021/2022",
+   "mpi": 0.11137,
+   "headcount": 26.438,
+   "intensity": 42.124,
+   "vulnerable": 31.041,
+   "severe": 6.773,
+   "popShare": 2.689,
+   "pop2024": 474.2,
+   "poor2024": 125.4,
+   "censored": {
+    "nutrition": 10.076,
+    "child_mortality": 0.696,
+    "schooling": 18.075,
+    "attendance": 16.71,
+    "cooking": 22.454,
+    "sanitation": 11.369,
+    "water": 10.246,
+    "electricity": 6.725,
+    "housing": 7.508,
+    "assets": 5.489
+   },
+   "raw": {
+    "nutrition": 19.473,
+    "child_mortality": 1.162,
+    "schooling": 29.343,
+    "attendance": 29.276,
+    "cooking": 77.174,
+    "sanitation": 21.151,
+    "water": 29.223,
+    "electricity": 7.911,
+    "housing": 22.211,
+    "assets": 7.74
+   },
+   "contribDims": {
+    "health": 16.12,
+    "education": 52.06,
+    "living": 31.82
+   },
+   "contrib": {
+    "nutrition": 15.08,
+    "child_mortality": 1.04,
+    "schooling": 27.05,
+    "attendance": 25.01,
+    "cooking": 11.2,
+    "sanitation": 5.67,
+    "water": 5.11,
+    "electricity": 3.35,
+    "housing": 3.75,
+    "assets": 2.74
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Ratanak Kiri",
+   "year": "2021/2022",
+   "mpi": 0.23128,
+   "headcount": 49.061,
+   "intensity": 47.142,
+   "vulnerable": 18.435,
+   "severe": 19.751,
+   "popShare": 1.467,
+   "pop2024": 258.7,
+   "poor2024": 126.9,
+   "censored": {
+    "nutrition": 15.811,
+    "child_mortality": 1.155,
+    "schooling": 37.376,
+    "attendance": 18.388,
+    "cooking": 48.193,
+    "sanitation": 40.711,
+    "water": 35.461,
+    "electricity": 40.978,
+    "housing": 6.366,
+    "assets": 26.41
+   },
+   "raw": {
+    "nutrition": 21.349,
+    "child_mortality": 1.568,
+    "schooling": 41.996,
+    "attendance": 20.285,
+    "cooking": 80.808,
+    "sanitation": 57.767,
+    "water": 52.308,
+    "electricity": 56.871,
+    "housing": 10.237,
+    "assets": 32.269
+   },
+   "contribDims": {
+    "health": 12.23,
+    "education": 40.18,
+    "living": 47.59
+   },
+   "contrib": {
+    "nutrition": 11.39,
+    "child_mortality": 0.83,
+    "schooling": 26.93,
+    "attendance": 13.25,
+    "cooking": 11.58,
+    "sanitation": 9.78,
+    "water": 8.52,
+    "electricity": 9.84,
+    "housing": 1.53,
+    "assets": 6.34
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Siem Reap",
+   "year": "2021/2022",
+   "mpi": 0.09537,
+   "headcount": 21.833,
+   "intensity": 43.681,
+   "vulnerable": 21.135,
+   "severe": 6.229,
+   "popShare": 7.774,
+   "pop2024": 1371.2,
+   "poor2024": 299.4,
+   "censored": {
+    "nutrition": 11.565,
+    "child_mortality": 0.257,
+    "schooling": 14.434,
+    "attendance": 9.079,
+    "cooking": 19.809,
+    "sanitation": 11.797,
+    "water": 9.429,
+    "electricity": 8.285,
+    "housing": 10.014,
+    "assets": 6.327
+   },
+   "raw": {
+    "nutrition": 18.603,
+    "child_mortality": 0.257,
+    "schooling": 20.52,
+    "attendance": 25.973,
+    "cooking": 64.468,
+    "sanitation": 22.913,
+    "water": 16.646,
+    "electricity": 11.298,
+    "housing": 23.816,
+    "assets": 8.523
+   },
+   "contribDims": {
+    "health": 20.66,
+    "education": 41.09,
+    "living": 38.25
+   },
+   "contrib": {
+    "nutrition": 20.21,
+    "child_mortality": 0.45,
+    "schooling": 25.22,
+    "attendance": 15.87,
+    "cooking": 11.54,
+    "sanitation": 6.87,
+    "water": 5.49,
+    "electricity": 4.83,
+    "housing": 5.83,
+    "assets": 3.69
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Stung Treng",
+   "year": "2021/2022",
+   "mpi": 0.20083,
+   "headcount": 43.787,
+   "intensity": 45.865,
+   "vulnerable": 23.897,
+   "severe": 16.618,
+   "popShare": 1.063,
+   "pop2024": 187.6,
+   "poor2024": 82.1,
+   "censored": {
+    "nutrition": 20.994,
+    "child_mortality": 1.219,
+    "schooling": 27.197,
+    "attendance": 13.94,
+    "cooking": 40.889,
+    "sanitation": 34.311,
+    "water": 28.852,
+    "electricity": 38.664,
+    "housing": 17.188,
+    "assets": 11.53
+   },
+   "raw": {
+    "nutrition": 27.913,
+    "child_mortality": 1.219,
+    "schooling": 30.534,
+    "attendance": 17.334,
+    "cooking": 77.977,
+    "sanitation": 55.997,
+    "water": 49.744,
+    "electricity": 61.524,
+    "housing": 29.593,
+    "assets": 14.738
+   },
+   "contribDims": {
+    "health": 18.43,
+    "education": 34.14,
+    "living": 47.43
+   },
+   "contrib": {
+    "nutrition": 17.42,
+    "child_mortality": 1.01,
+    "schooling": 22.57,
+    "attendance": 11.57,
+    "cooking": 11.31,
+    "sanitation": 9.49,
+    "water": 7.98,
+    "electricity": 10.7,
+    "housing": 4.75,
+    "assets": 3.19
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Svay Rieng",
+   "year": "2021/2022",
+   "mpi": 0.03897,
+   "headcount": 9.399,
+   "intensity": 41.457,
+   "vulnerable": 17.17,
+   "severe": 1.762,
+   "popShare": 3.834,
+   "pop2024": 676.3,
+   "poor2024": 63.6,
+   "censored": {
+    "nutrition": 4.572,
+    "child_mortality": 0.717,
+    "schooling": 7.737,
+    "attendance": 4.295,
+    "cooking": 6.121,
+    "sanitation": 3.911,
+    "water": 0.0,
+    "electricity": 3.568,
+    "housing": 2.777,
+    "assets": 1.799
+   },
+   "raw": {
+    "nutrition": 16.232,
+    "child_mortality": 0.913,
+    "schooling": 17.448,
+    "attendance": 7.629,
+    "cooking": 37.367,
+    "sanitation": 23.05,
+    "water": 0.0,
+    "electricity": 10.272,
+    "housing": 11.612,
+    "assets": 4.838
+   },
+   "contribDims": {
+    "health": 22.62,
+    "education": 51.46,
+    "living": 25.91
+   },
+   "contrib": {
+    "nutrition": 19.55,
+    "child_mortality": 3.07,
+    "schooling": 33.09,
+    "attendance": 18.37,
+    "cooking": 8.73,
+    "sanitation": 5.58,
+    "water": 0.0,
+    "electricity": 5.09,
+    "housing": 3.96,
+    "assets": 2.57
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Takeo",
+   "year": "2021/2022",
+   "mpi": 0.04396,
+   "headcount": 10.549,
+   "intensity": 41.67,
+   "vulnerable": 18.316,
+   "severe": 1.924,
+   "popShare": 5.694,
+   "pop2024": 1004.3,
+   "poor2024": 105.9,
+   "censored": {
+    "nutrition": 7.117,
+    "child_mortality": 0.0,
+    "schooling": 4.891,
+    "attendance": 6.989,
+    "cooking": 5.811,
+    "sanitation": 6.672,
+    "water": 4.021,
+    "electricity": 1.101,
+    "housing": 2.249,
+    "assets": 2.275
+   },
+   "raw": {
+    "nutrition": 21.513,
+    "child_mortality": 0.701,
+    "schooling": 13.744,
+    "attendance": 19.799,
+    "cooking": 37.394,
+    "sanitation": 18.989,
+    "water": 15.388,
+    "electricity": 1.632,
+    "housing": 8.077,
+    "assets": 5.339
+   },
+   "contribDims": {
+    "health": 26.99,
+    "education": 45.05,
+    "living": 27.97
+   },
+   "contrib": {
+    "nutrition": 26.99,
+    "child_mortality": 0.0,
+    "schooling": 18.55,
+    "attendance": 26.5,
+    "cooking": 7.34,
+    "sanitation": 8.43,
+    "water": 5.08,
+    "electricity": 1.39,
+    "housing": 2.84,
+    "assets": 2.88
+   }
+  },
+  {
+   "iso": "KHM",
+   "name": "Tboung Khmum",
+   "year": "2021/2022",
+   "mpi": 0.1107,
+   "headcount": 26.616,
+   "intensity": 41.593,
+   "vulnerable": 32.642,
+   "severe": 6.38,
+   "popShare": 4.465,
+   "pop2024": 787.6,
+   "poor2024": 209.6,
+   "censored": {
+    "nutrition": 11.271,
+    "child_mortality": 0.332,
+    "schooling": 17.273,
+    "attendance": 19.155,
+    "cooking": 19.969,
+    "sanitation": 13.693,
+    "water": 2.502,
+    "electricity": 1.534,
+    "housing": 13.34,
+    "assets": 4.135
+   },
+   "raw": {
+    "nutrition": 22.566,
+    "child_mortality": 0.332,
+    "schooling": 23.802,
+    "attendance": 43.325,
+    "cooking": 62.878,
+    "sanitation": 28.875,
+    "water": 4.777,
+    "electricity": 2.767,
+    "housing": 36.943,
+    "assets": 5.886
+   },
+   "contribDims": {
+    "health": 17.47,
+    "education": 54.84,
+    "living": 27.69
+   },
+   "contrib": {
+    "nutrition": 16.97,
+    "child_mortality": 0.5,
+    "schooling": 26.01,
+    "attendance": 28.84,
+    "cooking": 10.02,
+    "sanitation": 6.87,
+    "water": 1.26,
+    "electricity": 0.77,
+    "housing": 6.69,
+    "assets": 2.07
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Attapeu",
+   "year": "2023",
+   "mpi": 0.09247,
+   "headcount": 20.176,
+   "intensity": 45.834,
+   "vulnerable": 25.832,
+   "severe": 6.966,
+   "popShare": 2.51,
+   "pop2024": 195.0,
+   "poor2024": 39.3,
+   "censored": {
+    "nutrition": 10.048,
+    "child_mortality": 1.429,
+    "schooling": 13.128,
+    "attendance": 13.688,
+    "cooking": 20.176,
+    "sanitation": 12.013,
+    "water": 7.867,
+    "electricity": 1.301,
+    "housing": 5.931,
+    "assets": 4.284
+   },
+   "raw": {
+    "nutrition": 19.253,
+    "child_mortality": 2.526,
+    "schooling": 20.259,
+    "attendance": 21.708,
+    "cooking": 97.156,
+    "sanitation": 19.776,
+    "water": 17.769,
+    "electricity": 1.677,
+    "housing": 11.287,
+    "assets": 5.352
+   },
+   "contribDims": {
+    "health": 20.69,
+    "education": 48.33,
+    "living": 30.98
+   },
+   "contrib": {
+    "nutrition": 18.11,
+    "child_mortality": 2.58,
+    "schooling": 23.66,
+    "attendance": 24.67,
+    "cooking": 12.12,
+    "sanitation": 7.22,
+    "water": 4.73,
+    "electricity": 0.78,
+    "housing": 3.56,
+    "assets": 2.57
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Bokeo",
+   "year": "2023",
+   "mpi": 0.07385,
+   "headcount": 16.191,
+   "intensity": 45.613,
+   "vulnerable": 21.2,
+   "severe": 5.261,
+   "popShare": 2.594,
+   "pop2024": 201.6,
+   "poor2024": 32.6,
+   "censored": {
+    "nutrition": 6.724,
+    "child_mortality": 1.219,
+    "schooling": 11.856,
+    "attendance": 7.979,
+    "cooking": 14.839,
+    "sanitation": 7.776,
+    "water": 5.748,
+    "electricity": 2.31,
+    "housing": 9.91,
+    "assets": 9.015
+   },
+   "raw": {
+    "nutrition": 15.453,
+    "child_mortality": 1.563,
+    "schooling": 22.057,
+    "attendance": 12.132,
+    "cooking": 78.015,
+    "sanitation": 12.373,
+    "water": 14.944,
+    "electricity": 2.694,
+    "housing": 17.286,
+    "assets": 14.13
+   },
+   "contribDims": {
+    "health": 17.93,
+    "education": 44.76,
+    "living": 37.31
+   },
+   "contrib": {
+    "nutrition": 15.18,
+    "child_mortality": 2.75,
+    "schooling": 26.76,
+    "attendance": 18.01,
+    "cooking": 11.16,
+    "sanitation": 5.85,
+    "water": 4.32,
+    "electricity": 1.74,
+    "housing": 7.46,
+    "assets": 6.78
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Borikhamxay",
+   "year": "2023",
+   "mpi": 0.05654,
+   "headcount": 13.292,
+   "intensity": 42.536,
+   "vulnerable": 29.592,
+   "severe": 2.934,
+   "popShare": 4.35,
+   "pop2024": 338.0,
+   "poor2024": 44.9,
+   "censored": {
+    "nutrition": 7.644,
+    "child_mortality": 0.403,
+    "schooling": 8.094,
+    "attendance": 7.423,
+    "cooking": 13.138,
+    "sanitation": 4.711,
+    "water": 3.986,
+    "electricity": 0.456,
+    "housing": 6.806,
+    "assets": 1.982
+   },
+   "raw": {
+    "nutrition": 18.988,
+    "child_mortality": 0.75,
+    "schooling": 17.515,
+    "attendance": 17.499,
+    "cooking": 92.368,
+    "sanitation": 8.408,
+    "water": 10.187,
+    "electricity": 0.456,
+    "housing": 13.028,
+    "assets": 2.749
+   },
+   "contribDims": {
+    "health": 23.72,
+    "education": 45.74,
+    "living": 30.54
+   },
+   "contrib": {
+    "nutrition": 22.53,
+    "child_mortality": 1.19,
+    "schooling": 23.86,
+    "attendance": 21.88,
+    "cooking": 12.91,
+    "sanitation": 4.63,
+    "water": 3.92,
+    "electricity": 0.45,
+    "housing": 6.69,
+    "assets": 1.95
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Champasack",
+   "year": "2023",
+   "mpi": 0.06091,
+   "headcount": 13.454,
+   "intensity": 45.271,
+   "vulnerable": 30.094,
+   "severe": 3.973,
+   "popShare": 9.357,
+   "pop2024": 727.1,
+   "poor2024": 97.8,
+   "censored": {
+    "nutrition": 5.901,
+    "child_mortality": 0.498,
+    "schooling": 11.575,
+    "attendance": 9.687,
+    "cooking": 13.383,
+    "sanitation": 6.615,
+    "water": 2.771,
+    "electricity": 0.292,
+    "housing": 1.736,
+    "assets": 1.848
+   },
+   "raw": {
+    "nutrition": 16.79,
+    "child_mortality": 0.607,
+    "schooling": 22.855,
+    "attendance": 17.868,
+    "cooking": 97.488,
+    "sanitation": 16.522,
+    "water": 7.716,
+    "electricity": 0.292,
+    "housing": 3.598,
+    "assets": 2.706
+   },
+   "contribDims": {
+    "health": 17.51,
+    "education": 58.18,
+    "living": 24.31
+   },
+   "contrib": {
+    "nutrition": 16.15,
+    "child_mortality": 1.36,
+    "schooling": 31.68,
+    "attendance": 26.51,
+    "cooking": 12.21,
+    "sanitation": 6.03,
+    "water": 2.53,
+    "electricity": 0.27,
+    "housing": 1.58,
+    "assets": 1.69
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Huaphanh",
+   "year": "2023",
+   "mpi": 0.06834,
+   "headcount": 15.402,
+   "intensity": 44.371,
+   "vulnerable": 31.6,
+   "severe": 4.768,
+   "popShare": 4.205,
+   "pop2024": 326.7,
+   "poor2024": 50.3,
+   "censored": {
+    "nutrition": 10.128,
+    "child_mortality": 0.961,
+    "schooling": 9.046,
+    "attendance": 7.417,
+    "cooking": 15.402,
+    "sanitation": 5.389,
+    "water": 2.323,
+    "electricity": 2.441,
+    "housing": 9.73,
+    "assets": 5.069
+   },
+   "raw": {
+    "nutrition": 31.006,
+    "child_mortality": 1.667,
+    "schooling": 16.191,
+    "attendance": 10.326,
+    "cooking": 97.124,
+    "sanitation": 8.526,
+    "water": 5.981,
+    "electricity": 3.393,
+    "housing": 24.401,
+    "assets": 7.794
+   },
+   "contribDims": {
+    "health": 27.04,
+    "education": 40.15,
+    "living": 32.81
+   },
+   "contrib": {
+    "nutrition": 24.7,
+    "child_mortality": 2.34,
+    "schooling": 22.06,
+    "attendance": 18.09,
+    "cooking": 12.52,
+    "sanitation": 4.38,
+    "water": 1.89,
+    "electricity": 1.98,
+    "housing": 7.91,
+    "assets": 4.12
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Khammuan",
+   "year": "2023",
+   "mpi": 0.08456,
+   "headcount": 18.371,
+   "intensity": 46.027,
+   "vulnerable": 28.187,
+   "severe": 6.616,
+   "popShare": 6.128,
+   "pop2024": 476.2,
+   "poor2024": 87.5,
+   "censored": {
+    "nutrition": 8.441,
+    "child_mortality": 0.512,
+    "schooling": 14.597,
+    "attendance": 10.558,
+    "cooking": 18.355,
+    "sanitation": 8.359,
+    "water": 7.967,
+    "electricity": 2.037,
+    "housing": 7.012,
+    "assets": 6.148
+   },
+   "raw": {
+    "nutrition": 18.015,
+    "child_mortality": 0.792,
+    "schooling": 25.058,
+    "attendance": 17.902,
+    "cooking": 98.288,
+    "sanitation": 14.502,
+    "water": 15.515,
+    "electricity": 2.111,
+    "housing": 15.409,
+    "assets": 8.005
+   },
+   "contribDims": {
+    "health": 17.65,
+    "education": 49.58,
+    "living": 32.77
+   },
+   "contrib": {
+    "nutrition": 16.64,
+    "child_mortality": 1.01,
+    "schooling": 28.77,
+    "attendance": 20.81,
+    "cooking": 12.06,
+    "sanitation": 5.49,
+    "water": 5.23,
+    "electricity": 1.34,
+    "housing": 4.61,
+    "assets": 4.04
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Luangnamtha",
+   "year": "2023",
+   "mpi": 0.07227,
+   "headcount": 16.981,
+   "intensity": 42.556,
+   "vulnerable": 24.574,
+   "severe": 4.62,
+   "popShare": 2.927,
+   "pop2024": 227.4,
+   "poor2024": 38.6,
+   "censored": {
+    "nutrition": 8.433,
+    "child_mortality": 0.784,
+    "schooling": 12.271,
+    "attendance": 5.15,
+    "cooking": 16.796,
+    "sanitation": 6.781,
+    "water": 12.647,
+    "electricity": 1.763,
+    "housing": 8.271,
+    "assets": 3.906
+   },
+   "raw": {
+    "nutrition": 20.742,
+    "child_mortality": 1.269,
+    "schooling": 19.86,
+    "attendance": 8.672,
+    "cooking": 97.055,
+    "sanitation": 10.784,
+    "water": 33.297,
+    "electricity": 2.484,
+    "housing": 19.828,
+    "assets": 5.712
+   },
+   "contribDims": {
+    "health": 21.26,
+    "education": 40.18,
+    "living": 38.57
+   },
+   "contrib": {
+    "nutrition": 19.45,
+    "child_mortality": 1.81,
+    "schooling": 28.3,
+    "attendance": 11.88,
+    "cooking": 12.91,
+    "sanitation": 5.21,
+    "water": 9.72,
+    "electricity": 1.36,
+    "housing": 6.36,
+    "assets": 3.0
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Luangprabang",
+   "year": "2023",
+   "mpi": 0.0731,
+   "headcount": 17.152,
+   "intensity": 42.618,
+   "vulnerable": 30.475,
+   "severe": 4.053,
+   "popShare": 6.628,
+   "pop2024": 515.0,
+   "poor2024": 88.3,
+   "censored": {
+    "nutrition": 9.556,
+    "child_mortality": 1.044,
+    "schooling": 9.105,
+    "attendance": 7.515,
+    "cooking": 17.043,
+    "sanitation": 8.578,
+    "water": 7.337,
+    "electricity": 2.221,
+    "housing": 9.856,
+    "assets": 4.882
+   },
+   "raw": {
+    "nutrition": 22.543,
+    "child_mortality": 1.834,
+    "schooling": 17.457,
+    "attendance": 14.712,
+    "cooking": 92.169,
+    "sanitation": 17.0,
+    "water": 20.176,
+    "electricity": 3.053,
+    "housing": 18.708,
+    "assets": 9.468
+   },
+   "contribDims": {
+    "health": 24.17,
+    "education": 37.89,
+    "living": 37.94
+   },
+   "contrib": {
+    "nutrition": 21.79,
+    "child_mortality": 2.38,
+    "schooling": 20.76,
+    "attendance": 17.13,
+    "cooking": 12.95,
+    "sanitation": 6.52,
+    "water": 5.58,
+    "electricity": 1.69,
+    "housing": 7.49,
+    "assets": 3.71
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Oudomxay",
+   "year": "2023",
+   "mpi": 0.14409,
+   "headcount": 30.864,
+   "intensity": 46.684,
+   "vulnerable": 22.879,
+   "severe": 12.387,
+   "popShare": 5.339,
+   "pop2024": 414.9,
+   "poor2024": 128.0,
+   "censored": {
+    "nutrition": 18.441,
+    "child_mortality": 2.814,
+    "schooling": 17.677,
+    "attendance": 12.63,
+    "cooking": 30.613,
+    "sanitation": 17.456,
+    "water": 17.772,
+    "electricity": 6.103,
+    "housing": 20.04,
+    "assets": 12.684
+   },
+   "raw": {
+    "nutrition": 29.56,
+    "child_mortality": 3.336,
+    "schooling": 23.3,
+    "attendance": 16.136,
+    "cooking": 95.202,
+    "sanitation": 23.638,
+    "water": 31.78,
+    "electricity": 7.325,
+    "housing": 30.74,
+    "assets": 18.078
+   },
+   "contribDims": {
+    "health": 24.59,
+    "education": 35.06,
+    "living": 40.36
+   },
+   "contrib": {
+    "nutrition": 21.33,
+    "child_mortality": 3.25,
+    "schooling": 20.45,
+    "attendance": 14.61,
+    "cooking": 11.8,
+    "sanitation": 6.73,
+    "water": 6.85,
+    "electricity": 2.35,
+    "housing": 7.73,
+    "assets": 4.89
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Phongsaly",
+   "year": "2023",
+   "mpi": 0.12169,
+   "headcount": 26.118,
+   "intensity": 46.595,
+   "vulnerable": 27.82,
+   "severe": 10.886,
+   "popShare": 2.979,
+   "pop2024": 231.5,
+   "poor2024": 60.5,
+   "censored": {
+    "nutrition": 14.511,
+    "child_mortality": 1.703,
+    "schooling": 20.423,
+    "attendance": 9.301,
+    "cooking": 26.118,
+    "sanitation": 17.67,
+    "water": 3.03,
+    "electricity": 5.631,
+    "housing": 17.322,
+    "assets": 11.469
+   },
+   "raw": {
+    "nutrition": 26.198,
+    "child_mortality": 2.589,
+    "schooling": 31.834,
+    "attendance": 12.225,
+    "cooking": 96.69,
+    "sanitation": 24.35,
+    "water": 6.995,
+    "electricity": 8.838,
+    "housing": 29.502,
+    "assets": 14.177
+   },
+   "contribDims": {
+    "health": 22.2,
+    "education": 40.71,
+    "living": 37.09
+   },
+   "contrib": {
+    "nutrition": 19.87,
+    "child_mortality": 2.33,
+    "schooling": 27.97,
+    "attendance": 12.74,
+    "cooking": 11.92,
+    "sanitation": 8.07,
+    "water": 1.38,
+    "electricity": 2.57,
+    "housing": 7.91,
+    "assets": 5.24
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Saravane",
+   "year": "2023",
+   "mpi": 0.1197,
+   "headcount": 27.09,
+   "intensity": 44.186,
+   "vulnerable": 33.314,
+   "severe": 7.666,
+   "popShare": 5.461,
+   "pop2024": 424.3,
+   "poor2024": 114.9,
+   "censored": {
+    "nutrition": 11.583,
+    "child_mortality": 1.268,
+    "schooling": 22.974,
+    "attendance": 14.0,
+    "cooking": 26.889,
+    "sanitation": 12.515,
+    "water": 8.73,
+    "electricity": 2.334,
+    "housing": 7.748,
+    "assets": 7.767
+   },
+   "raw": {
+    "nutrition": 20.015,
+    "child_mortality": 1.327,
+    "schooling": 36.494,
+    "attendance": 24.554,
+    "cooking": 99.426,
+    "sanitation": 25.373,
+    "water": 16.915,
+    "electricity": 2.524,
+    "housing": 11.97,
+    "assets": 10.572
+   },
+   "contribDims": {
+    "health": 17.89,
+    "education": 51.48,
+    "living": 30.62
+   },
+   "contrib": {
+    "nutrition": 16.13,
+    "child_mortality": 1.77,
+    "schooling": 31.99,
+    "attendance": 19.49,
+    "cooking": 12.48,
+    "sanitation": 5.81,
+    "water": 4.05,
+    "electricity": 1.08,
+    "housing": 3.6,
+    "assets": 3.61
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Savannakhet",
+   "year": "2023",
+   "mpi": 0.17743,
+   "headcount": 35.143,
+   "intensity": 50.489,
+   "vulnerable": 22.7,
+   "severe": 17.892,
+   "popShare": 15.048,
+   "pop2024": 1169.2,
+   "poor2024": 410.9,
+   "censored": {
+    "nutrition": 16.539,
+    "child_mortality": 1.593,
+    "schooling": 27.862,
+    "attendance": 20.74,
+    "cooking": 35.015,
+    "sanitation": 27.388,
+    "water": 22.542,
+    "electricity": 10.597,
+    "housing": 13.931,
+    "assets": 9.707
+   },
+   "raw": {
+    "nutrition": 23.61,
+    "child_mortality": 2.201,
+    "schooling": 36.696,
+    "attendance": 25.902,
+    "cooking": 98.285,
+    "sanitation": 36.441,
+    "water": 28.101,
+    "electricity": 11.453,
+    "housing": 17.646,
+    "assets": 10.484
+   },
+   "contribDims": {
+    "health": 17.03,
+    "education": 45.65,
+    "living": 37.32
+   },
+   "contrib": {
+    "nutrition": 15.54,
+    "child_mortality": 1.5,
+    "schooling": 26.17,
+    "attendance": 19.48,
+    "cooking": 10.96,
+    "sanitation": 8.58,
+    "water": 7.06,
+    "electricity": 3.32,
+    "housing": 4.36,
+    "assets": 3.04
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Sekong",
+   "year": "2023",
+   "mpi": 0.12671,
+   "headcount": 26.976,
+   "intensity": 46.971,
+   "vulnerable": 28.259,
+   "severe": 10.459,
+   "popShare": 1.95,
+   "pop2024": 151.5,
+   "poor2024": 40.9,
+   "censored": {
+    "nutrition": 14.407,
+    "child_mortality": 1.43,
+    "schooling": 17.126,
+    "attendance": 18.505,
+    "cooking": 26.976,
+    "sanitation": 17.185,
+    "water": 4.823,
+    "electricity": 4.087,
+    "housing": 11.457,
+    "assets": 9.147
+   },
+   "raw": {
+    "nutrition": 27.798,
+    "child_mortality": 2.057,
+    "schooling": 22.715,
+    "attendance": 26.493,
+    "cooking": 98.339,
+    "sanitation": 30.486,
+    "water": 8.29,
+    "electricity": 4.733,
+    "housing": 25.321,
+    "assets": 11.83
+   },
+   "contribDims": {
+    "health": 20.83,
+    "education": 46.87,
+    "living": 32.3
+   },
+   "contrib": {
+    "nutrition": 18.95,
+    "child_mortality": 1.88,
+    "schooling": 22.53,
+    "attendance": 24.34,
+    "cooking": 11.83,
+    "sanitation": 7.53,
+    "water": 2.11,
+    "electricity": 1.79,
+    "housing": 5.02,
+    "assets": 4.01
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Vientiane",
+   "year": "2023",
+   "mpi": 0.03469,
+   "headcount": 8.37,
+   "intensity": 41.443,
+   "vulnerable": 24.666,
+   "severe": 1.5,
+   "popShare": 6.454,
+   "pop2024": 501.5,
+   "poor2024": 42.0,
+   "censored": {
+    "nutrition": 4.897,
+    "child_mortality": 1.566,
+    "schooling": 4.162,
+    "attendance": 4.3,
+    "cooking": 8.264,
+    "sanitation": 2.415,
+    "water": 1.587,
+    "electricity": 0.246,
+    "housing": 3.505,
+    "assets": 1.642
+   },
+   "raw": {
+    "nutrition": 15.088,
+    "child_mortality": 1.886,
+    "schooling": 9.465,
+    "attendance": 14.064,
+    "cooking": 89.591,
+    "sanitation": 7.849,
+    "water": 4.255,
+    "electricity": 0.342,
+    "housing": 7.464,
+    "assets": 2.682
+   },
+   "contribDims": {
+    "health": 31.05,
+    "education": 40.66,
+    "living": 28.28
+   },
+   "contrib": {
+    "nutrition": 23.53,
+    "child_mortality": 7.53,
+    "schooling": 20.0,
+    "attendance": 20.66,
+    "cooking": 13.24,
+    "sanitation": 3.87,
+    "water": 2.54,
+    "electricity": 0.39,
+    "housing": 5.61,
+    "assets": 2.63
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Vientiane Capital",
+   "year": "2023",
+   "mpi": 0.00816,
+   "headcount": 2.044,
+   "intensity": 39.913,
+   "vulnerable": 12.218,
+   "severe": 0.164,
+   "popShare": 12.754,
+   "pop2024": 991.0,
+   "poor2024": 20.3,
+   "censored": {
+    "nutrition": 1.627,
+    "child_mortality": 0.094,
+    "schooling": 1.031,
+    "attendance": 1.466,
+    "cooking": 1.866,
+    "sanitation": 0.016,
+    "water": 0.065,
+    "electricity": 0.0,
+    "housing": 0.067,
+    "assets": 0.018
+   },
+   "raw": {
+    "nutrition": 7.775,
+    "child_mortality": 0.327,
+    "schooling": 3.885,
+    "attendance": 7.401,
+    "cooking": 67.708,
+    "sanitation": 0.37,
+    "water": 0.657,
+    "electricity": 0.0,
+    "housing": 5.119,
+    "assets": 0.335
+   },
+   "contribDims": {
+    "health": 35.16,
+    "education": 51.01,
+    "living": 13.84
+   },
+   "contrib": {
+    "nutrition": 33.24,
+    "child_mortality": 1.92,
+    "schooling": 21.06,
+    "attendance": 29.95,
+    "cooking": 12.71,
+    "sanitation": 0.11,
+    "water": 0.44,
+    "electricity": 0.0,
+    "housing": 0.45,
+    "assets": 0.12
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Xayabury",
+   "year": "2023",
+   "mpi": 0.03259,
+   "headcount": 7.834,
+   "intensity": 41.608,
+   "vulnerable": 25.071,
+   "severe": 1.708,
+   "popShare": 5.528,
+   "pop2024": 429.5,
+   "poor2024": 33.6,
+   "censored": {
+    "nutrition": 3.599,
+    "child_mortality": 0.358,
+    "schooling": 5.496,
+    "attendance": 3.237,
+    "cooking": 7.834,
+    "sanitation": 2.773,
+    "water": 2.275,
+    "electricity": 0.479,
+    "housing": 4.136,
+    "assets": 3.1
+   },
+   "raw": {
+    "nutrition": 11.128,
+    "child_mortality": 0.94,
+    "schooling": 19.113,
+    "attendance": 6.822,
+    "cooking": 95.264,
+    "sanitation": 6.725,
+    "water": 7.399,
+    "electricity": 0.839,
+    "housing": 10.115,
+    "assets": 5.115
+   },
+   "contribDims": {
+    "health": 20.24,
+    "education": 44.66,
+    "living": 35.11
+   },
+   "contrib": {
+    "nutrition": 18.4,
+    "child_mortality": 1.83,
+    "schooling": 28.1,
+    "attendance": 16.55,
+    "cooking": 13.35,
+    "sanitation": 4.73,
+    "water": 3.88,
+    "electricity": 0.82,
+    "housing": 7.05,
+    "assets": 5.28
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Xaysomboun",
+   "year": "2023",
+   "mpi": 0.0612,
+   "headcount": 14.301,
+   "intensity": 42.793,
+   "vulnerable": 34.119,
+   "severe": 3.088,
+   "popShare": 1.457,
+   "pop2024": 113.2,
+   "poor2024": 16.2,
+   "censored": {
+    "nutrition": 10.689,
+    "child_mortality": 0.409,
+    "schooling": 4.808,
+    "attendance": 9.677,
+    "cooking": 14.022,
+    "sanitation": 5.74,
+    "water": 2.932,
+    "electricity": 0.412,
+    "housing": 8.414,
+    "assets": 1.885
+   },
+   "raw": {
+    "nutrition": 31.491,
+    "child_mortality": 1.675,
+    "schooling": 8.716,
+    "attendance": 20.324,
+    "cooking": 92.501,
+    "sanitation": 11.79,
+    "water": 7.044,
+    "electricity": 0.566,
+    "housing": 20.916,
+    "assets": 2.869
+   },
+   "contribDims": {
+    "health": 30.22,
+    "education": 39.45,
+    "living": 30.33
+   },
+   "contrib": {
+    "nutrition": 29.11,
+    "child_mortality": 1.11,
+    "schooling": 13.1,
+    "attendance": 26.35,
+    "cooking": 12.73,
+    "sanitation": 5.21,
+    "water": 2.66,
+    "electricity": 0.37,
+    "housing": 7.64,
+    "assets": 1.71
+   }
+  },
+  {
+   "iso": "LAO",
+   "name": "Xiengkhuang",
+   "year": "2023",
+   "mpi": 0.04798,
+   "headcount": 11.325,
+   "intensity": 42.37,
+   "vulnerable": 30.851,
+   "severe": 2.478,
+   "popShare": 4.33,
+   "pop2024": 336.5,
+   "poor2024": 38.1,
+   "censored": {
+    "nutrition": 8.561,
+    "child_mortality": 2.76,
+    "schooling": 4.057,
+    "attendance": 4.332,
+    "cooking": 11.325,
+    "sanitation": 3.317,
+    "water": 4.141,
+    "electricity": 1.505,
+    "housing": 5.508,
+    "assets": 1.443
+   },
+   "raw": {
+    "nutrition": 31.557,
+    "child_mortality": 3.432,
+    "schooling": 7.79,
+    "attendance": 8.012,
+    "cooking": 95.111,
+    "sanitation": 11.28,
+    "water": 9.447,
+    "electricity": 2.532,
+    "housing": 15.466,
+    "assets": 2.008
+   },
+   "contribDims": {
+    "health": 39.32,
+    "education": 29.14,
+    "living": 31.54
+   },
+   "contrib": {
+    "nutrition": 29.74,
+    "child_mortality": 9.59,
+    "schooling": 14.09,
+    "attendance": 15.05,
+    "cooking": 13.11,
+    "sanitation": 3.84,
+    "water": 4.8,
+    "electricity": 1.74,
+    "housing": 6.38,
+    "assets": 1.67
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Ayeyarwaddy",
+   "year": "2015/2016",
+   "mpi": 0.23712,
+   "headcount": 50.83,
+   "intensity": 46.649,
+   "vulnerable": 26.228,
+   "severe": 20.409,
+   "popShare": 13.4,
+   "pop2024": 7303.0,
+   "poor2024": 3712.1,
+   "censored": {
+    "nutrition": 24.058,
+    "child_mortality": 2.359,
+    "schooling": 29.463,
+    "attendance": 9.0,
+    "cooking": 50.282,
+    "sanitation": 40.365,
+    "water": 28.539,
+    "electricity": 39.455,
+    "housing": 48.855,
+    "assets": 24.672
+   },
+   "raw": {
+    "nutrition": 27.484,
+    "child_mortality": 2.624,
+    "schooling": 30.179,
+    "attendance": 9.227,
+    "cooking": 93.494,
+    "sanitation": 67.732,
+    "water": 46.481,
+    "electricity": 62.01,
+    "housing": 89.457,
+    "assets": 29.859
+   },
+   "contribDims": {
+    "health": 18.57,
+    "education": 27.04,
+    "living": 54.4
+   },
+   "contrib": {
+    "nutrition": 16.91,
+    "child_mortality": 1.66,
+    "schooling": 20.71,
+    "attendance": 6.33,
+    "cooking": 11.78,
+    "sanitation": 9.46,
+    "water": 6.69,
+    "electricity": 9.24,
+    "housing": 11.45,
+    "assets": 5.78
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Bago",
+   "year": "2015/2016",
+   "mpi": 0.17789,
+   "headcount": 40.713,
+   "intensity": 43.695,
+   "vulnerable": 23.95,
+   "severe": 10.522,
+   "popShare": 9.466,
+   "pop2024": 5158.7,
+   "poor2024": 2100.3,
+   "censored": {
+    "nutrition": 20.337,
+    "child_mortality": 1.121,
+    "schooling": 22.639,
+    "attendance": 9.835,
+    "cooking": 39.856,
+    "sanitation": 34.863,
+    "water": 9.24,
+    "electricity": 22.528,
+    "housing": 39.891,
+    "assets": 12.032
+   },
+   "raw": {
+    "nutrition": 26.374,
+    "child_mortality": 1.585,
+    "schooling": 24.408,
+    "attendance": 10.96,
+    "cooking": 83.058,
+    "sanitation": 67.458,
+    "water": 16.909,
+    "electricity": 39.868,
+    "housing": 86.155,
+    "assets": 15.293
+   },
+   "contribDims": {
+    "health": 20.1,
+    "education": 30.43,
+    "living": 49.47
+   },
+   "contrib": {
+    "nutrition": 19.05,
+    "child_mortality": 1.05,
+    "schooling": 21.21,
+    "attendance": 9.21,
+    "cooking": 12.45,
+    "sanitation": 10.89,
+    "water": 2.89,
+    "electricity": 7.04,
+    "housing": 12.46,
+    "assets": 3.76
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Chin",
+   "year": "2015/2016",
+   "mpi": 0.18495,
+   "headcount": 41.035,
+   "intensity": 45.071,
+   "vulnerable": 23.371,
+   "severe": 15.123,
+   "popShare": 0.967,
+   "pop2024": 527.1,
+   "poor2024": 216.3,
+   "censored": {
+    "nutrition": 24.224,
+    "child_mortality": 6.514,
+    "schooling": 13.43,
+    "attendance": 10.711,
+    "cooking": 41.035,
+    "sanitation": 17.431,
+    "water": 15.686,
+    "electricity": 32.345,
+    "housing": 29.814,
+    "assets": 31.96
+   },
+   "raw": {
+    "nutrition": 30.665,
+    "child_mortality": 6.938,
+    "schooling": 14.526,
+    "attendance": 12.336,
+    "cooking": 93.186,
+    "sanitation": 31.552,
+    "water": 23.863,
+    "electricity": 57.157,
+    "housing": 55.034,
+    "assets": 50.648
+   },
+   "contribDims": {
+    "health": 27.7,
+    "education": 21.75,
+    "living": 50.55
+   },
+   "contrib": {
+    "nutrition": 21.83,
+    "child_mortality": 5.87,
+    "schooling": 12.1,
+    "attendance": 9.65,
+    "cooking": 12.33,
+    "sanitation": 5.24,
+    "water": 4.71,
+    "electricity": 9.72,
+    "housing": 8.96,
+    "assets": 9.6
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Kachin",
+   "year": "2015/2016",
+   "mpi": 0.12109,
+   "headcount": 28.11,
+   "intensity": 43.077,
+   "vulnerable": 19.958,
+   "severe": 9.568,
+   "popShare": 3.092,
+   "pop2024": 1684.9,
+   "poor2024": 473.6,
+   "censored": {
+    "nutrition": 15.76,
+    "child_mortality": 1.215,
+    "schooling": 15.178,
+    "attendance": 7.847,
+    "cooking": 27.481,
+    "sanitation": 7.388,
+    "water": 9.563,
+    "electricity": 14.888,
+    "housing": 27.814,
+    "assets": 10.826
+   },
+   "raw": {
+    "nutrition": 23.574,
+    "child_mortality": 2.409,
+    "schooling": 19.305,
+    "attendance": 8.79,
+    "cooking": 89.111,
+    "sanitation": 13.602,
+    "water": 16.522,
+    "electricity": 27.084,
+    "housing": 86.007,
+    "assets": 16.637
+   },
+   "contribDims": {
+    "health": 23.36,
+    "education": 31.69,
+    "living": 44.94
+   },
+   "contrib": {
+    "nutrition": 21.69,
+    "child_mortality": 1.67,
+    "schooling": 20.89,
+    "attendance": 10.8,
+    "cooking": 12.61,
+    "sanitation": 3.39,
+    "water": 4.39,
+    "electricity": 6.83,
+    "housing": 12.76,
+    "assets": 4.97
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Kayah",
+   "year": "2015/2016",
+   "mpi": 0.12944,
+   "headcount": 29.759,
+   "intensity": 43.495,
+   "vulnerable": 20.745,
+   "severe": 8.454,
+   "popShare": 0.537,
+   "pop2024": 292.5,
+   "poor2024": 87.0,
+   "censored": {
+    "nutrition": 16.424,
+    "child_mortality": 1.535,
+    "schooling": 17.502,
+    "attendance": 6.825,
+    "cooking": 28.21,
+    "sanitation": 21.502,
+    "water": 10.139,
+    "electricity": 8.62,
+    "housing": 24.792,
+    "assets": 12.865
+   },
+   "raw": {
+    "nutrition": 26.822,
+    "child_mortality": 1.906,
+    "schooling": 21.658,
+    "attendance": 8.286,
+    "cooking": 76.75,
+    "sanitation": 54.694,
+    "water": 18.533,
+    "electricity": 13.0,
+    "housing": 58.611,
+    "assets": 17.605
+   },
+   "contribDims": {
+    "health": 23.12,
+    "education": 31.32,
+    "living": 45.55
+   },
+   "contrib": {
+    "nutrition": 21.15,
+    "child_mortality": 1.98,
+    "schooling": 22.54,
+    "attendance": 8.79,
+    "cooking": 12.11,
+    "sanitation": 9.23,
+    "water": 4.35,
+    "electricity": 3.7,
+    "housing": 10.64,
+    "assets": 5.52
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Kayin",
+   "year": "2015/2016",
+   "mpi": 0.23008,
+   "headcount": 45.006,
+   "intensity": 51.123,
+   "vulnerable": 18.803,
+   "severe": 23.597,
+   "popShare": 2.886,
+   "pop2024": 1573.1,
+   "poor2024": 708.0,
+   "censored": {
+    "nutrition": 17.399,
+    "child_mortality": 4.588,
+    "schooling": 34.248,
+    "attendance": 15.527,
+    "cooking": 44.296,
+    "sanitation": 37.101,
+    "water": 22.248,
+    "electricity": 34.347,
+    "housing": 39.213,
+    "assets": 21.656
+   },
+   "raw": {
+    "nutrition": 23.109,
+    "child_mortality": 4.835,
+    "schooling": 40.882,
+    "attendance": 17.635,
+    "cooking": 83.597,
+    "sanitation": 52.908,
+    "water": 30.149,
+    "electricity": 45.78,
+    "housing": 61.939,
+    "assets": 24.767
+   },
+   "contribDims": {
+    "health": 15.93,
+    "education": 36.06,
+    "living": 48.02
+   },
+   "contrib": {
+    "nutrition": 12.6,
+    "child_mortality": 3.32,
+    "schooling": 24.81,
+    "attendance": 11.25,
+    "cooking": 10.7,
+    "sanitation": 8.96,
+    "water": 5.37,
+    "electricity": 8.29,
+    "housing": 9.47,
+    "assets": 5.23
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Magway",
+   "year": "2015/2016",
+   "mpi": 0.17742,
+   "headcount": 41.403,
+   "intensity": 42.853,
+   "vulnerable": 20.835,
+   "severe": 11.524,
+   "popShare": 8.0,
+   "pop2024": 4359.7,
+   "poor2024": 1805.1,
+   "censored": {
+    "nutrition": 19.671,
+    "child_mortality": 1.899,
+    "schooling": 27.847,
+    "attendance": 5.584,
+    "cooking": 41.076,
+    "sanitation": 16.605,
+    "water": 7.747,
+    "electricity": 37.469,
+    "housing": 38.173,
+    "assets": 13.285
+   },
+   "raw": {
+    "nutrition": 26.123,
+    "child_mortality": 1.961,
+    "schooling": 30.095,
+    "attendance": 5.991,
+    "cooking": 85.635,
+    "sanitation": 29.731,
+    "water": 18.262,
+    "electricity": 68.452,
+    "housing": 81.277,
+    "assets": 18.407
+   },
+   "contribDims": {
+    "health": 20.26,
+    "education": 31.4,
+    "living": 48.33
+   },
+   "contrib": {
+    "nutrition": 18.48,
+    "child_mortality": 1.78,
+    "schooling": 26.16,
+    "attendance": 5.25,
+    "cooking": 12.86,
+    "sanitation": 5.2,
+    "water": 2.43,
+    "electricity": 11.73,
+    "housing": 11.95,
+    "assets": 4.16
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Mandalay",
+   "year": "2015/2016",
+   "mpi": 0.13661,
+   "headcount": 31.705,
+   "intensity": 43.086,
+   "vulnerable": 20.489,
+   "severe": 9.18,
+   "popShare": 11.495,
+   "pop2024": 6265.0,
+   "poor2024": 1986.3,
+   "censored": {
+    "nutrition": 14.171,
+    "child_mortality": 1.048,
+    "schooling": 22.387,
+    "attendance": 4.375,
+    "cooking": 30.59,
+    "sanitation": 17.493,
+    "water": 7.209,
+    "electricity": 27.207,
+    "housing": 30.056,
+    "assets": 7.393
+   },
+   "raw": {
+    "nutrition": 23.843,
+    "child_mortality": 1.26,
+    "schooling": 25.655,
+    "attendance": 5.959,
+    "cooking": 68.957,
+    "sanitation": 33.837,
+    "water": 16.623,
+    "electricity": 51.707,
+    "housing": 72.465,
+    "assets": 10.137
+   },
+   "contribDims": {
+    "health": 18.57,
+    "education": 32.65,
+    "living": 48.78
+   },
+   "contrib": {
+    "nutrition": 17.29,
+    "child_mortality": 1.28,
+    "schooling": 27.31,
+    "attendance": 5.34,
+    "cooking": 12.44,
+    "sanitation": 7.11,
+    "water": 2.93,
+    "electricity": 11.06,
+    "housing": 12.22,
+    "assets": 3.01
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Mon",
+   "year": "2015/2016",
+   "mpi": 0.15076,
+   "headcount": 34.41,
+   "intensity": 43.811,
+   "vulnerable": 19.746,
+   "severe": 10.351,
+   "popShare": 3.762,
+   "pop2024": 2050.3,
+   "poor2024": 705.5,
+   "censored": {
+    "nutrition": 14.894,
+    "child_mortality": 1.778,
+    "schooling": 22.702,
+    "attendance": 7.696,
+    "cooking": 33.37,
+    "sanitation": 29.149,
+    "water": 9.178,
+    "electricity": 15.723,
+    "housing": 30.567,
+    "assets": 12.167
+   },
+   "raw": {
+    "nutrition": 21.858,
+    "child_mortality": 1.778,
+    "schooling": 27.589,
+    "attendance": 8.658,
+    "cooking": 75.735,
+    "sanitation": 55.283,
+    "water": 19.214,
+    "electricity": 25.408,
+    "housing": 60.037,
+    "assets": 16.342
+   },
+   "contribDims": {
+    "health": 18.43,
+    "education": 33.61,
+    "living": 47.96
+   },
+   "contrib": {
+    "nutrition": 16.47,
+    "child_mortality": 1.97,
+    "schooling": 25.1,
+    "attendance": 8.51,
+    "cooking": 12.3,
+    "sanitation": 10.74,
+    "water": 3.38,
+    "electricity": 5.79,
+    "housing": 11.26,
+    "assets": 4.48
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Naypyitaw",
+   "year": "2015/2016",
+   "mpi": 0.14598,
+   "headcount": 33.767,
+   "intensity": 43.232,
+   "vulnerable": 22.986,
+   "severe": 7.669,
+   "popShare": 2.277,
+   "pop2024": 1241.0,
+   "poor2024": 419.0,
+   "censored": {
+    "nutrition": 15.335,
+    "child_mortality": 1.446,
+    "schooling": 20.975,
+    "attendance": 5.64,
+    "cooking": 31.725,
+    "sanitation": 22.746,
+    "water": 6.394,
+    "electricity": 23.856,
+    "housing": 33.229,
+    "assets": 14.624
+   },
+   "raw": {
+    "nutrition": 21.651,
+    "child_mortality": 1.69,
+    "schooling": 24.053,
+    "attendance": 6.952,
+    "cooking": 68.276,
+    "sanitation": 50.841,
+    "water": 10.052,
+    "electricity": 41.097,
+    "housing": 81.325,
+    "assets": 21.959
+   },
+   "contribDims": {
+    "health": 19.16,
+    "education": 30.39,
+    "living": 50.45
+   },
+   "contrib": {
+    "nutrition": 17.51,
+    "child_mortality": 1.65,
+    "schooling": 23.95,
+    "attendance": 6.44,
+    "cooking": 12.07,
+    "sanitation": 8.66,
+    "water": 2.43,
+    "electricity": 9.08,
+    "housing": 12.65,
+    "assets": 5.57
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Rakhine",
+   "year": "2015/2016",
+   "mpi": 0.3019,
+   "headcount": 58.559,
+   "intensity": 51.555,
+   "vulnerable": 20.79,
+   "severe": 30.214,
+   "popShare": 6.27,
+   "pop2024": 3417.4,
+   "poor2024": 2001.2,
+   "censored": {
+    "nutrition": 31.21,
+    "child_mortality": 3.352,
+    "schooling": 38.883,
+    "attendance": 18.645,
+    "cooking": 58.381,
+    "sanitation": 49.233,
+    "water": 26.701,
+    "electricity": 30.136,
+    "housing": 57.321,
+    "assets": 45.375
+   },
+   "raw": {
+    "nutrition": 33.93,
+    "child_mortality": 3.352,
+    "schooling": 39.71,
+    "attendance": 19.156,
+    "cooking": 95.201,
+    "sanitation": 72.356,
+    "water": 41.14,
+    "electricity": 38.623,
+    "housing": 90.767,
+    "assets": 55.722
+   },
+   "contribDims": {
+    "health": 19.08,
+    "education": 31.76,
+    "living": 49.16
+   },
+   "contrib": {
+    "nutrition": 17.23,
+    "child_mortality": 1.85,
+    "schooling": 21.47,
+    "attendance": 10.29,
+    "cooking": 10.74,
+    "sanitation": 9.06,
+    "water": 4.91,
+    "electricity": 5.55,
+    "housing": 10.55,
+    "assets": 8.35
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Sagaing",
+   "year": "2015/2016",
+   "mpi": 0.15741,
+   "headcount": 36.366,
+   "intensity": 43.285,
+   "vulnerable": 26.852,
+   "severe": 9.005,
+   "popShare": 11.221,
+   "pop2024": 6115.4,
+   "poor2024": 2223.9,
+   "censored": {
+    "nutrition": 17.674,
+    "child_mortality": 1.658,
+    "schooling": 19.347,
+    "attendance": 7.044,
+    "cooking": 35.007,
+    "sanitation": 27.502,
+    "water": 10.687,
+    "electricity": 30.264,
+    "housing": 33.096,
+    "assets": 9.61
+   },
+   "raw": {
+    "nutrition": 22.925,
+    "child_mortality": 2.025,
+    "schooling": 22.989,
+    "attendance": 8.733,
+    "cooking": 81.137,
+    "sanitation": 56.759,
+    "water": 19.093,
+    "electricity": 55.662,
+    "housing": 81.129,
+    "assets": 13.391
+   },
+   "contribDims": {
+    "health": 20.47,
+    "education": 27.94,
+    "living": 51.59
+   },
+   "contrib": {
+    "nutrition": 18.71,
+    "child_mortality": 1.76,
+    "schooling": 20.48,
+    "attendance": 7.46,
+    "cooking": 12.36,
+    "sanitation": 9.71,
+    "water": 3.77,
+    "electricity": 10.68,
+    "housing": 11.68,
+    "assets": 3.39
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Shan",
+   "year": "2015/2016",
+   "mpi": 0.23434,
+   "headcount": 46.829,
+   "intensity": 50.041,
+   "vulnerable": 21.669,
+   "severe": 23.087,
+   "popShare": 10.655,
+   "pop2024": 5807.2,
+   "poor2024": 2719.5,
+   "censored": {
+    "nutrition": 15.764,
+    "child_mortality": 3.541,
+    "schooling": 41.493,
+    "attendance": 17.852,
+    "cooking": 44.914,
+    "sanitation": 34.859,
+    "water": 17.751,
+    "electricity": 32.741,
+    "housing": 34.748,
+    "assets": 20.848
+   },
+   "raw": {
+    "nutrition": 19.938,
+    "child_mortality": 4.062,
+    "schooling": 53.948,
+    "attendance": 18.811,
+    "cooking": 80.029,
+    "sanitation": 49.85,
+    "water": 25.352,
+    "electricity": 41.144,
+    "housing": 51.808,
+    "assets": 24.589
+   },
+   "contribDims": {
+    "health": 13.73,
+    "education": 42.21,
+    "living": 44.06
+   },
+   "contrib": {
+    "nutrition": 11.21,
+    "child_mortality": 2.52,
+    "schooling": 29.51,
+    "attendance": 12.7,
+    "cooking": 10.65,
+    "sanitation": 8.26,
+    "water": 4.21,
+    "electricity": 7.76,
+    "housing": 8.24,
+    "assets": 4.94
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Taninthayi",
+   "year": "2015/2016",
+   "mpi": 0.18767,
+   "headcount": 40.537,
+   "intensity": 46.295,
+   "vulnerable": 20.849,
+   "severe": 16.259,
+   "popShare": 2.586,
+   "pop2024": 1409.3,
+   "poor2024": 571.3,
+   "censored": {
+    "nutrition": 17.449,
+    "child_mortality": 2.831,
+    "schooling": 25.991,
+    "attendance": 10.987,
+    "cooking": 40.134,
+    "sanitation": 33.087,
+    "water": 15.617,
+    "electricity": 21.986,
+    "housing": 38.348,
+    "assets": 16.855
+   },
+   "raw": {
+    "nutrition": 22.887,
+    "child_mortality": 3.206,
+    "schooling": 28.962,
+    "attendance": 13.088,
+    "cooking": 92.864,
+    "sanitation": 57.256,
+    "water": 24.25,
+    "electricity": 32.186,
+    "housing": 77.626,
+    "assets": 22.13
+   },
+   "contribDims": {
+    "health": 18.01,
+    "education": 32.84,
+    "living": 49.15
+   },
+   "contrib": {
+    "nutrition": 15.5,
+    "child_mortality": 2.51,
+    "schooling": 23.08,
+    "attendance": 9.76,
+    "cooking": 11.88,
+    "sanitation": 9.79,
+    "water": 4.62,
+    "electricity": 6.51,
+    "housing": 11.35,
+    "assets": 4.99
+   }
+  },
+  {
+   "iso": "MMR",
+   "name": "Yangon",
+   "year": "2015/2016",
+   "mpi": 0.06767,
+   "headcount": 15.805,
+   "intensity": 42.817,
+   "vulnerable": 16.322,
+   "severe": 4.623,
+   "popShare": 13.386,
+   "pop2024": 7295.5,
+   "poor2024": 1153.1,
+   "censored": {
+    "nutrition": 6.459,
+    "child_mortality": 0.919,
+    "schooling": 10.494,
+    "attendance": 4.196,
+    "cooking": 14.001,
+    "sanitation": 12.352,
+    "water": 4.819,
+    "electricity": 6.02,
+    "housing": 13.424,
+    "assets": 4.99
+   },
+   "raw": {
+    "nutrition": 18.058,
+    "child_mortality": 0.993,
+    "schooling": 14.133,
+    "attendance": 6.529,
+    "cooking": 42.477,
+    "sanitation": 43.994,
+    "water": 13.031,
+    "electricity": 10.295,
+    "housing": 48.074,
+    "assets": 8.371
+   },
+   "contribDims": {
+    "health": 18.17,
+    "education": 36.18,
+    "living": 45.65
+   },
+   "contrib": {
+    "nutrition": 15.91,
+    "child_mortality": 2.26,
+    "schooling": 25.85,
+    "attendance": 10.33,
+    "cooking": 11.49,
+    "sanitation": 10.14,
+    "water": 3.96,
+    "electricity": 4.94,
+    "housing": 11.02,
+    "assets": 4.1
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "ARMM",
+   "year": "2022",
+   "mpi": 0.07567,
+   "headcount": 18.014,
+   "intensity": 42.004,
+   "vulnerable": 21.823,
+   "severe": 3.866,
+   "popShare": 4.31,
+   "pop2024": 4993.4,
+   "poor2024": 899.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.76,
+    "schooling": 8.694,
+    "attendance": 10.436,
+    "cooking": 17.554,
+    "sanitation": 12.634,
+    "water": 6.511,
+    "electricity": 10.34,
+    "housing": 10.184,
+    "assets": 11.028
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.76,
+    "schooling": 10.074,
+    "attendance": 17.013,
+    "cooking": 87.564,
+    "sanitation": 44.733,
+    "water": 22.947,
+    "electricity": 36.008,
+    "housing": 32.54,
+    "assets": 28.372
+   },
+   "contribDims": {
+    "health": 7.75,
+    "education": 42.14,
+    "living": 50.11
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 7.75,
+    "schooling": 19.15,
+    "attendance": 22.99,
+    "cooking": 12.89,
+    "sanitation": 9.28,
+    "water": 4.78,
+    "electricity": 7.59,
+    "housing": 7.48,
+    "assets": 8.1
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Bicol",
+   "year": "2022",
+   "mpi": 0.02013,
+   "headcount": 4.936,
+   "intensity": 40.78,
+   "vulnerable": 11.223,
+   "severe": 0.847,
+   "popShare": 5.377,
+   "pop2024": 6228.5,
+   "poor2024": 307.4,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.246,
+    "schooling": 1.878,
+    "attendance": 1.566,
+    "cooking": 4.868,
+    "sanitation": 3.458,
+    "water": 1.863,
+    "electricity": 2.311,
+    "housing": 3.708,
+    "assets": 2.218
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.246,
+    "schooling": 2.6,
+    "attendance": 10.283,
+    "cooking": 63.527,
+    "sanitation": 21.273,
+    "water": 10.972,
+    "electricity": 6.951,
+    "housing": 31.542,
+    "assets": 10.71
+   },
+   "contribDims": {
+    "health": 20.63,
+    "education": 28.51,
+    "living": 50.85
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 20.63,
+    "schooling": 15.55,
+    "attendance": 12.96,
+    "cooking": 13.43,
+    "sanitation": 9.54,
+    "water": 5.14,
+    "electricity": 6.38,
+    "housing": 10.23,
+    "assets": 6.12
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Cagayan Valley",
+   "year": "2022",
+   "mpi": 0.00521,
+   "headcount": 1.296,
+   "intensity": 40.205,
+   "vulnerable": 3.53,
+   "severe": 0.356,
+   "popShare": 3.262,
+   "pop2024": 3778.2,
+   "poor2024": 49.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.654,
+    "schooling": 0.642,
+    "attendance": 0.176,
+    "cooking": 0.86,
+    "sanitation": 0.459,
+    "water": 0.091,
+    "electricity": 0.419,
+    "housing": 0.442,
+    "assets": 0.731
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.654,
+    "schooling": 3.393,
+    "attendance": 1.442,
+    "cooking": 48.257,
+    "sanitation": 18.618,
+    "water": 1.465,
+    "electricity": 2.833,
+    "housing": 9.82,
+    "assets": 6.086
+   },
+   "contribDims": {
+    "health": 41.82,
+    "education": 26.17,
+    "living": 32.01
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 41.82,
+    "schooling": 20.54,
+    "attendance": 5.62,
+    "cooking": 9.17,
+    "sanitation": 4.9,
+    "water": 0.97,
+    "electricity": 4.47,
+    "housing": 4.71,
+    "assets": 7.79
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Calabarzon",
+   "year": "2022",
+   "mpi": 0.0077,
+   "headcount": 2.149,
+   "intensity": 35.85,
+   "vulnerable": 2.288,
+   "severe": 0.072,
+   "popShare": 14.207,
+   "pop2024": 16458.1,
+   "poor2024": 353.7,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.348,
+    "schooling": 0.322,
+    "attendance": 0.534,
+    "cooking": 1.143,
+    "sanitation": 0.626,
+    "water": 0.153,
+    "electricity": 0.068,
+    "housing": 0.772,
+    "assets": 0.451
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.348,
+    "schooling": 0.871,
+    "attendance": 3.244,
+    "cooking": 15.485,
+    "sanitation": 8.088,
+    "water": 0.944,
+    "electricity": 0.93,
+    "housing": 9.027,
+    "assets": 5.661
+   },
+   "contribDims": {
+    "health": 58.33,
+    "education": 18.51,
+    "living": 23.16
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 58.33,
+    "schooling": 6.96,
+    "attendance": 11.55,
+    "cooking": 8.24,
+    "sanitation": 4.51,
+    "water": 1.1,
+    "electricity": 0.49,
+    "housing": 5.57,
+    "assets": 3.25
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Caraga",
+   "year": "2022",
+   "mpi": 0.0117,
+   "headcount": 3.031,
+   "intensity": 38.599,
+   "vulnerable": 6.646,
+   "severe": 0.444,
+   "popShare": 2.415,
+   "pop2024": 2797.3,
+   "poor2024": 84.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.576,
+    "schooling": 1.424,
+    "attendance": 1.22,
+    "cooking": 3.031,
+    "sanitation": 0.624,
+    "water": 0.37,
+    "electricity": 0.83,
+    "housing": 2.564,
+    "assets": 2.248
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.576,
+    "schooling": 2.51,
+    "attendance": 4.104,
+    "cooking": 67.268,
+    "sanitation": 11.084,
+    "water": 4.101,
+    "electricity": 4.817,
+    "housing": 39.366,
+    "assets": 13.693
+   },
+   "contribDims": {
+    "health": 16.42,
+    "education": 37.67,
+    "living": 45.91
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 16.42,
+    "schooling": 20.29,
+    "attendance": 17.38,
+    "cooking": 14.39,
+    "sanitation": 2.97,
+    "water": 1.76,
+    "electricity": 3.94,
+    "housing": 12.18,
+    "assets": 10.68
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Central Luzon",
+   "year": "2022",
+   "mpi": 0.00706,
+   "headcount": 1.74,
+   "intensity": 40.563,
+   "vulnerable": 1.584,
+   "severe": 0.372,
+   "popShare": 10.975,
+   "pop2024": 12713.5,
+   "poor2024": 221.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.899,
+    "schooling": 0.545,
+    "attendance": 0.796,
+    "cooking": 0.999,
+    "sanitation": 0.943,
+    "water": 0.024,
+    "electricity": 0.156,
+    "housing": 0.702,
+    "assets": 0.463
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.899,
+    "schooling": 1.041,
+    "attendance": 2.764,
+    "cooking": 13.439,
+    "sanitation": 11.146,
+    "water": 0.56,
+    "electricity": 1.916,
+    "housing": 6.87,
+    "assets": 3.951
+   },
+   "contribDims": {
+    "health": 42.47,
+    "education": 31.65,
+    "living": 25.88
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 42.47,
+    "schooling": 12.87,
+    "attendance": 18.79,
+    "cooking": 7.87,
+    "sanitation": 7.42,
+    "water": 0.19,
+    "electricity": 1.23,
+    "housing": 5.53,
+    "assets": 3.65
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Central Visayas",
+   "year": "2022",
+   "mpi": 0.02019,
+   "headcount": 5.011,
+   "intensity": 40.284,
+   "vulnerable": 5.916,
+   "severe": 0.729,
+   "popShare": 7.497,
+   "pop2024": 8684.5,
+   "poor2024": 435.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.274,
+    "schooling": 2.541,
+    "attendance": 1.396,
+    "cooking": 4.373,
+    "sanitation": 2.37,
+    "water": 0.647,
+    "electricity": 2.456,
+    "housing": 4.124,
+    "assets": 2.917
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.274,
+    "schooling": 3.53,
+    "attendance": 2.978,
+    "cooking": 44.539,
+    "sanitation": 19.647,
+    "water": 3.456,
+    "electricity": 8.39,
+    "housing": 41.633,
+    "assets": 11.693
+   },
+   "contribDims": {
+    "health": 21.03,
+    "education": 32.5,
+    "living": 46.47
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 21.03,
+    "schooling": 20.98,
+    "attendance": 11.52,
+    "cooking": 12.03,
+    "sanitation": 6.52,
+    "water": 1.78,
+    "electricity": 6.76,
+    "housing": 11.35,
+    "assets": 8.03
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Cordillera Admin",
+   "year": "2022",
+   "mpi": 0.00403,
+   "headcount": 1.07,
+   "intensity": 37.704,
+   "vulnerable": 3.11,
+   "severe": 0.044,
+   "popShare": 1.729,
+   "pop2024": 2002.8,
+   "poor2024": 21.4,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.446,
+    "schooling": 0.477,
+    "attendance": 0.137,
+    "cooking": 0.82,
+    "sanitation": 0.507,
+    "water": 0.298,
+    "electricity": 0.357,
+    "housing": 0.269,
+    "assets": 0.491
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.446,
+    "schooling": 2.005,
+    "attendance": 1.806,
+    "cooking": 24.122,
+    "sanitation": 18.454,
+    "water": 6.558,
+    "electricity": 1.898,
+    "housing": 8.16,
+    "assets": 7.682
+   },
+   "contribDims": {
+    "health": 36.86,
+    "education": 25.38,
+    "living": 37.76
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 36.86,
+    "schooling": 19.71,
+    "attendance": 5.67,
+    "cooking": 11.29,
+    "sanitation": 6.98,
+    "water": 4.1,
+    "electricity": 4.92,
+    "housing": 3.71,
+    "assets": 6.76
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Davao",
+   "year": "2022",
+   "mpi": 0.01534,
+   "headcount": 3.767,
+   "intensity": 40.724,
+   "vulnerable": 4.927,
+   "severe": 0.472,
+   "popShare": 5.478,
+   "pop2024": 6346.4,
+   "poor2024": 239.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.638,
+    "schooling": 2.269,
+    "attendance": 1.403,
+    "cooking": 3.586,
+    "sanitation": 1.255,
+    "water": 1.311,
+    "electricity": 2.064,
+    "housing": 2.967,
+    "assets": 1.582
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.638,
+    "schooling": 3.461,
+    "attendance": 2.436,
+    "cooking": 55.229,
+    "sanitation": 18.612,
+    "water": 3.971,
+    "electricity": 6.481,
+    "housing": 28.025,
+    "assets": 9.775
+   },
+   "contribDims": {
+    "health": 13.87,
+    "education": 39.9,
+    "living": 46.23
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 13.87,
+    "schooling": 24.66,
+    "attendance": 15.25,
+    "cooking": 12.99,
+    "sanitation": 4.55,
+    "water": 4.75,
+    "electricity": 7.48,
+    "housing": 10.74,
+    "assets": 5.73
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Eastern Visayas",
+   "year": "2022",
+   "mpi": 0.01989,
+   "headcount": 5.036,
+   "intensity": 39.5,
+   "vulnerable": 5.729,
+   "severe": 0.801,
+   "popShare": 3.903,
+   "pop2024": 4521.9,
+   "poor2024": 227.7,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.337,
+    "schooling": 2.613,
+    "attendance": 1.609,
+    "cooking": 4.541,
+    "sanitation": 2.621,
+    "water": 0.313,
+    "electricity": 0.577,
+    "housing": 4.111,
+    "assets": 2.955
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.337,
+    "schooling": 3.875,
+    "attendance": 3.511,
+    "cooking": 55.361,
+    "sanitation": 17.582,
+    "water": 5.475,
+    "electricity": 1.973,
+    "housing": 38.46,
+    "assets": 12.039
+   },
+   "contribDims": {
+    "health": 22.41,
+    "education": 35.37,
+    "living": 42.22
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 22.41,
+    "schooling": 21.89,
+    "attendance": 13.48,
+    "cooking": 12.68,
+    "sanitation": 7.32,
+    "water": 0.87,
+    "electricity": 1.61,
+    "housing": 11.48,
+    "assets": 8.25
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Ilocos",
+   "year": "2022",
+   "mpi": 0.01121,
+   "headcount": 2.757,
+   "intensity": 40.672,
+   "vulnerable": 2.12,
+   "severe": 0.486,
+   "popShare": 5.512,
+   "pop2024": 6384.8,
+   "poor2024": 176.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.929,
+    "schooling": 0.711,
+    "attendance": 0.436,
+    "cooking": 2.35,
+    "sanitation": 1.307,
+    "water": 0.0,
+    "electricity": 0.434,
+    "housing": 0.334,
+    "assets": 0.739
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.929,
+    "schooling": 1.311,
+    "attendance": 1.035,
+    "cooking": 42.652,
+    "sanitation": 18.423,
+    "water": 0.459,
+    "electricity": 0.905,
+    "housing": 12.479,
+    "assets": 4.693
+   },
+   "contribDims": {
+    "health": 57.36,
+    "education": 17.05,
+    "living": 25.59
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 57.36,
+    "schooling": 10.57,
+    "attendance": 6.48,
+    "cooking": 11.64,
+    "sanitation": 6.48,
+    "water": 0.0,
+    "electricity": 2.15,
+    "housing": 1.65,
+    "assets": 3.66
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Mimaropa",
+   "year": "2022",
+   "mpi": 0.02782,
+   "headcount": 6.156,
+   "intensity": 45.185,
+   "vulnerable": 8.261,
+   "severe": 1.842,
+   "popShare": 2.643,
+   "pop2024": 3061.9,
+   "poor2024": 188.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.703,
+    "schooling": 3.104,
+    "attendance": 2.154,
+    "cooking": 6.062,
+    "sanitation": 3.372,
+    "water": 2.196,
+    "electricity": 3.661,
+    "housing": 5.306,
+    "assets": 3.487
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.703,
+    "schooling": 3.993,
+    "attendance": 3.561,
+    "cooking": 70.833,
+    "sanitation": 20.713,
+    "water": 8.288,
+    "electricity": 9.583,
+    "housing": 39.209,
+    "assets": 13.629
+   },
+   "contribDims": {
+    "health": 20.4,
+    "education": 31.5,
+    "living": 48.1
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 20.4,
+    "schooling": 18.6,
+    "attendance": 12.9,
+    "cooking": 12.11,
+    "sanitation": 6.73,
+    "water": 4.39,
+    "electricity": 7.31,
+    "housing": 10.6,
+    "assets": 6.96
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "National Capital",
+   "year": "2022",
+   "mpi": 0.00331,
+   "headcount": 0.965,
+   "intensity": 34.271,
+   "vulnerable": 1.925,
+   "severe": 0.0,
+   "popShare": 13.454,
+   "pop2024": 15585.4,
+   "poor2024": 150.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.525,
+    "schooling": 0.141,
+    "attendance": 0.299,
+    "cooking": 0.133,
+    "sanitation": 0.538,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.505,
+    "assets": 0.307
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.525,
+    "schooling": 0.381,
+    "attendance": 4.341,
+    "cooking": 1.167,
+    "sanitation": 18.293,
+    "water": 0.888,
+    "electricity": 0.117,
+    "housing": 12.584,
+    "assets": 4.33
+   },
+   "contribDims": {
+    "health": 52.94,
+    "education": 22.16,
+    "living": 24.9
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 52.94,
+    "schooling": 7.08,
+    "attendance": 15.08,
+    "cooking": 2.24,
+    "sanitation": 9.04,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 8.47,
+    "assets": 5.15
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Northern Mindanao",
+   "year": "2022",
+   "mpi": 0.0168,
+   "headcount": 4.264,
+   "intensity": 39.405,
+   "vulnerable": 6.901,
+   "severe": 0.497,
+   "popShare": 3.964,
+   "pop2024": 4591.9,
+   "poor2024": 195.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.396,
+    "schooling": 2.039,
+    "attendance": 1.14,
+    "cooking": 4.099,
+    "sanitation": 1.848,
+    "water": 0.229,
+    "electricity": 1.513,
+    "housing": 2.585,
+    "assets": 2.063
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.396,
+    "schooling": 3.354,
+    "attendance": 4.156,
+    "cooking": 68.594,
+    "sanitation": 14.598,
+    "water": 1.935,
+    "electricity": 5.064,
+    "housing": 32.466,
+    "assets": 10.281
+   },
+   "contribDims": {
+    "health": 27.69,
+    "education": 31.52,
+    "living": 40.79
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 27.69,
+    "schooling": 20.22,
+    "attendance": 11.3,
+    "cooking": 13.55,
+    "sanitation": 6.11,
+    "water": 0.76,
+    "electricity": 5.0,
+    "housing": 8.55,
+    "assets": 6.82
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Soccsksargen",
+   "year": "2022",
+   "mpi": 0.03216,
+   "headcount": 7.332,
+   "intensity": 43.867,
+   "vulnerable": 8.9,
+   "severe": 2.23,
+   "popShare": 4.477,
+   "pop2024": 5185.9,
+   "poor2024": 380.2,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 1.993,
+    "schooling": 3.739,
+    "attendance": 2.543,
+    "cooking": 7.235,
+    "sanitation": 4.259,
+    "water": 1.031,
+    "electricity": 3.94,
+    "housing": 6.1,
+    "assets": 4.526
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 1.993,
+    "schooling": 4.532,
+    "attendance": 4.106,
+    "cooking": 72.805,
+    "sanitation": 25.06,
+    "water": 5.183,
+    "electricity": 11.385,
+    "housing": 44.264,
+    "assets": 13.641
+   },
+   "contribDims": {
+    "health": 20.65,
+    "education": 32.55,
+    "living": 46.79
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 20.65,
+    "schooling": 19.37,
+    "attendance": 13.18,
+    "cooking": 12.5,
+    "sanitation": 7.36,
+    "water": 1.78,
+    "electricity": 6.81,
+    "housing": 10.54,
+    "assets": 7.82
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Western Visayas",
+   "year": "2022",
+   "mpi": 0.01072,
+   "headcount": 2.75,
+   "intensity": 38.986,
+   "vulnerable": 4.365,
+   "severe": 0.363,
+   "popShare": 7.205,
+   "pop2024": 8346.7,
+   "poor2024": 229.5,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.867,
+    "schooling": 1.193,
+    "attendance": 0.686,
+    "cooking": 2.553,
+    "sanitation": 2.004,
+    "water": 0.063,
+    "electricity": 0.702,
+    "housing": 2.062,
+    "assets": 1.073
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.867,
+    "schooling": 2.024,
+    "attendance": 1.415,
+    "cooking": 71.276,
+    "sanitation": 15.371,
+    "water": 2.971,
+    "electricity": 2.479,
+    "housing": 36.333,
+    "assets": 8.349
+   },
+   "contribDims": {
+    "health": 26.97,
+    "education": 29.21,
+    "living": 43.82
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 26.97,
+    "schooling": 18.54,
+    "attendance": 10.67,
+    "cooking": 13.23,
+    "sanitation": 10.38,
+    "water": 0.32,
+    "electricity": 3.64,
+    "housing": 10.68,
+    "assets": 5.56
+   }
+  },
+  {
+   "iso": "PHL",
+   "name": "Zamboanga Peninsula",
+   "year": "2022",
+   "mpi": 0.03468,
+   "headcount": 8.238,
+   "intensity": 42.096,
+   "vulnerable": 9.824,
+   "severe": 1.877,
+   "popShare": 3.593,
+   "pop2024": 4162.4,
+   "poor2024": 342.9,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.2,
+    "schooling": 3.701,
+    "attendance": 3.279,
+    "cooking": 7.844,
+    "sanitation": 3.918,
+    "water": 3.522,
+    "electricity": 2.831,
+    "housing": 5.459,
+    "assets": 4.71
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.2,
+    "schooling": 4.593,
+    "attendance": 5.11,
+    "cooking": 80.541,
+    "sanitation": 23.597,
+    "water": 13.424,
+    "electricity": 8.849,
+    "housing": 44.743,
+    "assets": 16.061
+   },
+   "contribDims": {
+    "health": 21.15,
+    "education": 33.54,
+    "living": 45.31
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 21.15,
+    "schooling": 17.79,
+    "attendance": 15.76,
+    "cooking": 12.57,
+    "sanitation": 6.28,
+    "water": 5.64,
+    "electricity": 4.54,
+    "housing": 8.74,
+    "assets": 7.54
+   }
+  },
+  {
+   "iso": "THA",
+   "name": "Bangkok",
+   "year": "2022",
+   "mpi": 0.00083,
+   "headcount": 0.249,
+   "intensity": 33.333,
+   "vulnerable": 0.956,
+   "severe": 0.0,
+   "popShare": 13.232,
+   "pop2024": 9483.2,
+   "poor2024": 23.6,
+   "censored": {
+    "nutrition": 0.076,
+    "child_mortality": 0.015,
+    "schooling": 0.226,
+    "attendance": 0.103,
+    "cooking": 0.03,
+    "sanitation": 0.079,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.079,
+    "assets": 0.049
+   },
+   "raw": {
+    "nutrition": 1.373,
+    "child_mortality": 0.44,
+    "schooling": 5.777,
+    "attendance": 0.627,
+    "cooking": 0.494,
+    "sanitation": 4.55,
+    "water": 0.1,
+    "electricity": 0.0,
+    "housing": 1.424,
+    "assets": 2.177
+   },
+   "contribDims": {
+    "health": 18.25,
+    "education": 65.94,
+    "living": 15.81
+   },
+   "contrib": {
+    "nutrition": 15.21,
+    "child_mortality": 3.05,
+    "schooling": 45.21,
+    "attendance": 20.72,
+    "cooking": 1.99,
+    "sanitation": 5.27,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 5.27,
+    "assets": 3.28
+   }
+  },
+  {
+   "iso": "THA",
+   "name": "Central",
+   "year": "2022",
+   "mpi": 0.00077,
+   "headcount": 0.19,
+   "intensity": 40.766,
+   "vulnerable": 1.2,
+   "severe": 0.055,
+   "popShare": 30.368,
+   "pop2024": 21764.0,
+   "poor2024": 41.3,
+   "censored": {
+    "nutrition": 0.147,
+    "child_mortality": 0.012,
+    "schooling": 0.122,
+    "attendance": 0.153,
+    "cooking": 0.04,
+    "sanitation": 0.0,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.01,
+    "assets": 0.04
+   },
+   "raw": {
+    "nutrition": 2.126,
+    "child_mortality": 0.279,
+    "schooling": 7.318,
+    "attendance": 1.012,
+    "cooking": 2.398,
+    "sanitation": 1.588,
+    "water": 0.025,
+    "electricity": 0.036,
+    "housing": 2.198,
+    "assets": 1.061
+   },
+   "contribDims": {
+    "health": 34.3,
+    "education": 59.27,
+    "living": 6.43
+   },
+   "contrib": {
+    "nutrition": 31.79,
+    "child_mortality": 2.5,
+    "schooling": 26.36,
+    "attendance": 32.91,
+    "cooking": 2.85,
+    "sanitation": 0.0,
+    "water": 0.0,
+    "electricity": 0.0,
+    "housing": 0.74,
+    "assets": 2.85
+   }
+  },
+  {
+   "iso": "THA",
+   "name": "North",
+   "year": "2022",
+   "mpi": 0.00328,
+   "headcount": 0.877,
+   "intensity": 37.35,
+   "vulnerable": 7.316,
+   "severe": 0.036,
+   "popShare": 15.937,
+   "pop2024": 11421.8,
+   "poor2024": 100.2,
+   "censored": {
+    "nutrition": 0.461,
+    "child_mortality": 0.129,
+    "schooling": 0.692,
+    "attendance": 0.163,
+    "cooking": 0.552,
+    "sanitation": 0.17,
+    "water": 0.075,
+    "electricity": 0.131,
+    "housing": 0.411,
+    "assets": 0.22
+   },
+   "raw": {
+    "nutrition": 3.322,
+    "child_mortality": 0.811,
+    "schooling": 16.271,
+    "attendance": 1.304,
+    "cooking": 21.501,
+    "sanitation": 1.399,
+    "water": 0.678,
+    "electricity": 0.253,
+    "housing": 2.893,
+    "assets": 0.805
+   },
+   "contribDims": {
+    "health": 30.03,
+    "education": 43.53,
+    "living": 26.44
+   },
+   "contrib": {
+    "nutrition": 23.46,
+    "child_mortality": 6.57,
+    "schooling": 35.22,
+    "attendance": 8.31,
+    "cooking": 9.37,
+    "sanitation": 2.88,
+    "water": 1.27,
+    "electricity": 2.22,
+    "housing": 6.97,
+    "assets": 3.74
+   }
+  },
+  {
+   "iso": "THA",
+   "name": "Northeast",
+   "year": "2022",
+   "mpi": 0.00194,
+   "headcount": 0.547,
+   "intensity": 35.419,
+   "vulnerable": 9.91,
+   "severe": 0.0,
+   "popShare": 26.905,
+   "pop2024": 19282.1,
+   "poor2024": 105.5,
+   "censored": {
+    "nutrition": 0.29,
+    "child_mortality": 0.078,
+    "schooling": 0.335,
+    "attendance": 0.361,
+    "cooking": 0.227,
+    "sanitation": 0.015,
+    "water": 0.0,
+    "electricity": 0.002,
+    "housing": 0.021,
+    "assets": 0.027
+   },
+   "raw": {
+    "nutrition": 3.412,
+    "child_mortality": 1.194,
+    "schooling": 12.61,
+    "attendance": 2.909,
+    "cooking": 35.338,
+    "sanitation": 0.591,
+    "water": 0.094,
+    "electricity": 0.002,
+    "housing": 2.192,
+    "assets": 0.776
+   },
+   "contribDims": {
+    "health": 31.68,
+    "education": 59.92,
+    "living": 8.39
+   },
+   "contrib": {
+    "nutrition": 24.97,
+    "child_mortality": 6.71,
+    "schooling": 28.84,
+    "attendance": 31.08,
+    "cooking": 6.51,
+    "sanitation": 0.44,
+    "water": 0.0,
+    "electricity": 0.05,
+    "housing": 0.61,
+    "assets": 0.78
+   }
+  },
+  {
+   "iso": "THA",
+   "name": "South",
+   "year": "2022",
+   "mpi": 0.00316,
+   "headcount": 0.836,
+   "intensity": 37.819,
+   "vulnerable": 2.721,
+   "severe": 0.07,
+   "popShare": 13.558,
+   "pop2024": 9716.8,
+   "poor2024": 81.3,
+   "censored": {
+    "nutrition": 0.38,
+    "child_mortality": 0.263,
+    "schooling": 0.496,
+    "attendance": 0.522,
+    "cooking": 0.115,
+    "sanitation": 0.191,
+    "water": 0.084,
+    "electricity": 0.037,
+    "housing": 0.127,
+    "assets": 0.156
+   },
+   "raw": {
+    "nutrition": 4.155,
+    "child_mortality": 1.73,
+    "schooling": 11.095,
+    "attendance": 2.55,
+    "cooking": 1.503,
+    "sanitation": 2.287,
+    "water": 1.604,
+    "electricity": 0.082,
+    "housing": 2.158,
+    "assets": 1.379
+   },
+   "contribDims": {
+    "health": 33.87,
+    "education": 53.64,
+    "living": 12.48
+   },
+   "contrib": {
+    "nutrition": 20.01,
+    "child_mortality": 13.86,
+    "schooling": 26.12,
+    "attendance": 27.53,
+    "cooking": 2.02,
+    "sanitation": 3.36,
+    "water": 1.47,
+    "electricity": 0.65,
+    "housing": 2.23,
+    "assets": 2.74
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Aileu",
+   "year": "2016",
+   "mpi": 0.2387,
+   "headcount": 53.162,
+   "intensity": 44.9,
+   "vulnerable": 28.716,
+   "severe": 17.983,
+   "popShare": 3.925,
+   "pop2024": 55.0,
+   "poor2024": 29.2,
+   "censored": {
+    "nutrition": 41.516,
+    "child_mortality": 2.701,
+    "schooling": 16.092,
+    "attendance": 15.74,
+    "cooking": 52.657,
+    "sanitation": 19.145,
+    "water": 17.354,
+    "electricity": 25.755,
+    "housing": 49.617,
+    "assets": 36.976
+   },
+   "raw": {
+    "nutrition": 61.218,
+    "child_mortality": 2.838,
+    "schooling": 17.251,
+    "attendance": 16.642,
+    "cooking": 96.949,
+    "sanitation": 27.019,
+    "water": 24.194,
+    "electricity": 31.632,
+    "housing": 80.077,
+    "assets": 47.096
+   },
+   "contribDims": {
+    "health": 30.87,
+    "education": 22.23,
+    "living": 46.9
+   },
+   "contrib": {
+    "nutrition": 28.99,
+    "child_mortality": 1.89,
+    "schooling": 11.24,
+    "attendance": 10.99,
+    "cooking": 12.26,
+    "sanitation": 4.46,
+    "water": 4.04,
+    "electricity": 5.99,
+    "housing": 11.55,
+    "assets": 8.61
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Ainaro",
+   "year": "2016",
+   "mpi": 0.32538,
+   "headcount": 67.663,
+   "intensity": 48.088,
+   "vulnerable": 18.258,
+   "severe": 29.965,
+   "popShare": 5.124,
+   "pop2024": 71.8,
+   "poor2024": 48.6,
+   "censored": {
+    "nutrition": 47.404,
+    "child_mortality": 7.921,
+    "schooling": 20.933,
+    "attendance": 23.534,
+    "cooking": 66.409,
+    "sanitation": 54.091,
+    "water": 28.161,
+    "electricity": 34.568,
+    "housing": 61.966,
+    "assets": 41.108
+   },
+   "raw": {
+    "nutrition": 53.961,
+    "child_mortality": 8.288,
+    "schooling": 21.46,
+    "attendance": 24.39,
+    "cooking": 95.953,
+    "sanitation": 69.942,
+    "water": 34.281,
+    "electricity": 41.617,
+    "housing": 83.718,
+    "assets": 50.05
+   },
+   "contribDims": {
+    "health": 28.34,
+    "education": 22.78,
+    "living": 48.88
+   },
+   "contrib": {
+    "nutrition": 24.28,
+    "child_mortality": 4.06,
+    "schooling": 10.72,
+    "attendance": 12.05,
+    "cooking": 11.34,
+    "sanitation": 9.24,
+    "water": 4.81,
+    "electricity": 5.9,
+    "housing": 10.58,
+    "assets": 7.02
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Baucau",
+   "year": "2016",
+   "mpi": 0.21385,
+   "headcount": 49.073,
+   "intensity": 43.578,
+   "vulnerable": 28.016,
+   "severe": 14.251,
+   "popShare": 11.669,
+   "pop2024": 163.4,
+   "poor2024": 80.2,
+   "censored": {
+    "nutrition": 34.213,
+    "child_mortality": 3.603,
+    "schooling": 13.251,
+    "attendance": 14.334,
+    "cooking": 47.842,
+    "sanitation": 35.006,
+    "water": 27.996,
+    "electricity": 11.911,
+    "housing": 43.151,
+    "assets": 22.818
+   },
+   "raw": {
+    "nutrition": 51.877,
+    "child_mortality": 3.903,
+    "schooling": 14.676,
+    "attendance": 16.636,
+    "cooking": 89.78,
+    "sanitation": 49.136,
+    "water": 40.786,
+    "electricity": 14.916,
+    "housing": 68.548,
+    "assets": 31.804
+   },
+   "contribDims": {
+    "health": 29.47,
+    "education": 21.5,
+    "living": 49.03
+   },
+   "contrib": {
+    "nutrition": 26.66,
+    "child_mortality": 2.81,
+    "schooling": 10.33,
+    "attendance": 11.17,
+    "cooking": 12.43,
+    "sanitation": 9.09,
+    "water": 7.27,
+    "electricity": 3.09,
+    "housing": 11.21,
+    "assets": 5.93
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Bobonaro",
+   "year": "2016",
+   "mpi": 0.25519,
+   "headcount": 55.501,
+   "intensity": 45.979,
+   "vulnerable": 24.512,
+   "severe": 20.431,
+   "popShare": 7.877,
+   "pop2024": 110.3,
+   "poor2024": 61.2,
+   "censored": {
+    "nutrition": 41.743,
+    "child_mortality": 1.294,
+    "schooling": 26.829,
+    "attendance": 15.012,
+    "cooking": 54.098,
+    "sanitation": 29.989,
+    "water": 16.969,
+    "electricity": 19.213,
+    "housing": 49.412,
+    "assets": 35.023
+   },
+   "raw": {
+    "nutrition": 61.034,
+    "child_mortality": 1.918,
+    "schooling": 29.513,
+    "attendance": 16.166,
+    "cooking": 92.056,
+    "sanitation": 36.3,
+    "water": 21.31,
+    "electricity": 23.776,
+    "housing": 69.17,
+    "assets": 42.076
+   },
+   "contribDims": {
+    "health": 28.11,
+    "education": 27.33,
+    "living": 44.57
+   },
+   "contrib": {
+    "nutrition": 27.26,
+    "child_mortality": 0.85,
+    "schooling": 17.52,
+    "attendance": 9.8,
+    "cooking": 11.78,
+    "sanitation": 6.53,
+    "water": 3.69,
+    "electricity": 4.18,
+    "housing": 10.76,
+    "assets": 7.62
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Cova Lima",
+   "year": "2016",
+   "mpi": 0.24192,
+   "headcount": 55.183,
+   "intensity": 43.839,
+   "vulnerable": 23.823,
+   "severe": 15.294,
+   "popShare": 5.934,
+   "pop2024": 83.1,
+   "poor2024": 45.9,
+   "censored": {
+    "nutrition": 41.734,
+    "child_mortality": 1.28,
+    "schooling": 14.942,
+    "attendance": 10.435,
+    "cooking": 54.355,
+    "sanitation": 46.093,
+    "water": 23.056,
+    "electricity": 28.672,
+    "housing": 47.057,
+    "assets": 31.044
+   },
+   "raw": {
+    "nutrition": 56.662,
+    "child_mortality": 1.459,
+    "schooling": 16.213,
+    "attendance": 11.22,
+    "cooking": 92.787,
+    "sanitation": 60.768,
+    "water": 29.079,
+    "electricity": 34.314,
+    "housing": 71.725,
+    "assets": 38.649
+   },
+   "contribDims": {
+    "health": 29.63,
+    "education": 17.48,
+    "living": 52.88
+   },
+   "contrib": {
+    "nutrition": 28.75,
+    "child_mortality": 0.88,
+    "schooling": 10.29,
+    "attendance": 7.19,
+    "cooking": 12.48,
+    "sanitation": 10.59,
+    "water": 5.29,
+    "electricity": 6.58,
+    "housing": 10.81,
+    "assets": 7.13
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Dili",
+   "year": "2016",
+   "mpi": 0.09425,
+   "headcount": 21.609,
+   "intensity": 43.615,
+   "vulnerable": 33.295,
+   "severe": 6.194,
+   "popShare": 20.426,
+   "pop2024": 286.1,
+   "poor2024": 61.8,
+   "censored": {
+    "nutrition": 18.913,
+    "child_mortality": 5.49,
+    "schooling": 2.766,
+    "attendance": 9.039,
+    "cooking": 18.816,
+    "sanitation": 12.749,
+    "water": 4.939,
+    "electricity": 2.625,
+    "housing": 15.08,
+    "assets": 6.806
+   },
+   "raw": {
+    "nutrition": 60.887,
+    "child_mortality": 6.767,
+    "schooling": 3.145,
+    "attendance": 10.221,
+    "cooking": 59.53,
+    "sanitation": 27.529,
+    "water": 9.045,
+    "electricity": 2.919,
+    "housing": 39.202,
+    "assets": 8.949
+   },
+   "contribDims": {
+    "health": 43.16,
+    "education": 20.88,
+    "living": 35.97
+   },
+   "contrib": {
+    "nutrition": 33.45,
+    "child_mortality": 9.71,
+    "schooling": 4.89,
+    "attendance": 15.99,
+    "cooking": 11.09,
+    "sanitation": 7.52,
+    "water": 2.91,
+    "electricity": 1.55,
+    "housing": 8.89,
+    "assets": 4.01
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Ermera",
+   "year": "2016",
+   "mpi": 0.33352,
+   "headcount": 67.445,
+   "intensity": 49.451,
+   "vulnerable": 17.53,
+   "severe": 31.507,
+   "popShare": 9.64,
+   "pop2024": 135.0,
+   "poor2024": 91.1,
+   "censored": {
+    "nutrition": 43.946,
+    "child_mortality": 2.348,
+    "schooling": 30.144,
+    "attendance": 26.066,
+    "cooking": 67.182,
+    "sanitation": 37.516,
+    "water": 32.512,
+    "electricity": 44.256,
+    "housing": 59.646,
+    "assets": 51.71
+   },
+   "raw": {
+    "nutrition": 52.073,
+    "child_mortality": 2.531,
+    "schooling": 30.93,
+    "attendance": 27.211,
+    "cooking": 99.072,
+    "sanitation": 44.173,
+    "water": 39.389,
+    "electricity": 50.609,
+    "housing": 75.914,
+    "assets": 60.537
+   },
+   "contribDims": {
+    "health": 23.13,
+    "education": 28.09,
+    "living": 48.78
+   },
+   "contrib": {
+    "nutrition": 21.96,
+    "child_mortality": 1.17,
+    "schooling": 15.06,
+    "attendance": 13.03,
+    "cooking": 11.19,
+    "sanitation": 6.25,
+    "water": 5.42,
+    "electricity": 7.37,
+    "housing": 9.94,
+    "assets": 8.61
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Lautem",
+   "year": "2016",
+   "mpi": 0.18389,
+   "headcount": 42.127,
+   "intensity": 43.652,
+   "vulnerable": 26.686,
+   "severe": 13.633,
+   "popShare": 5.647,
+   "pop2024": 79.1,
+   "poor2024": 33.3,
+   "censored": {
+    "nutrition": 27.755,
+    "child_mortality": 0.722,
+    "schooling": 15.024,
+    "attendance": 11.379,
+    "cooking": 40.665,
+    "sanitation": 29.42,
+    "water": 18.919,
+    "electricity": 13.136,
+    "housing": 36.371,
+    "assets": 27.853
+   },
+   "raw": {
+    "nutrition": 48.011,
+    "child_mortality": 1.081,
+    "schooling": 17.357,
+    "attendance": 12.87,
+    "cooking": 84.598,
+    "sanitation": 46.275,
+    "water": 26.76,
+    "electricity": 15.417,
+    "housing": 58.518,
+    "assets": 37.795
+   },
+   "contribDims": {
+    "health": 25.81,
+    "education": 23.93,
+    "living": 50.26
+   },
+   "contrib": {
+    "nutrition": 25.16,
+    "child_mortality": 0.65,
+    "schooling": 13.62,
+    "attendance": 10.31,
+    "cooking": 12.29,
+    "sanitation": 8.89,
+    "water": 5.72,
+    "electricity": 3.97,
+    "housing": 10.99,
+    "assets": 8.41
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Liquica",
+   "year": "2016",
+   "mpi": 0.23802,
+   "headcount": 51.355,
+   "intensity": 46.347,
+   "vulnerable": 30.65,
+   "severe": 19.514,
+   "popShare": 6.554,
+   "pop2024": 91.8,
+   "poor2024": 47.1,
+   "censored": {
+    "nutrition": 38.505,
+    "child_mortality": 2.205,
+    "schooling": 19.917,
+    "attendance": 18.403,
+    "cooking": 50.94,
+    "sanitation": 29.674,
+    "water": 8.855,
+    "electricity": 22.967,
+    "housing": 46.756,
+    "assets": 32.15
+   },
+   "raw": {
+    "nutrition": 58.5,
+    "child_mortality": 2.57,
+    "schooling": 21.347,
+    "attendance": 20.503,
+    "cooking": 96.42,
+    "sanitation": 41.663,
+    "water": 13.463,
+    "electricity": 29.512,
+    "housing": 73.115,
+    "assets": 41.08
+   },
+   "contribDims": {
+    "health": 28.51,
+    "education": 26.83,
+    "living": 44.66
+   },
+   "contrib": {
+    "nutrition": 26.96,
+    "child_mortality": 1.54,
+    "schooling": 13.95,
+    "attendance": 12.89,
+    "cooking": 11.89,
+    "sanitation": 6.93,
+    "water": 2.07,
+    "electricity": 5.36,
+    "housing": 10.91,
+    "assets": 7.5
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Manatuto",
+   "year": "2016",
+   "mpi": 0.21862,
+   "headcount": 48.276,
+   "intensity": 45.286,
+   "vulnerable": 31.3,
+   "severe": 15.65,
+   "popShare": 4.662,
+   "pop2024": 65.3,
+   "poor2024": 31.5,
+   "censored": {
+    "nutrition": 36.11,
+    "child_mortality": 4.42,
+    "schooling": 12.94,
+    "attendance": 14.848,
+    "cooking": 48.012,
+    "sanitation": 37.955,
+    "water": 22.879,
+    "electricity": 8.706,
+    "housing": 39.839,
+    "assets": 31.177
+   },
+   "raw": {
+    "nutrition": 55.758,
+    "child_mortality": 5.225,
+    "schooling": 14.198,
+    "attendance": 15.858,
+    "cooking": 92.895,
+    "sanitation": 63.959,
+    "water": 33.162,
+    "electricity": 9.495,
+    "housing": 59.332,
+    "assets": 40.451
+   },
+   "contribDims": {
+    "health": 30.9,
+    "education": 21.18,
+    "living": 47.92
+   },
+   "contrib": {
+    "nutrition": 27.53,
+    "child_mortality": 3.37,
+    "schooling": 9.86,
+    "attendance": 11.32,
+    "cooking": 12.2,
+    "sanitation": 9.64,
+    "water": 5.81,
+    "electricity": 2.21,
+    "housing": 10.12,
+    "assets": 7.92
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Manufahi",
+   "year": "2016",
+   "mpi": 0.22372,
+   "headcount": 49.282,
+   "intensity": 45.397,
+   "vulnerable": 27.62,
+   "severe": 17.373,
+   "popShare": 5.358,
+   "pop2024": 75.1,
+   "poor2024": 37.0,
+   "censored": {
+    "nutrition": 39.337,
+    "child_mortality": 3.241,
+    "schooling": 9.079,
+    "attendance": 15.242,
+    "cooking": 49.181,
+    "sanitation": 34.872,
+    "water": 21.551,
+    "electricity": 27.685,
+    "housing": 42.6,
+    "assets": 26.118
+   },
+   "raw": {
+    "nutrition": 55.68,
+    "child_mortality": 3.861,
+    "schooling": 9.782,
+    "attendance": 16.746,
+    "cooking": 95.657,
+    "sanitation": 48.241,
+    "water": 31.876,
+    "electricity": 35.407,
+    "housing": 68.001,
+    "assets": 35.41
+   },
+   "contribDims": {
+    "health": 31.72,
+    "education": 18.12,
+    "living": 50.16
+   },
+   "contrib": {
+    "nutrition": 29.3,
+    "child_mortality": 2.41,
+    "schooling": 6.76,
+    "attendance": 11.35,
+    "cooking": 12.21,
+    "sanitation": 8.66,
+    "water": 5.35,
+    "electricity": 6.87,
+    "housing": 10.58,
+    "assets": 6.49
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Oecussi",
+   "year": "2016",
+   "mpi": 0.33744,
+   "headcount": 67.777,
+   "intensity": 49.786,
+   "vulnerable": 17.898,
+   "severe": 32.847,
+   "popShare": 6.465,
+   "pop2024": 90.6,
+   "poor2024": 61.4,
+   "censored": {
+    "nutrition": 47.289,
+    "child_mortality": 4.444,
+    "schooling": 32.24,
+    "attendance": 20.335,
+    "cooking": 65.904,
+    "sanitation": 56.685,
+    "water": 30.142,
+    "electricity": 25.566,
+    "housing": 61.974,
+    "assets": 54.189
+   },
+   "raw": {
+    "nutrition": 56.944,
+    "child_mortality": 4.69,
+    "schooling": 33.514,
+    "attendance": 21.163,
+    "cooking": 92.017,
+    "sanitation": 69.658,
+    "water": 37.788,
+    "electricity": 27.286,
+    "housing": 79.788,
+    "assets": 62.869
+   },
+   "contribDims": {
+    "health": 25.55,
+    "education": 25.97,
+    "living": 48.48
+   },
+   "contrib": {
+    "nutrition": 23.36,
+    "child_mortality": 2.2,
+    "schooling": 15.92,
+    "attendance": 10.04,
+    "cooking": 10.85,
+    "sanitation": 9.33,
+    "water": 4.96,
+    "electricity": 4.21,
+    "housing": 10.2,
+    "assets": 8.92
+   }
+  },
+  {
+   "iso": "TLS",
+   "name": "Viqueque",
+   "year": "2016",
+   "mpi": 0.21851,
+   "headcount": 50.516,
+   "intensity": 43.255,
+   "vulnerable": 30.496,
+   "severe": 12.317,
+   "popShare": 6.718,
+   "pop2024": 94.1,
+   "poor2024": 47.5,
+   "censored": {
+    "nutrition": 37.511,
+    "child_mortality": 3.674,
+    "schooling": 12.241,
+    "attendance": 8.432,
+    "cooking": 49.696,
+    "sanitation": 39.449,
+    "water": 14.966,
+    "electricity": 23.416,
+    "housing": 43.507,
+    "assets": 36.71
+   },
+   "raw": {
+    "nutrition": 50.922,
+    "child_mortality": 3.789,
+    "schooling": 13.252,
+    "attendance": 10.481,
+    "cooking": 93.891,
+    "sanitation": 60.715,
+    "water": 19.237,
+    "electricity": 33.083,
+    "housing": 75.49,
+    "assets": 54.211
+   },
+   "contribDims": {
+    "health": 31.41,
+    "education": 15.77,
+    "living": 52.82
+   },
+   "contrib": {
+    "nutrition": 28.61,
+    "child_mortality": 2.8,
+    "schooling": 9.34,
+    "attendance": 6.43,
+    "cooking": 12.64,
+    "sanitation": 10.03,
+    "water": 3.8,
+    "electricity": 5.95,
+    "housing": 11.06,
+    "assets": 9.33
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "Central Highlands",
+   "year": "2020/2021",
+   "mpi": 0.02597,
+   "headcount": 6.185,
+   "intensity": 41.979,
+   "vulnerable": 5.501,
+   "severe": 1.16,
+   "popShare": 6.06,
+   "pop2024": 6120.2,
+   "poor2024": 378.6,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.709,
+    "schooling": 4.879,
+    "attendance": 3.09,
+    "cooking": 5.773,
+    "sanitation": 4.788,
+    "water": 2.485,
+    "electricity": 0.146,
+    "housing": 2.903,
+    "assets": 2.484
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.709,
+    "schooling": 9.738,
+    "attendance": 5.49,
+    "cooking": 29.965,
+    "sanitation": 20.464,
+    "water": 5.726,
+    "electricity": 0.146,
+    "housing": 11.539,
+    "assets": 4.673
+   },
+   "contribDims": {
+    "health": 9.1,
+    "education": 51.15,
+    "living": 39.75
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 9.1,
+    "schooling": 31.32,
+    "attendance": 19.84,
+    "cooking": 12.35,
+    "sanitation": 10.24,
+    "water": 5.32,
+    "electricity": 0.31,
+    "housing": 6.21,
+    "assets": 5.32
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "Mekong River Delta",
+   "year": "2020/2021",
+   "mpi": 0.00778,
+   "headcount": 1.926,
+   "intensity": 40.402,
+   "vulnerable": 8.353,
+   "severe": 0.367,
+   "popShare": 17.539,
+   "pop2024": 17712.3,
+   "poor2024": 341.1,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.195,
+    "schooling": 1.522,
+    "attendance": 0.905,
+    "cooking": 1.309,
+    "sanitation": 1.777,
+    "water": 0.268,
+    "electricity": 0.146,
+    "housing": 1.61,
+    "assets": 0.445
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.195,
+    "schooling": 12.011,
+    "attendance": 3.605,
+    "cooking": 14.403,
+    "sanitation": 23.197,
+    "water": 1.525,
+    "electricity": 0.291,
+    "housing": 22.099,
+    "assets": 1.203
+   },
+   "contribDims": {
+    "health": 8.34,
+    "education": 51.99,
+    "living": 39.67
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 8.34,
+    "schooling": 32.61,
+    "attendance": 19.38,
+    "cooking": 9.35,
+    "sanitation": 12.69,
+    "water": 1.91,
+    "electricity": 1.04,
+    "housing": 11.5,
+    "assets": 3.18
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "North Central & Central Coast",
+   "year": "2020/2021",
+   "mpi": 0.00332,
+   "headcount": 0.87,
+   "intensity": 38.169,
+   "vulnerable": 2.366,
+   "severe": 0.093,
+   "popShare": 20.559,
+   "pop2024": 20761.6,
+   "poor2024": 180.7,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.21,
+    "schooling": 0.641,
+    "attendance": 0.101,
+    "cooking": 0.62,
+    "sanitation": 0.557,
+    "water": 0.269,
+    "electricity": 0.028,
+    "housing": 0.505,
+    "assets": 0.51
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.21,
+    "schooling": 4.86,
+    "attendance": 1.012,
+    "cooking": 9.224,
+    "sanitation": 6.67,
+    "water": 2.48,
+    "electricity": 0.121,
+    "housing": 2.944,
+    "assets": 1.97
+   },
+   "contribDims": {
+    "health": 21.11,
+    "education": 37.27,
+    "living": 41.62
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 21.11,
+    "schooling": 32.19,
+    "attendance": 5.09,
+    "cooking": 10.37,
+    "sanitation": 9.33,
+    "water": 4.5,
+    "electricity": 0.46,
+    "housing": 8.44,
+    "assets": 8.53
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "Northern Uplands",
+   "year": "2020/2021",
+   "mpi": 0.02624,
+   "headcount": 6.329,
+   "intensity": 41.462,
+   "vulnerable": 5.416,
+   "severe": 1.544,
+   "popShare": 12.719,
+   "pop2024": 12845.1,
+   "poor2024": 813.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 2.4,
+    "schooling": 3.769,
+    "attendance": 1.103,
+    "cooking": 5.647,
+    "sanitation": 4.349,
+    "water": 1.559,
+    "electricity": 0.419,
+    "housing": 4.662,
+    "assets": 1.58
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 2.4,
+    "schooling": 8.877,
+    "attendance": 2.196,
+    "cooking": 35.973,
+    "sanitation": 14.502,
+    "water": 6.166,
+    "electricity": 0.612,
+    "housing": 19.196,
+    "assets": 2.282
+   },
+   "contribDims": {
+    "health": 30.49,
+    "education": 30.94,
+    "living": 38.56
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 30.49,
+    "schooling": 23.94,
+    "attendance": 7.01,
+    "cooking": 11.95,
+    "sanitation": 9.21,
+    "water": 3.3,
+    "electricity": 0.89,
+    "housing": 9.87,
+    "assets": 3.35
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "Red River Delta",
+   "year": "2020/2021",
+   "mpi": 0.00095,
+   "headcount": 0.281,
+   "intensity": 33.883,
+   "vulnerable": 0.994,
+   "severe": 0.0,
+   "popShare": 24.98,
+   "pop2024": 25226.6,
+   "poor2024": 70.8,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.202,
+    "schooling": 0.078,
+    "attendance": 0.0,
+    "cooking": 0.066,
+    "sanitation": 0.066,
+    "water": 0.015,
+    "electricity": 0.013,
+    "housing": 0.037,
+    "assets": 0.065
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.202,
+    "schooling": 2.368,
+    "attendance": 0.349,
+    "cooking": 3.077,
+    "sanitation": 3.077,
+    "water": 0.405,
+    "electricity": 0.032,
+    "housing": 0.7,
+    "assets": 0.936
+   },
+   "contribDims": {
+    "health": 70.99,
+    "education": 13.69,
+    "living": 15.31
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 70.99,
+    "schooling": 13.69,
+    "attendance": 0.0,
+    "cooking": 3.87,
+    "sanitation": 3.83,
+    "water": 0.89,
+    "electricity": 0.74,
+    "housing": 2.18,
+    "assets": 3.82
+   }
+  },
+  {
+   "iso": "VNM",
+   "name": "Southeast",
+   "year": "2020/2021",
+   "mpi": 0.00294,
+   "headcount": 0.84,
+   "intensity": 34.959,
+   "vulnerable": 1.381,
+   "severe": 0.0,
+   "popShare": 18.143,
+   "pop2024": 18321.9,
+   "poor2024": 154.0,
+   "censored": {
+    "nutrition": null,
+    "child_mortality": 0.297,
+    "schooling": 0.544,
+    "attendance": 0.497,
+    "cooking": 0.102,
+    "sanitation": 0.115,
+    "water": 0.015,
+    "electricity": 0.012,
+    "housing": 0.067,
+    "assets": 0.076
+   },
+   "raw": {
+    "nutrition": null,
+    "child_mortality": 0.297,
+    "schooling": 5.082,
+    "attendance": 2.498,
+    "cooking": 1.784,
+    "sanitation": 3.592,
+    "water": 0.41,
+    "electricity": 0.037,
+    "housing": 1.612,
+    "assets": 0.746
+   },
+   "contribDims": {
+    "health": 33.65,
+    "education": 59.03,
+    "living": 7.32
+   },
+   "contrib": {
+    "nutrition": null,
+    "child_mortality": 33.65,
+    "schooling": 30.85,
+    "attendance": 28.18,
+    "cooking": 1.93,
+    "sanitation": 2.17,
+    "water": 0.29,
+    "electricity": 0.23,
+    "housing": 1.27,
+    "assets": 1.44
+   }
+  }
+ ],
+ "changes": [
+  {
+   "iso": "IDN",
+   "survey0": "DHS",
+   "year0": "2012",
+   "survey1": "DHS",
+   "year1": "2017",
+   "mpi": {
+    "t0": 0.02768,
+    "t1": 0.0139,
+    "abs": -0.00275,
+    "rel": -12.862,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 6.87294,
+    "t1": 3.59493,
+    "abs": -0.6556,
+    "rel": -12.157,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 40.26687,
+    "t1": 38.67646,
+    "abs": -0.31808,
+    "rel": -0.803,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 8.95309,
+    "t1": 4.63165,
+    "abs": -0.86429,
+    "rel": -12.35,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 1.12523,
+    "t1": 0.43357,
+    "abs": -0.13833,
+    "rel": -17.365,
+    "sig": "***"
+   },
+   "poor0": 17367.8,
+   "poor1": 9610.9,
+   "censored": {
+    "nutrition": {
+     "t0": null,
+     "t1": null,
+     "abs": null,
+     "rel": null,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 1.95759,
+     "t1": 1.46029,
+     "abs": -0.09946,
+     "rel": -5.693,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 2.94195,
+     "t1": 1.54192,
+     "abs": -0.28001,
+     "rel": -12.121,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 2.06521,
+     "t1": 0.68422,
+     "abs": -0.2762,
+     "rel": -19.824,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 5.63319,
+     "t1": 2.37128,
+     "abs": -0.65238,
+     "rel": -15.89,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 5.06061,
+     "t1": 2.15938,
+     "abs": -0.58025,
+     "rel": -15.662,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 4.05997,
+     "t1": 1.27085,
+     "abs": -0.55782,
+     "rel": -20.729,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 1.77706,
+     "t1": 0.76956,
+     "abs": -0.2015,
+     "rel": -15.412,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 2.95104,
+     "t1": 1.30004,
+     "abs": -0.3302,
+     "rel": -15.122,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 3.56641,
+     "t1": 1.71578,
+     "abs": -0.37013,
+     "rel": -13.613,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 9,
+   "missing": "Nutrition"
+  },
+  {
+   "iso": "KHM",
+   "survey0": "DHS",
+   "year0": "2010",
+   "survey1": "DHS",
+   "year1": "2014",
+   "mpi": {
+    "t0": 0.22541,
+    "t1": 0.16834,
+    "abs": -0.01427,
+    "rel": -7.039,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 47.11806,
+    "t1": 36.72113,
+    "abs": -2.59923,
+    "rel": -6.042,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 47.84022,
+    "t1": 45.84209,
+    "abs": -0.49953,
+    "rel": -1.061,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 21.80841,
+    "t1": 21.27984,
+    "abs": -0.13214,
+    "rel": -0.612,
+    "sig": ""
+   },
+   "severe": {
+    "t0": 19.4941,
+    "t1": 13.11637,
+    "abs": -1.59443,
+    "rel": -9.431,
+    "sig": "***"
+   },
+   "poor0": 6832.5,
+   "poor1": 5653.9,
+   "censored": {
+    "nutrition": {
+     "t0": 28.70192,
+     "t1": 20.17439,
+     "abs": -2.13188,
+     "rel": -8.437,
+     "sig": "***"
+    },
+    "child_mortality": {
+     "t0": 3.11494,
+     "t1": 1.82945,
+     "abs": -0.32137,
+     "rel": -12.458,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 26.28815,
+     "t1": 21.45664,
+     "abs": -1.20788,
+     "rel": -4.95,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 10.40678,
+     "t1": 10.71269,
+     "abs": 0.07648,
+     "rel": 0.727,
+     "sig": ""
+    },
+    "cooking": {
+     "t0": 46.57692,
+     "t1": 35.77624,
+     "abs": -2.70017,
+     "rel": -6.383,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 42.11039,
+     "t1": 30.33169,
+     "abs": -2.94467,
+     "rel": -7.875,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 25.22516,
+     "t1": 20.0235,
+     "abs": -1.30041,
+     "rel": -5.61,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 42.61902,
+     "t1": 26.09619,
+     "abs": -4.13071,
+     "rel": -11.541,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 29.12162,
+     "t1": 21.7139,
+     "abs": -1.85193,
+     "rel": -7.075,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 14.55649,
+     "t1": 6.54612,
+     "abs": -2.00259,
+     "rel": -18.11,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "KHM",
+   "survey0": "DHS",
+   "year0": "2014",
+   "survey1": "DHS",
+   "year1": "2021/2022",
+   "mpi": {
+    "t0": 0.16834,
+    "t1": 0.07037,
+    "abs": -0.01306,
+    "rel": -10.979,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 36.72113,
+    "t1": 16.6447,
+    "abs": -2.67686,
+    "rel": -10.013,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 45.84209,
+    "t1": 42.27648,
+    "abs": -0.47541,
+    "rel": -1.074,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 21.27984,
+    "t1": 20.52115,
+    "abs": -0.10116,
+    "rel": -0.483,
+    "sig": ""
+   },
+   "severe": {
+    "t0": 13.11637,
+    "t1": 4.09292,
+    "abs": -1.20313,
+    "rel": -14.382,
+    "sig": "***"
+   },
+   "poor0": 5653.9,
+   "poor1": 2863.2,
+   "censored": {
+    "nutrition": {
+     "t0": 20.17439,
+     "t1": 8.58364,
+     "abs": -1.54543,
+     "rel": -10.769,
+     "sig": "***"
+    },
+    "child_mortality": {
+     "t0": 1.82945,
+     "t1": 0.50935,
+     "abs": -0.17601,
+     "rel": -15.674,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 21.45664,
+     "t1": 10.47848,
+     "abs": -1.46375,
+     "rel": -9.114,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 10.71269,
+     "t1": 9.77026,
+     "abs": -0.12566,
+     "rel": -1.22,
+     "sig": ""
+    },
+    "cooking": {
+     "t0": 35.77624,
+     "t1": 12.07544,
+     "abs": -3.16011,
+     "rel": -13.482,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 30.33169,
+     "t1": 8.63187,
+     "abs": -2.89331,
+     "rel": -15.428,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 20.0235,
+     "t1": 5.03761,
+     "abs": -1.99812,
+     "rel": -16.806,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 26.09619,
+     "t1": 4.5829,
+     "abs": -2.86844,
+     "rel": -20.7,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 21.7139,
+     "t1": 4.59525,
+     "abs": -2.28249,
+     "rel": -18.703,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 6.54612,
+     "t1": 3.714,
+     "abs": -0.37762,
+     "rel": -7.278,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "LAO",
+   "survey0": "MICS",
+   "year0": "2011/2012",
+   "survey1": "MICS",
+   "year1": "2017",
+   "mpi": {
+    "t0": 0.21015,
+    "t1": 0.10849,
+    "abs": -0.01848,
+    "rel": -11.327,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 40.36527,
+    "t1": 23.08739,
+    "abs": -3.14143,
+    "rel": -9.659,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 52.06261,
+    "t1": 46.98981,
+    "abs": -0.92233,
+    "rel": -1.847,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 18.98499,
+    "t1": 21.2077,
+    "abs": 0.40413,
+    "rel": 2.033,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 21.81472,
+    "t1": 9.58101,
+    "abs": -2.22431,
+    "rel": -13.895,
+    "sig": "***"
+   },
+   "poor0": 2631.4,
+   "poor1": 1620.3,
+   "censored": {
+    "nutrition": {
+     "t0": 21.2698,
+     "t1": 12.0595,
+     "abs": -1.6746,
+     "rel": -9.803,
+     "sig": "***"
+    },
+    "child_mortality": {
+     "t0": 5.43044,
+     "t1": 2.01186,
+     "abs": -0.62156,
+     "rel": -16.518,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 31.13216,
+     "t1": 16.61225,
+     "abs": -2.63998,
+     "rel": -10.792,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 16.63683,
+     "t1": 9.14419,
+     "abs": -1.3623,
+     "rel": -10.311,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 40.34032,
+     "t1": 22.91388,
+     "abs": -3.16844,
+     "rel": -9.773,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 31.78767,
+     "t1": 17.17447,
+     "abs": -2.65695,
+     "rel": -10.59,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 18.54551,
+     "t1": 10.43598,
+     "abs": -1.47446,
+     "rel": -9.926,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 21.76847,
+     "t1": 6.07284,
+     "abs": -2.85375,
+     "rel": -20.715,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 26.74607,
+     "t1": 12.05347,
+     "abs": -2.67138,
+     "rel": -13.49,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 15.67812,
+     "t1": 7.14296,
+     "abs": -1.55185,
+     "rel": -13.319,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "LAO",
+   "survey0": "MICS",
+   "year0": "2017",
+   "survey1": "MICS",
+   "year1": "2023",
+   "mpi": {
+    "t0": 0.10849,
+    "t1": 0.08249,
+    "abs": -0.00433,
+    "rel": -4.464,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 23.08739,
+    "t1": 17.8231,
+    "abs": -0.87738,
+    "rel": -4.221,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 46.98981,
+    "t1": 46.28114,
+    "abs": -0.11811,
+    "rel": -0.253,
+    "sig": ""
+   },
+   "vulnerable": {
+    "t0": 21.2077,
+    "t1": 25.30262,
+    "abs": 0.68249,
+    "rel": 2.986,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 9.58101,
+    "t1": 6.48568,
+    "abs": -0.51589,
+    "rel": -6.296,
+    "sig": "***"
+   },
+   "poor0": 1620.3,
+   "poor1": 1366.1,
+   "censored": {
+    "nutrition": {
+     "t0": 12.0595,
+     "t1": 9.2028,
+     "abs": -0.47612,
+     "rel": -4.406,
+     "sig": "***"
+    },
+    "child_mortality": {
+     "t0": 2.01186,
+     "t1": 1.09171,
+     "abs": -0.15336,
+     "rel": -9.687,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 16.61225,
+     "t1": 12.59297,
+     "abs": -0.66988,
+     "rel": -4.512,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 9.14419,
+     "t1": 9.55735,
+     "abs": 0.06886,
+     "rel": 0.739,
+     "sig": ""
+    },
+    "cooking": {
+     "t0": 22.91388,
+     "t1": 17.68386,
+     "abs": -0.87167,
+     "rel": -4.226,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 17.17447,
+     "t1": 9.96975,
+     "abs": -1.20079,
+     "rel": -8.666,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 10.43598,
+     "t1": 7.68215,
+     "abs": -0.45897,
+     "rel": -4.978,
+     "sig": "**"
+    },
+    "electricity": {
+     "t0": 6.07284,
+     "t1": 2.97495,
+     "abs": -0.51632,
+     "rel": -11.213,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 12.05347,
+     "t1": 7.75199,
+     "abs": -0.71691,
+     "rel": -7.093,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 7.14296,
+     "t1": 5.08003,
+     "abs": -0.34382,
+     "rel": -5.522,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "PHL",
+   "survey0": "DHS",
+   "year0": "2008",
+   "survey1": "DHS",
+   "year1": "2013",
+   "mpi": {
+    "t0": 0.05619,
+    "t1": 0.0372,
+    "abs": -0.0038,
+    "rel": -7.919,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 12.57279,
+    "t1": 8.36917,
+    "abs": -0.84072,
+    "rel": -7.817,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 44.68916,
+    "t1": 44.44381,
+    "abs": -0.04907,
+    "rel": -0.11,
+    "sig": ""
+   },
+   "vulnerable": {
+    "t0": 13.7554,
+    "t1": 10.63383,
+    "abs": -0.62431,
+    "rel": -5.018,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 3.86424,
+    "t1": 2.54314,
+    "abs": -0.26422,
+    "rel": -8.027,
+    "sig": "***"
+   },
+   "poor0": 11654.9,
+   "poor1": 8542.9,
+   "censored": {
+    "nutrition": {
+     "t0": null,
+     "t1": null,
+     "abs": null,
+     "rel": null,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 2.37492,
+     "t1": 2.23705,
+     "abs": -0.02757,
+     "rel": -1.189,
+     "sig": ""
+    },
+    "schooling": {
+     "t0": 4.67457,
+     "t1": 3.768,
+     "abs": -0.18132,
+     "rel": -4.22,
+     "sig": "**"
+    },
+    "attendance": {
+     "t0": 7.00772,
+     "t1": 3.13345,
+     "abs": -0.77485,
+     "rel": -14.869,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 12.04714,
+     "t1": 7.92336,
+     "abs": -0.82476,
+     "rel": -8.039,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 8.80386,
+     "t1": 5.65075,
+     "abs": -0.63062,
+     "rel": -8.486,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 4.32193,
+     "t1": 2.82833,
+     "abs": -0.29872,
+     "rel": -8.131,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 7.68215,
+     "t1": 4.6023,
+     "abs": -0.61597,
+     "rel": -9.739,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 9.99919,
+     "t1": 6.33952,
+     "abs": -0.73193,
+     "rel": -8.711,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 8.98542,
+     "t1": 5.4815,
+     "abs": -0.70078,
+     "rel": -9.412,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 9,
+   "missing": "Nutrition"
+  },
+  {
+   "iso": "PHL",
+   "survey0": "DHS",
+   "year0": "2013",
+   "survey1": "DHS",
+   "year1": "2017",
+   "mpi": {
+    "t0": 0.0372,
+    "t1": 0.02407,
+    "abs": -0.00328,
+    "rel": -10.313,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 8.36917,
+    "t1": 5.75583,
+    "abs": -0.65333,
+    "rel": -8.934,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 44.44381,
+    "t1": 41.81267,
+    "abs": -0.65779,
+    "rel": -1.514,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 10.63383,
+    "t1": 7.11086,
+    "abs": -0.88074,
+    "rel": -9.571,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 2.54314,
+    "t1": 1.25992,
+    "abs": -0.3208,
+    "rel": -16.104,
+    "sig": "***"
+   },
+   "poor0": 8542.9,
+   "poor1": 6223.2,
+   "censored": {
+    "nutrition": {
+     "t0": null,
+     "t1": null,
+     "abs": null,
+     "rel": null,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 2.23705,
+     "t1": 1.4773,
+     "abs": -0.18994,
+     "rel": -9.854,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 3.768,
+     "t1": 2.93555,
+     "abs": -0.20811,
+     "rel": -6.05,
+     "sig": "**"
+    },
+    "attendance": {
+     "t0": 3.13345,
+     "t1": 1.55222,
+     "abs": -0.39531,
+     "rel": -16.106,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 7.92336,
+     "t1": 5.17393,
+     "abs": -0.68736,
+     "rel": -10.107,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 5.65075,
+     "t1": 3.59728,
+     "abs": -0.51337,
+     "rel": -10.676,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 2.82833,
+     "t1": 1.85867,
+     "abs": -0.24241,
+     "rel": -9.964,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 4.6023,
+     "t1": 2.51978,
+     "abs": -0.52063,
+     "rel": -13.98,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 6.33952,
+     "t1": 4.40089,
+     "abs": -0.48466,
+     "rel": -8.721,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 5.4815,
+     "t1": 3.44231,
+     "abs": -0.5098,
+     "rel": -10.98,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 9,
+   "missing": "Nutrition"
+  },
+  {
+   "iso": "PHL",
+   "survey0": "DHS",
+   "year0": "2017",
+   "survey1": "DHS",
+   "year1": "2022",
+   "mpi": {
+    "t0": 0.02407,
+    "t1": 0.01579,
+    "abs": -0.00166,
+    "rel": -8.086,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 5.75583,
+    "t1": 3.88666,
+    "abs": -0.37383,
+    "rel": -7.553,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 41.81267,
+    "t1": 40.6213,
+    "abs": -0.23827,
+    "rel": -0.576,
+    "sig": "**"
+   },
+   "vulnerable": {
+    "t0": 7.11086,
+    "t1": 5.24303,
+    "abs": -0.37357,
+    "rel": -5.912,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 1.25992,
+    "t1": 0.68674,
+    "abs": -0.11464,
+    "rel": -11.429,
+    "sig": "***"
+   },
+   "poor0": 6223.2,
+   "poor1": 4429.4,
+   "censored": {
+    "nutrition": {
+     "t0": null,
+     "t1": null,
+     "abs": null,
+     "rel": null,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 1.4773,
+     "t1": 1.16677,
+     "abs": -0.06211,
+     "rel": -4.61,
+     "sig": "*"
+    },
+    "schooling": {
+     "t0": 2.93555,
+     "t1": 1.66881,
+     "abs": -0.25335,
+     "rel": -10.681,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 1.55222,
+     "t1": 1.42655,
+     "abs": -0.02513,
+     "rel": -1.674,
+     "sig": ""
+    },
+    "cooking": {
+     "t0": 5.17393,
+     "t1": 3.36725,
+     "abs": -0.36134,
+     "rel": -8.232,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 3.59728,
+     "t1": 2.09305,
+     "abs": -0.30085,
+     "rel": -10.265,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 1.85867,
+     "t1": 0.79913,
+     "abs": -0.21191,
+     "rel": -15.534,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 2.51978,
+     "t1": 1.46559,
+     "abs": -0.21084,
+     "rel": -10.272,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 4.40089,
+     "t1": 2.48509,
+     "abs": -0.38316,
+     "rel": -10.801,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 3.44231,
+     "t1": 1.92182,
+     "abs": -0.3041,
+     "rel": -11.004,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 9,
+   "missing": "Nutrition"
+  },
+  {
+   "iso": "THA",
+   "survey0": "MICS",
+   "year0": "2012",
+   "survey1": "MICS",
+   "year1": "2015/2016",
+   "mpi": {
+    "t0": 0.00481,
+    "t1": 0.00371,
+    "abs": -0.00032,
+    "rel": -7.198,
+    "sig": ""
+   },
+   "headcount": {
+    "t0": 1.3088,
+    "t1": 0.9306,
+    "abs": -0.10806,
+    "rel": -9.284,
+    "sig": "*"
+   },
+   "intensity": {
+    "t0": 36.77481,
+    "t1": 39.82054,
+    "abs": 0.87021,
+    "rel": 2.299,
+    "sig": "**"
+   },
+   "vulnerable": {
+    "t0": 8.88262,
+    "t1": 7.1101,
+    "abs": -0.50643,
+    "rel": -6.161,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 0.05531,
+    "t1": 0.21129,
+    "abs": 0.04457,
+    "rel": 46.659,
+    "sig": ""
+   },
+   "poor0": 908.8,
+   "poor1": 659.4,
+   "censored": {
+    "nutrition": {
+     "t0": 0.72213,
+     "t1": 0.47977,
+     "abs": -0.06924,
+     "rel": -11.026,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 0.34593,
+     "t1": 0.29077,
+     "abs": -0.01576,
+     "rel": -4.842,
+     "sig": ""
+    },
+    "schooling": {
+     "t0": 1.00387,
+     "t1": 0.70849,
+     "abs": -0.0844,
+     "rel": -9.477,
+     "sig": "*"
+    },
+    "attendance": {
+     "t0": 0.18609,
+     "t1": 0.40821,
+     "abs": 0.06346,
+     "rel": 25.162,
+     "sig": "*"
+    },
+    "cooking": {
+     "t0": 0.76085,
+     "t1": 0.35098,
+     "abs": -0.11711,
+     "rel": -19.833,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 0.18646,
+     "t1": 0.16042,
+     "abs": -0.00744,
+     "rel": -4.208,
+     "sig": ""
+    },
+    "water": {
+     "t0": 0.21831,
+     "t1": 0.06432,
+     "abs": -0.044,
+     "rel": -29.471,
+     "sig": "**"
+    },
+    "electricity": {
+     "t0": 0.0915,
+     "t1": 0.08599,
+     "abs": -0.00158,
+     "rel": -1.76,
+     "sig": ""
+    },
+    "housing": {
+     "t0": 0.29073,
+     "t1": 0.21274,
+     "abs": -0.02228,
+     "rel": -8.537,
+     "sig": ""
+    },
+    "assets": {
+     "t0": 0.34163,
+     "t1": 0.13411,
+     "abs": -0.05929,
+     "rel": -23.446,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "THA",
+   "survey0": "MICS",
+   "year0": "2015/2016",
+   "survey1": "MICS",
+   "year1": "2019",
+   "mpi": {
+    "t0": 0.00371,
+    "t1": 0.00213,
+    "abs": -0.00045,
+    "rel": -14.592,
+    "sig": "**"
+   },
+   "headcount": {
+    "t0": 0.9306,
+    "t1": 0.58104,
+    "abs": -0.09987,
+    "rel": -12.591,
+    "sig": "**"
+   },
+   "intensity": {
+    "t0": 39.82054,
+    "t1": 36.72058,
+    "abs": -0.8857,
+    "rel": -2.289,
+    "sig": "**"
+   },
+   "vulnerable": {
+    "t0": 7.1101,
+    "t1": 6.16009,
+    "abs": -0.27143,
+    "rel": -4.015,
+    "sig": "**"
+   },
+   "severe": {
+    "t0": 0.21129,
+    "t1": 0.02998,
+    "abs": -0.0518,
+    "rel": -42.761,
+    "sig": "*"
+   },
+   "poor0": 659.4,
+   "poor1": 415.6,
+   "censored": {
+    "nutrition": {
+     "t0": 0.47977,
+     "t1": 0.3375,
+     "abs": -0.04065,
+     "rel": -9.562,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 0.29077,
+     "t1": 0.149,
+     "abs": -0.04051,
+     "rel": -17.39,
+     "sig": "*"
+    },
+    "schooling": {
+     "t0": 0.70849,
+     "t1": 0.40654,
+     "abs": -0.08627,
+     "rel": -14.675,
+     "sig": "**"
+    },
+    "attendance": {
+     "t0": 0.40821,
+     "t1": 0.17019,
+     "abs": -0.068,
+     "rel": -22.117,
+     "sig": "*"
+    },
+    "cooking": {
+     "t0": 0.35098,
+     "t1": 0.28365,
+     "abs": -0.01924,
+     "rel": -5.904,
+     "sig": ""
+    },
+    "sanitation": {
+     "t0": 0.16042,
+     "t1": 0.08123,
+     "abs": -0.02262,
+     "rel": -17.668,
+     "sig": "*"
+    },
+    "water": {
+     "t0": 0.06432,
+     "t1": 0.03516,
+     "abs": -0.00833,
+     "rel": -15.851,
+     "sig": ""
+    },
+    "electricity": {
+     "t0": 0.08599,
+     "t1": 0.02982,
+     "abs": -0.01605,
+     "rel": -26.107,
+     "sig": "*"
+    },
+    "housing": {
+     "t0": 0.21274,
+     "t1": 0.10372,
+     "abs": -0.03115,
+     "rel": -18.556,
+     "sig": "*"
+    },
+    "assets": {
+     "t0": 0.13411,
+     "t1": 0.11726,
+     "abs": -0.00481,
+     "rel": -3.764,
+     "sig": ""
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "THA",
+   "survey0": "MICS",
+   "year0": "2019",
+   "survey1": "MICS",
+   "year1": "2022",
+   "mpi": {
+    "t0": 0.00213,
+    "t1": 0.00182,
+    "abs": -0.00011,
+    "rel": -5.21,
+    "sig": ""
+   },
+   "headcount": {
+    "t0": 0.58104,
+    "t1": 0.491,
+    "abs": -0.03001,
+    "rel": -5.458,
+    "sig": ""
+   },
+   "intensity": {
+    "t0": 36.72058,
+    "t1": 37.00975,
+    "abs": 0.09639,
+    "rel": 0.262,
+    "sig": ""
+   },
+   "vulnerable": {
+    "t0": 6.16009,
+    "t1": 4.6919,
+    "abs": -0.4894,
+    "rel": -8.676,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 0.02998,
+    "t1": 0.03181,
+    "abs": 0.00061,
+    "rel": 1.993,
+    "sig": ""
+   },
+   "poor0": 415.6,
+   "poor1": 352.2,
+   "censored": {
+    "nutrition": {
+     "t0": 0.3375,
+     "t1": 0.2579,
+     "abs": -0.02653,
+     "rel": -8.576,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 0.149,
+     "t1": 0.0828,
+     "abs": -0.02206,
+     "rel": -17.783,
+     "sig": ""
+    },
+    "schooling": {
+     "t0": 0.40654,
+     "t1": 0.33476,
+     "abs": -0.02393,
+     "rel": -6.27,
+     "sig": ""
+    },
+    "attendance": {
+     "t0": 0.17019,
+     "t1": 0.25412,
+     "abs": 0.02798,
+     "rel": 14.297,
+     "sig": ""
+    },
+    "cooking": {
+     "t0": 0.28365,
+     "t1": 0.18075,
+     "abs": -0.0343,
+     "rel": -13.946,
+     "sig": ""
+    },
+    "sanitation": {
+     "t0": 0.08123,
+     "t1": 0.06755,
+     "abs": -0.00456,
+     "rel": -5.964,
+     "sig": ""
+    },
+    "water": {
+     "t0": 0.03516,
+     "t1": 0.02329,
+     "abs": -0.00396,
+     "rel": -12.824,
+     "sig": ""
+    },
+    "electricity": {
+     "t0": 0.02982,
+     "t1": 0.02639,
+     "abs": -0.00115,
+     "rel": -3.998,
+     "sig": ""
+    },
+    "housing": {
+     "t0": 0.10372,
+     "t1": 0.10202,
+     "abs": -0.00057,
+     "rel": -0.551,
+     "sig": ""
+    },
+    "assets": {
+     "t0": 0.11726,
+     "t1": 0.08217,
+     "abs": -0.01169,
+     "rel": -11.176,
+     "sig": ""
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "TLS",
+   "survey0": "DHS",
+   "year0": "2009/2010",
+   "survey1": "DHS",
+   "year1": "2016",
+   "mpi": {
+    "t0": 0.36173,
+    "t1": 0.21514,
+    "abs": -0.02255,
+    "rel": -7.682,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 69.60968,
+    "t1": 46.88844,
+    "abs": -3.49558,
+    "rel": -5.898,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 51.96499,
+    "t1": 45.88406,
+    "abs": -0.93553,
+    "rel": -1.896,
+    "sig": "***"
+   },
+   "vulnerable": {
+    "t0": 17.55782,
+    "t1": 26.38486,
+    "abs": 1.35801,
+    "rel": 6.466,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 39.02591,
+    "t1": 16.87387,
+    "abs": -3.40801,
+    "rel": -12.102,
+    "sig": "***"
+   },
+   "poor0": 755.0,
+   "poor1": 575.9,
+   "censored": {
+    "nutrition": {
+     "t0": 49.65265,
+     "t1": 33.21508,
+     "abs": -2.52886,
+     "rel": -5.998,
+     "sig": "***"
+    },
+    "child_mortality": {
+     "t0": 5.70431,
+     "t1": 3.55199,
+     "abs": -0.33113,
+     "rel": -7.029,
+     "sig": "***"
+    },
+    "schooling": {
+     "t0": 21.52507,
+     "t1": 15.85605,
+     "abs": -0.87216,
+     "rel": -4.594,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 30.14483,
+     "t1": 14.81081,
+     "abs": -2.35908,
+     "rel": -10.357,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 69.26678,
+     "t1": 45.61412,
+     "abs": -3.63887,
+     "rel": -6.225,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 49.28436,
+     "t1": 31.67925,
+     "abs": -2.70848,
+     "rel": -6.573,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 40.76116,
+     "t1": 18.61772,
+     "abs": -3.40668,
+     "rel": -11.357,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 54.82973,
+     "t1": 19.19999,
+     "abs": -5.4815,
+     "rel": -14.908,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 61.44365,
+     "t1": 40.70203,
+     "abs": -3.19102,
+     "rel": -6.139,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 54.44172,
+     "t1": 29.14287,
+     "abs": -3.89213,
+     "rel": -9.166,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 10,
+   "missing": ""
+  },
+  {
+   "iso": "VNM",
+   "survey0": "MICS",
+   "year0": "2013/2014",
+   "survey1": "MICS",
+   "year1": "2020/2021",
+   "mpi": {
+    "t0": 0.01936,
+    "t1": 0.00773,
+    "abs": -0.00166,
+    "rel": -12.291,
+    "sig": "***"
+   },
+   "headcount": {
+    "t0": 4.92692,
+    "t1": 1.91912,
+    "abs": -0.42969,
+    "rel": -12.602,
+    "sig": "***"
+   },
+   "intensity": {
+    "t0": 39.28823,
+    "t1": 40.27571,
+    "abs": 0.14107,
+    "rel": 0.355,
+    "sig": ""
+   },
+   "vulnerable": {
+    "t0": 5.43108,
+    "t1": 3.47253,
+    "abs": -0.27979,
+    "rel": -6.19,
+    "sig": "***"
+   },
+   "severe": {
+    "t0": 0.70633,
+    "t1": 0.35013,
+    "abs": -0.05088,
+    "rel": -9.539,
+    "sig": "**"
+   },
+   "poor0": 4517.0,
+   "poor1": 1898.7,
+   "censored": {
+    "nutrition": {
+     "t0": null,
+     "t1": null,
+     "abs": null,
+     "rel": null,
+     "sig": ""
+    },
+    "child_mortality": {
+     "t0": 0.88285,
+     "t1": 0.53003,
+     "abs": -0.0504,
+     "rel": -7.029,
+     "sig": "**"
+    },
+    "schooling": {
+     "t0": 3.59788,
+     "t1": 1.29214,
+     "abs": -0.32939,
+     "rel": -13.61,
+     "sig": "***"
+    },
+    "attendance": {
+     "t0": 1.37852,
+     "t1": 0.59726,
+     "abs": -0.11161,
+     "rel": -11.262,
+     "sig": "***"
+    },
+    "cooking": {
+     "t0": 4.48839,
+     "t1": 1.46023,
+     "abs": -0.43259,
+     "rel": -14.821,
+     "sig": "***"
+    },
+    "sanitation": {
+     "t0": 4.09158,
+     "t1": 1.30666,
+     "abs": -0.39784,
+     "rel": -15.046,
+     "sig": "***"
+    },
+    "water": {
+     "t0": 1.33042,
+     "t1": 0.45775,
+     "abs": -0.12467,
+     "rel": -14.137,
+     "sig": "***"
+    },
+    "electricity": {
+     "t0": 0.44809,
+     "t1": 0.09876,
+     "abs": -0.0499,
+     "rel": -19.43,
+     "sig": "***"
+    },
+    "housing": {
+     "t0": 3.08631,
+     "t1": 1.17658,
+     "abs": -0.27282,
+     "rel": -12.87,
+     "sig": "***"
+    },
+    "assets": {
+     "t0": 1.17151,
+     "t1": 0.56452,
+     "abs": -0.08671,
+     "rel": -9.904,
+     "sig": "***"
+    }
+   },
+   "nIndicators": 9,
+   "missing": "Nutrition"
+  }
+ ]
+}

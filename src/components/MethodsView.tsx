@@ -19,6 +19,9 @@ const RULES = [
   ['Graduation', 'Members whose World Bank income group moved up in the latest classification, read with their ODA trend.'],
   ['ODA reliance', 'Members where net ODA is at least 2% of GNI.'],
   ['Data recency', 'Flags any indicator whose latest observation is more than three years old.'],
+  ['Poverty and energy: people', 'Poor people deprived in cooking fuel and electricity, from censored headcounts applied to the 2024 population; housing and sanitation deprivation among the poor in regions where at least a third of the poor lack electricity, against all other regions; gaps of 10 points or more between survey and SDG 7 figures.'],
+  ['Poverty and energy: options by type', 'For each profile type, integrated access options where at least 40% of the poor lack electricity, clean-cooking options where at least 70% of the poor lack clean cooking, and the most common other deprivation where it affects at least 40% of the poor.'],
+  ['Poverty and energy: ASEAN cooperation', 'Members and sub-regional framework areas holding type A regions; poor people, cooking and electricity deprivation in each framework area; the gap between the share of the poor lacking clean cooking and the programme areas of APAEC 2026-2030; the fastest harmonised falls in cooking and electricity deprivation; surveys older than 2018 and members not covered.'],
 ];
 
 export default function MethodsView() {
@@ -99,6 +102,62 @@ export default function MethodsView() {
                 <td className="px-3 py-2 text-ink-2">Survey years vary</td>
                 <td className="px-3 py-2 text-ink-2">{Object.keys(ds.static.mpi.rows).length} of 11</td>
               </tr>
+              {ds.static.mpi2026 && (
+                <tr className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">Poverty and energy</td>
+                  <td className="px-3 py-2 text-ink">
+                    Global MPI 2026 by sub-national region (Table 5) and harmonised changes over time (Table 6.1): headcount, intensity, censored and uncensored headcount ratios for all ten indicators, contributions,
+                    number of poor
+                    <span className="mt-0.5 block text-xs text-ink-3">
+                      {ds.static.mpi2026.citations.regions} {ds.static.mpi2026.citations.changes}
+                    </span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">% of population; index; thousands</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={ds.static.mpi2026.pageUrl} target="_blank" rel="noreferrer">
+                      OPHI, global MPI 2026 tables (CC BY 4.0)
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">Survey years vary</td>
+                  <td className="px-3 py-2 text-ink-2">
+                    {Object.keys(ds.static.mpi2026.national).length} of 11; {ds.static.mpi2026.regions.length} regions
+                  </td>
+                </tr>
+              )}
+              {(ds.static.subregional?.frameworks ?? []).map((f) => (
+                <tr key={f.id} className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">Poverty and energy</td>
+                  <td className="px-3 py-2 text-ink">
+                    {f.name}: member territories
+                    <span className="mt-0.5 block text-xs text-ink-3">{f.members}. {f.partialNote}</span>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">Membership</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={f.sourceUrl} target="_blank" rel="noreferrer">
+                      {f.sourceName}
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">Current</td>
+                  <td className="px-3 py-2 text-ink-2">{Object.keys(f.regions).length} survey regions</td>
+                </tr>
+              ))}
+              {Object.entries(ds.static.povrefs ?? {}).map(([id, r]) => (
+                <tr key={id} className="align-top odd:bg-surface even:bg-raised">
+                  <td className="px-3 py-2 text-ink-2">Poverty and energy</td>
+                  <td className="px-3 py-2 text-ink">
+                    Reference: {r.name}
+                    {r.facts && <span className="mt-0.5 block text-xs text-ink-3">{r.facts}</span>}
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">Text</td>
+                  <td className="px-3 py-2">
+                    <a className="text-brand underline underline-offset-2" href={r.url} target="_blank" rel="noreferrer">
+                      {r.name}
+                    </a>
+                  </td>
+                  <td className="px-3 py-2 text-ink-2">As published</td>
+                  <td className="px-3 py-2 text-ink-2">Regional or global</td>
+                </tr>
+              ))}
               {ds.static.irena && (
                 <tr className="align-top odd:bg-surface even:bg-raised">
                   <td className="px-3 py-2 text-ink-2">{pillarName('workers')}</td>
@@ -178,7 +237,15 @@ export default function MethodsView() {
       <section className="card p-5 text-sm text-ink-2">
         <h3 className="text-[17px] font-semibold text-ink">Notes</h3>
         <ul className="mt-2 list-disc space-y-1 pl-5">
-          <li>The boundaries and names shown and the designations used on the map do not imply official endorsement or acceptance by the United Nations. Base map: Natural Earth.</li>
+          <li>
+            The boundaries and names shown and the designations used on the maps do not imply official endorsement or acceptance by the United Nations. Base map: Natural Earth. Sub-national regions: geoBoundaries
+            gbOpen ADM1 (CC BY 4.0), with Thai and Vietnamese provinces grouped into the survey regions used by each national statistics office.
+          </li>
+          <li>
+            Poverty and energy: numbers of poor people apply each survey's headcount ratio to the 2024 population, as OPHI does. The profile types come from k-means clustering (k = 4, deterministic start) on the log
+            headcount and the share of the poor deprived in eight indicators, for regions where at least 1% of people are poor. Over-time charts use only OPHI's harmonised pairs (Table 6.1), never a comparison between
+            the 2026 levels and older published figures. The policy text on that tab is generated by fixed rules and names a sub-regional framework only where its member territories are confirmed by an official source.
+          </li>
           <li>Source data are published under the licences of their producers. World Bank data are available under CC BY 4.0.</li>
           <li>IMF World Economic Outlook values for the current year onward are projections and are hidden unless switched on.</li>
           <li>The code is open source. Suggested citation: UNDP (2026), ASEAN Green and Just Transition Monitor, United Nations Development Programme.</li>

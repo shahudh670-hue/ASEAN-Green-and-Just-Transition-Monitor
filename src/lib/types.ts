@@ -75,5 +75,102 @@ export interface Dataset {
     mpi: { source: string; sourceUrl: string; tableUrl: string; note: string; notCovered: string[]; rows: Record<Iso3, MpiRow> };
     income: { source: string; sourceUrl: string; thresholds: Record<string, string>; groups: Record<string, string>; rows: Record<Iso3, IncomeRow> };
     irena?: { source: string; sourceUrl: string; note: string; year: number; rows: Record<Iso3, { jobs: number; technology: string }> };
+    mpi2026?: Mpi2026;
+    subregional?: { note: string; frameworks: Framework[] };
+    povrefs?: Record<string, { name: string; url: string; facts?: string }>;
   };
+}
+
+export const MPI_INDICATORS = ['nutrition', 'child_mortality', 'schooling', 'attendance', 'cooking', 'sanitation', 'water', 'electricity', 'housing', 'assets'] as const;
+export type MpiIndicator = (typeof MPI_INDICATORS)[number];
+export type MpiProfile = Record<MpiIndicator, number | null>;
+
+export interface MpiNational {
+  survey: string;
+  year: string;
+  mpi: number;
+  headcount: number;
+  intensity: number;
+  vulnerable: number;
+  severe: number;
+  destitute: number | null;
+  popSurvey: number;
+  pop2024: number;
+  poorSurvey: number;
+  poor2024: number;
+  nIndicators: number;
+  missing: string;
+  censored: MpiProfile;
+  raw: MpiProfile;
+  contrib: MpiProfile;
+  contribDims: { health: number; education: number; living: number };
+}
+
+export interface MpiRegion {
+  iso: Iso3;
+  name: string;
+  year: string;
+  mpi: number;
+  headcount: number;
+  intensity: number;
+  vulnerable: number;
+  severe: number;
+  popShare: number;
+  pop2024: number;
+  poor2024: number;
+  censored: MpiProfile;
+  raw: MpiProfile;
+  contrib: MpiProfile;
+  contribDims: { health: number; education: number; living: number };
+}
+
+export interface ChangeBlock {
+  t0: number | null;
+  t1: number | null;
+  abs: number | null;
+  rel: number | null;
+  sig: string;
+}
+
+export interface MpiChange {
+  iso: Iso3;
+  survey0: string;
+  year0: string;
+  survey1: string;
+  year1: string;
+  mpi: ChangeBlock;
+  headcount: ChangeBlock;
+  intensity: ChangeBlock;
+  vulnerable: ChangeBlock;
+  severe: ChangeBlock;
+  poor0: number;
+  poor1: number;
+  censored: Record<MpiIndicator, ChangeBlock>;
+  nIndicators: number;
+  missing: string;
+}
+
+export interface Mpi2026 {
+  title: string;
+  publisher: string;
+  licence: string;
+  pageUrl: string;
+  hdroUrl: string;
+  citations: { national: string; regions: string; changes: string };
+  units: string;
+  notCovered: Iso3[];
+  national: Record<Iso3, MpiNational>;
+  regions: MpiRegion[];
+  changes: MpiChange[];
+}
+
+export interface Framework {
+  id: string;
+  name: string;
+  short: string;
+  members: string;
+  sourceName: string;
+  sourceUrl: string;
+  regions: Record<string, 'full' | 'partial'>;
+  partialNote: string;
 }

@@ -10,6 +10,7 @@ import InsightsView, { PillarInsights } from './components/Insights';
 import ExplorerView from './components/ExplorerView';
 import CountriesView from './components/CountriesView';
 import MethodsView from './components/MethodsView';
+import PovertyEnergyView from './components/PovertyEnergyView';
 import { AppCtx, type Ctx } from './lib/context';
 import { allYears, defaultYear, meta } from './lib/data';
 import { generateInsights } from './lib/insights';
@@ -95,12 +96,13 @@ export default function App({ ds }: { ds: Dataset }) {
         )}
         {state.tab === 'explorer' && <ExplorerView />}
         {state.tab === 'insights' && <InsightsView />}
+        {state.tab === 'poverty' && <PovertyEnergyView />}
         {state.tab === 'countries' && <CountriesView />}
         {state.tab === 'methods' && <MethodsView />}
       </main>
       <footer className="border-t border-line bg-surface">
         <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-3 px-4 py-5 text-sm text-ink-3 sm:px-6">
-          <p>United Nations Development Programme. Data from the World Bank, IMF, UN Statistics Division, OECD, IRENA, IEA and UNDP HDRO.</p>
+          <p>United Nations Development Programme. Data from the World Bank, IMF, UN Statistics Division, ILO, OECD, IRENA, IEA, OPHI and UNDP HDRO.</p>
           <button className="font-semibold text-brand hover:underline" onClick={() => set({ tab: 'methods' })}>
             Sources and methods
           </button>

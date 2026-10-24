@@ -1,7 +1,8 @@
 // Data pipeline for the ASEAN Green and Just Transition Monitor.
 //
 // Pulls every series named in config/indicators.json from its official source,
-// derives composite series, attaches the static tables (MPI, income groups),
+// derives composite series, attaches the static tables (MPI national, sub-national
+// and harmonised changes, income groups, sub-regional frameworks),
 // runs reference checks and writes public/data/data.json plus a long-format CSV.
 //
 // Sources
@@ -25,6 +26,9 @@ const CONFIG = JSON.parse(readFileSync(resolve(ROOT, 'config/indicators.json'), 
 const MPI = JSON.parse(readFileSync(resolve(ROOT, 'config/static/mpi.json'), 'utf8'));
 const INCOME = JSON.parse(readFileSync(resolve(ROOT, 'config/static/income.json'), 'utf8'));
 const IRENA = JSON.parse(readFileSync(resolve(ROOT, 'config/static/irena-jobs.json'), 'utf8'));
+const MPI2026 = JSON.parse(readFileSync(resolve(ROOT, 'config/static/mpi2026.json'), 'utf8'));
+const SUBREGIONAL = JSON.parse(readFileSync(resolve(ROOT, 'config/static/subregional.json'), 'utf8'));
+const POVREFS = JSON.parse(readFileSync(resolve(ROOT, 'config/static/poverty-refs.json'), 'utf8'));
 const REFS = JSON.parse(readFileSync(resolve(ROOT, 'config/reference-checks.json'), 'utf8'));
 const OUT_DIR = resolve(ROOT, 'public/data');
 const OUT_JSON = resolve(OUT_DIR, 'data.json');
@@ -280,7 +284,7 @@ async function main() {
   checks.forEach((c) => log(`check ${c.ok ? 'ok  ' : 'WARN'} ${c.id} ${c.iso3} ${c.year}: expected ${c.value}, got ${c.got}`));
 
   // Link check: every source link shown on the site must resolve.
-  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl, IRENA.sourceUrl])];
+  const urls = [...new Set([...CONFIG.indicators.map((i) => i.sourceUrl), MPI.sourceUrl, MPI.tableUrl, INCOME.sourceUrl, IRENA.sourceUrl, MPI2026.pageUrl, MPI2026.hdroUrl, ...SUBREGIONAL.frameworks.map((f) => f.sourceUrl), ...Object.values(POVREFS).map((r) => r.url)])];
   const links = await Promise.all(
     urls.map(async (url) => {
       try {
@@ -308,7 +312,7 @@ async function main() {
     },
     catalogue: CONFIG.indicators,
     indicators,
-    static: { mpi: MPI, income: INCOME, irena: IRENA },
+    static: { mpi: MPI, income: INCOME, irena: IRENA, mpi2026: MPI2026, subregional: SUBREGIONAL, povrefs: POVREFS },
   };
 
   mkdirSync(OUT_DIR, { recursive: true });

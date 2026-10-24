@@ -1,0 +1,25 @@
+{
+  "who": {
+    "name": "WHO, Household air pollution fact sheet (16 December 2025)",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+    "facts": "2.9 million deaths a year linked to household air pollution in 2021, including more than 309,000 children under five; women and children carry most of the burden of cooking and fuel collection, which takes time from school and work."
+  },
+  "sdg7": {
+    "name": "IEA, IRENA, UNSD, World Bank and WHO, Tracking SDG 7: The Energy Progress Report 2026",
+    "url": "https://trackingsdg7.esmap.org/sites/default/files/download-documents/SDG7-Report2026-0623-V4-4Web.pdf",
+    "facts": "655 million people without electricity and about 2.0 billion relying on polluting cooking fuels in 2024."
+  },
+  "apaec": {
+    "name": "ASEAN Centre for Energy, ASEAN Plan of Action for Energy Cooperation (APAEC) 2026-2030",
+    "url": "https://aseanenergy.org/wp-content/uploads/2025/10/APAEC-2026-2030.pdf",
+    "facts": "Endorsed at the 43rd ASEAN Ministers on Energy Meeting, October 2025. Seven programme areas: ASEAN Power Grid; oil and gas connectivity, security and sustainability; clean coal transformation; energy efficiency and conservation; renewable energy; regional energy policy and planning; civilian nuclear energy. Energy access is addressed in general terms; there is no programme area for clean cooking."
+  },
+  "apaecPress": {
+    "name": "ASEAN Centre for Energy, ASEAN Ministers endorse APAEC 2026-2030 (press release)",
+    "url": "https://aseanenergy.org/press-release/asean-ministers-endorse-apaec-2026-2030-to-advance-regional-energy-cooperation"
+  },
+  "geoboundaries": {
+    "name": "geoBoundaries gbOpen ADM1, CC BY 4.0 (Runfola et al. 2020)",
+    "url": "https://www.geoboundaries.org/"
+  }
+}

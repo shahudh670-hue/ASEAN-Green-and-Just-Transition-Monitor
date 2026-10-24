@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useReducer } from 'react';
 import { MAX_FOCUS } from './theme';
 
-export type Tab = 'overview' | 'explorer' | 'insights' | 'countries' | 'methods';
+export type Tab = 'overview' | 'explorer' | 'insights' | 'poverty' | 'countries' | 'methods';
+export type PovLevelView = 'nat' | 'sub';
+export type PovMetric = 'headcount' | 'mpi' | 'poor' | 'cooking' | 'electricity' | 'type' | 'severe';
+export type PovTrend = 'headcount' | 'mpi' | 'cooking' | 'electricity' | 'poor';
 export type Agg = 'weighted' | 'median' | 'off';
 export type SizeBy = 'pop' | 'gdp' | 'none';
 
@@ -22,6 +25,7 @@ export interface AppState {
   from: number;
   ex: { x: string; y: string; size: SizeBy; logx: boolean; logy: boolean; trails: boolean; year: number | null };
   country: string;
+  pov: { level: PovLevelView; metric: PovMetric; sel: string | null; circles: boolean; trend: PovTrend };
 }
 
 export const initialState: AppState = {
@@ -36,11 +40,13 @@ export const initialState: AppState = {
   from: 2000,
   ex: { x: 'gdppc_ppp', y: 'co2_intensity', size: 'pop', logx: true, logy: false, trails: false, year: null },
   country: 'PHL',
+  pov: { level: 'sub', metric: 'headcount', sel: null, circles: true, trend: 'headcount' },
 };
 
 export type Action =
   | { type: 'set'; patch: Partial<AppState> }
   | { type: 'ex'; patch: Partial<AppState['ex']> }
+  | { type: 'pov'; patch: Partial<AppState['pov']> }
   | { type: 'toggleFocus'; iso: string }
   | { type: 'setFocus'; isos: string[] }
   | { type: 'clearFocus' };
@@ -51,6 +57,8 @@ function reducer(s: AppState, a: Action): AppState {
       return { ...s, ...a.patch };
     case 'ex':
       return { ...s, ex: { ...s.ex, ...a.patch } };
+    case 'pov':
+      return { ...s, pov: { ...s.pov, ...a.patch } };
     case 'toggleFocus': {
       if (s.focus.some((f) => f.iso === a.iso)) return { ...s, focus: s.focus.filter((f) => f.iso !== a.iso) };
       if (s.focus.length >= MAX_FOCUS) return s;
@@ -86,6 +94,13 @@ function encode(s: AppState): string {
   if (s.ex.trails) p.set('tr', '1');
   if (s.ex.year) p.set('ey', String(s.ex.year));
   p.set('c', s.country);
+  if (s.tab === 'poverty') {
+    p.set('pl', s.pov.level);
+    p.set('pm', s.pov.metric);
+    if (s.pov.sel) p.set('ps', s.pov.sel);
+    if (!s.pov.circles) p.set('pc', '0');
+    if (s.pov.trend !== 'headcount') p.set('pt', s.pov.trend);
+  }
   return p.toString();
 }
 
@@ -121,6 +136,13 @@ function decode(hash: string): Partial<AppState> {
       year: num('ey'),
     },
     country: p.get('c') || initialState.country,
+    pov: {
+      level: (p.get('pl') as PovLevelView) || initialState.pov.level,
+      metric: (p.get('pm') as PovMetric) || initialState.pov.metric,
+      sel: p.get('ps'),
+      circles: p.get('pc') !== '0',
+      trend: (p.get('pt') as PovTrend) || initialState.pov.trend,
+    },
   };
 }
 
