@@ -417,6 +417,24 @@ export function makeExtra({ CONFIG, ISO, put, parseCSV, log }) {
           (elec[ct.iso3] ??= {})[y] = { ...Object.fromEntries(Object.entries(e).map(([k, x]) => [k, Math.round((1000 * x) / tot) / 10])), totalTWh: Math.round(tot / 100) / 10 };
         }
       }
+      // Drop incomplete recent years: a total below half the highest earlier total
+      // means the year has only partial reporting so far.
+      for (const [store, field] of [
+        [tes, 'totalPJ'],
+        [elec, 'totalTWh'],
+      ]) {
+        const ys = Object.keys(store[ct.iso3] ?? {}).sort();
+        let peak = 0;
+        for (const y of ys) {
+          const tot = store[ct.iso3][y][field];
+          if (peak && tot < 0.5 * peak) {
+            delete store[ct.iso3][y];
+            if (store === tes) delete net[ct.iso3]?.[y];
+            continue;
+          }
+          peak = Math.max(peak, tot);
+        }
+      }
       log(`unsd ${ct.iso3}: ${Object.keys(tes[ct.iso3] ?? {}).length} supply years, ${Object.keys(elec[ct.iso3] ?? {}).length} electricity years`);
     }
     if (Object.keys(tes).length < 8) throw new Error(`UNSD: supply mix for only ${Object.keys(tes).length} members. ${failed.join(' | ')}`.slice(0, 900));
