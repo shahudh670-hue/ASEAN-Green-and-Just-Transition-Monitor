@@ -32,7 +32,7 @@ const inText = (ds: Dataset, iso: Iso3) => (iso === 'PHL' ? 'the Philippines' : 
 const names = (ds: Dataset, isos: Iso3[]) => listJoin(isos.map((i) => inText(ds, i)));
 /** Verb agreement for a list of countries. */
 const vb = (isos: unknown[], singular: string, plural: string) => (isos.length === 1 ? singular : plural);
-const tidy = (t: string) => t.replace(/(^|[.;:]\s+|\(\s*)the Philippines/g, (_m, p) => `${p}The Philippines`);
+const tidy = (t: string) => t.replace(/(^|[.:]\s+|\(\s*)the Philippines/g, (_m, p) => `${p}The Philippines`);
 const has = (ds: Dataset, id: string) => Boolean(ds.indicators[id]);
 
 /** Latest actual (non-projection) year for an indicator, per country. */
@@ -628,7 +628,9 @@ function mobilisation(ds: Dataset): Insight[] {
   if (!has(ds, 'mob_ratio')) return [];
   const rows = isoList(ds)
     .map((iso) => ({ iso, l: latest(ds, 'mob_ratio', iso) }))
-    .filter((r): r is { iso: Iso3; l: NonNullable<ReturnType<typeof latest>> } => Boolean(r.l));
+    .filter((r): r is { iso: Iso3; l: NonNullable<ReturnType<typeof latest>> } => Boolean(r.l))
+    // Small official flows make the ratio unstable; require US$100 million over three years.
+    .filter((r) => (sumWindow(ds, 'climate_fin', r.iso, r.l.year) ?? 0) >= 100);
   if (rows.length < 4) return [];
   rows.sort((a, b) => b.l.value - a.l.value);
   const med = median(rows.map((r) => r.l.value))!;
@@ -641,7 +643,7 @@ function mobilisation(ds: Dataset): Insight[] {
       kind: 'finance',
       title: `Official climate finance drew in a median US$${fmt(med, { decimals: 0 })} of private money per US$100`,
       body:
-        `Over the latest three years, private climate finance mobilised by official interventions (guarantees, syndicated loans, equity funds and credit lines) was highest relative to official climate finance in ${names(ds, lead.map((r) => r.iso))} (US$${lead.map((r) => fmt(r.l.value, { decimals: 0 })).join(' and US$')} per US$100). ` +
+        `Among members receiving at least US$100 million of official climate finance over the latest three years, private climate finance mobilised by official interventions (guarantees, syndicated loans, equity funds and credit lines) was highest relative to official climate finance in ${names(ds, lead.map((r) => r.iso))} (US$${lead.map((r) => fmt(r.l.value, { decimals: 0 })).join(' and US$')} per US$100). ` +
         (low.length ? `It was below US$10 per US$100 in ${names(ds, low.map((r) => r.iso))}. ` : '') +
         `Amounts withheld for confidentiality are excluded, so the ratios are lower bounds.`,
       countries: [...lead, ...low].map((r) => r.iso),
