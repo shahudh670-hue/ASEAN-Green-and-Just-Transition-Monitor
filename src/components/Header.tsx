@@ -13,7 +13,6 @@ const TABS: { id: Tab; label: string }[] = [
 
 export default function Header({ mode, onMode }: { mode: Mode; onMode: (m: Mode) => void }) {
   const c = useApp();
-  const updated = new Date(c.ds.meta.generatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   return (
     <header className="relative border-b border-line bg-surface">
       <div className="brand-band" aria-hidden />
@@ -26,10 +25,9 @@ export default function Header({ mode, onMode }: { mode: Mode; onMode: (m: Mode)
       <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between gap-4 py-1 pl-14 pr-4 pt-5 sm:pr-6">
         <div className="flex items-center gap-4">
           <div>
-            <p className="eyebrow">United Nations Development Programme</p>
             <h1 className="text-[22px] font-bold leading-tight text-ink sm:text-[26px]">ASEAN Green and Just Transition Monitor</h1>
             <p className="serif text-[15px] italic text-ink-2">
-              Energy transition, human development, fiscal space and finance across the eleven ASEAN members. Data updated {updated}.
+              Energy transition, human development, fiscal space and finance across the eleven ASEAN members.
             </p>
           </div>
         </div>
