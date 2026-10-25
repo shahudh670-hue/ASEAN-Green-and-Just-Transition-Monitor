@@ -296,7 +296,7 @@ export default function MethodsView() {
           </li>
           <li>Source data are published under the licences of their producers. World Bank data are available under CC BY 4.0.</li>
           <li>IMF World Economic Outlook values for the current year onward are projections and are hidden unless switched on.</li>
-          <li>The code is open source. Suggested citation: UNDP (2026), ASEAN Green and Just Transition Monitor, United Nations Development Programme.</li>
+          <li>The code is open source. Suggested citation: ASEAN Green and Just Transition Monitor (2026).</li>
         </ul>
       </section>
     </div>

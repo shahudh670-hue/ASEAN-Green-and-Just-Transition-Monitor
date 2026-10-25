@@ -1,6 +1,6 @@
 # ASEAN Green and Just Transition Monitor
 
-An open, fully client-side dashboard from the United Nations Development Programme that tracks the energy transition across the eleven ASEAN members alongside the things that decide whether it is fair and financeable: human development, multidimensional poverty, fiscal space, external debt, domestic capital markets and international finance flows.
+An open, fully client-side dashboard that tracks the energy transition across the eleven ASEAN members alongside the things that decide whether it is fair and financeable: human development, multidimensional poverty, fiscal space, external debt, domestic capital markets and international finance flows.
 
 **Live site:** https://shahudh670-hue.github.io/ASEAN-Green-and-Just-Transition-Monitor/
 
@@ -74,6 +74,6 @@ The boundaries and names shown and the designations used on the maps do not impl
 
 Prepared by Mohamed Shahudh, Country Economist, UNDP Philippines.
 
-Suggested citation: UNDP (2026). *ASEAN Green and Just Transition Monitor*. United Nations Development Programme.
+Suggested citation: *ASEAN Green and Just Transition Monitor* (2026).
 
 Code: MIT licence. Data: under the terms of each producer.

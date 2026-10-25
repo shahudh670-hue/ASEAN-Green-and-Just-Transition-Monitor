@@ -102,7 +102,7 @@ export default function App({ ds }: { ds: Dataset }) {
       </main>
       <footer className="border-t border-line bg-surface">
         <div className="mx-auto flex max-w-[1400px] flex-wrap justify-between gap-3 px-4 py-5 text-sm text-ink-3 sm:px-6">
-          <p>United Nations Development Programme. Data from the World Bank, IMF, UN Statistics Division, ILO, OECD, IRENA, IEA, OPHI and UNDP HDRO.</p>
+          <p>Data from the World Bank, IMF, UN Statistics Division, ILO, OECD, IRENA, IEA, OPHI and UNDP HDRO.</p>
           <button className="font-semibold text-brand hover:underline" onClick={() => set({ tab: 'methods' })}>
             Sources and methods
           </button>
