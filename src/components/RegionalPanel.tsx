@@ -65,7 +65,7 @@ export default function RegionalPanel({ year }: { year: number | undefined }) {
   const tooltipBase = {
     backgroundColor: theme.mode === 'dark' ? '#222220' : '#ffffff',
     borderColor: theme.grid,
-    textStyle: { color: theme.ink, fontFamily: 'Source Sans 3, system-ui, sans-serif' },
+    textStyle: { color: theme.ink, fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif' },
     extraCssText: 'box-shadow:0 4px 16px rgba(0,0,0,0.12);border-radius:8px;',
   };
 
@@ -170,7 +170,7 @@ export default function RegionalPanel({ year }: { year: number | undefined }) {
               value: r.v,
               iso: r.iso,
               itemStyle: {
-                color: col ?? (theme.mode === 'dark' ? '#6b6a64' : '#a9a8a1'),
+                color: col ?? (r.iso === 'PHL' ? theme.series[3] : theme.mode === 'dark' ? '#4a5a63' : theme.series[0]),
                 borderRadius: r.v >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4],
                 borderColor: hov ? theme.hover : theme.surface,
                 borderWidth: hov ? 2 : 1,

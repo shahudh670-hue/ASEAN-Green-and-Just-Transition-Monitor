@@ -6,16 +6,17 @@
    colour-vision-safe palette (see src/lib/theme.ts). */
 :root {
   color-scheme: light;
-  --brand: #006eb5;
+  --brand: #006eb6;
   --brand-strong: #00528a;
-  --brand-soft: #e6f0f8;
-  --plane: #f6f6f3;
-  --surface: #fcfcfb;
-  --raised: #ffffff;
-  --ink: #0b0b0b;
-  --ink-2: #52514e;
-  --ink-3: #6f6e69;
-  --line: #e1e0d9;
+  --brand-soft: #e3eef7;
+  --accent: #e3120b;
+  --plane: #ebf1f5;
+  --surface: #ffffff;
+  --raised: #f7fafc;
+  --ink: #121212;
+  --ink-2: #3a4b53;
+  --ink-3: #5e6d75;
+  --line: #a2b2bc;
   --good: #006300;
   --risk: #b42d2d;
 }
@@ -25,13 +26,14 @@
     --brand: #4fa3e0;
     --brand-strong: #7dbbe8;
     --brand-soft: #14283a;
-    --plane: #0d0d0d;
-    --surface: #1a1a19;
-    --raised: #222220;
+    --accent: #ff4b44;
+    --plane: #0f1418;
+    --surface: #182027;
+    --raised: #1f2932;
     --ink: #f0efec;
     --ink-2: #c3c2b7;
     --ink-3: #9a998f;
-    --line: #2c2c2a;
+    --line: #3a4b53;
     --good: #0ca30c;
     --risk: #e66767;
   }
@@ -41,13 +43,14 @@
   --brand: #4fa3e0;
   --brand-strong: #7dbbe8;
   --brand-soft: #14283a;
-  --plane: #0d0d0d;
-  --surface: #1a1a19;
-  --raised: #222220;
+  --accent: #ff4b44;
+  --plane: #0f1418;
+  --surface: #182027;
+  --raised: #1f2932;
   --ink: #f0efec;
   --ink-2: #c3c2b7;
   --ink-3: #9a998f;
-  --line: #2c2c2a;
+  --line: #3a4b53;
   --good: #0ca30c;
   --risk: #e66767;
 }
@@ -58,7 +61,7 @@ body {
   color: var(--ink);
 }
 body {
-  font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: Inter, 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 .tabular {
@@ -71,14 +74,15 @@ body {
 .card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 0;
+  box-shadow: none;
 }
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 4px 12px;
   font-size: 14px;
   line-height: 20px;
@@ -106,7 +110,7 @@ body {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23898781' stroke-width='1.5'/%3E%3C/svg%3E")
     no-repeat right 10px center;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 6px 30px 6px 10px;
   font-size: 14px;
   color: var(--ink);
@@ -117,7 +121,7 @@ body {
   align-items: center;
   gap: 6px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 6px 10px;
   font-size: 14px;
   background: var(--raised);
@@ -145,4 +149,26 @@ input[type='range'] {
   text-transform: uppercase;
   color: var(--ink-3);
   font-weight: 600;
+}
+
+/* Narrative serif layer: chart subtitles and story headlines. */
+.serif {
+  font-family: 'PT Serif', Georgia, serif;
+}
+.brand-band {
+  height: 4px;
+  background: #006eb6;
+}
+/* Blank geometric accent tag anchoring the page grid. Intentionally empty. */
+.accent-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #e3120b;
+}
+input[type='checkbox'] {
+  accent-color: var(--brand);
+  border-radius: 0;
 }

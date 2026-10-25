@@ -29,14 +29,14 @@ export function chartTheme(mode: Mode): ChartTheme {
   return mode === 'dark'
     ? {
         mode,
-        surface: '#1a1a19',
+        surface: '#182027',
         ink: '#f0efec',
-        ink2: '#c3c2b7',
-        muted: '#898781',
-        grid: '#2c2c2a',
-        axis: '#383835',
+        ink2: '#c3ccd1',
+        muted: '#8a989f',
+        grid: '#26323b',
+        axis: '#3a4b53',
         context: '#4a4945',
-        series: ['#3987e5', '#d95926', '#199e70', '#c98500'],
+        series: ['#3d8fd6', '#5cb848', '#9fb0b8', '#ff4b44'],
         cat8: ['#3987e5', '#d95926', '#199e70', '#c98500', '#d55181', '#008300', '#9085e9', '#e66767'],
         seq: SEQ,
         aggregate: '#f0efec',
@@ -44,18 +44,18 @@ export function chartTheme(mode: Mode): ChartTheme {
       }
     : {
         mode,
-        surface: '#fcfcfb',
-        ink: '#0b0b0b',
-        ink2: '#52514e',
-        muted: '#898781',
-        grid: '#e1e0d9',
-        axis: '#c3c2b7',
+        surface: '#ffffff',
+        ink: '#121212',
+        ink2: '#3a4b53',
+        muted: '#5e6d75',
+        grid: '#e1edf2',
+        axis: '#a2b2bc',
         context: '#cfcec7',
-        series: ['#2a78d6', '#eb6834', '#1baf7a', '#eda100'],
+        series: ['#006eb6', '#4c9f38', '#3a4b53', '#e3120b'],
         cat8: ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#6250d6', '#e34948'],
         seq: SEQ,
         aggregate: '#0b0b0b',
-        hover: '#00528a',
+        hover: '#e3120b',
       };
 }
 

@@ -4,7 +4,11 @@ export default {
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      fontFamily: { sans: ['"Source Sans 3"', 'system-ui', '-apple-system', '"Segoe UI"', 'sans-serif'] },
+      fontFamily: {
+        sans: ['Inter', '"Proxima Nova"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['"PT Serif"', 'Georgia', 'serif'],
+      },
+      borderRadius: { none: '0', sm: '0', DEFAULT: '0', md: '0', lg: '0', xl: '0', '2xl': '0', full: '9999px' },
       colors: {
         brand: { DEFAULT: 'var(--brand)', strong: 'var(--brand-strong)', soft: 'var(--brand-soft)' },
         plane: 'var(--plane)',
@@ -14,8 +18,10 @@ export default {
         line: 'var(--line)',
         good: 'var(--good)',
         risk: 'var(--risk)',
+        accent: 'var(--accent)',
       },
-      boxShadow: { card: '0 1px 2px rgba(11,11,11,0.04), 0 0 0 1px var(--line)' },
+      boxShadow: { card: 'none' },
+      colors2: {},
     },
   },
   plugins: [],

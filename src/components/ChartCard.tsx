@@ -15,7 +15,7 @@ export function SourceLine({ refs, className = '' }: { refs: SourceRef[]; classN
   if (!refs.length) return null;
   const bySource = refs.filter((r, i) => refs.findIndex((x) => x.url === r.url) === i);
   return (
-    <p className={`text-xs leading-relaxed text-ink-3 ${className}`}>
+    <p className={`text-[10px] leading-relaxed text-ink-3 ${className}`}>
       <span className="font-semibold text-ink-2">{refs.length > 1 ? 'Indicators' : 'Indicator'}:</span>{' '}
       {refs.map((r, i) => (
         <span key={r.label + i}>
@@ -79,8 +79,11 @@ export default function ChartCard({ title, subtitle, meta, sources, table, fileS
     <section className={`card p-4 sm:p-5 ${className}`} aria-label={title}>
       <header className="mb-3 flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="text-[17px] font-semibold leading-snug text-ink">{title}</h3>
-          {subtitle && <p className="mt-0.5 text-sm text-ink-2">{subtitle}</p>}
+          <h3 className="text-[17px] font-bold leading-snug text-ink">
+            <span aria-hidden className="mr-2 inline-block h-3 w-3 bg-accent align-baseline" />
+            {title}
+          </h3>
+          {subtitle && <p className="serif mt-1 text-[15px] leading-snug text-ink-2">{subtitle}</p>}
         </div>
         <div className="flex flex-wrap items-center gap-1.5">
           {actions}
@@ -167,7 +170,7 @@ export default function ChartCard({ title, subtitle, meta, sources, table, fileS
           </table>
         </div>
       )}
-      <SourceLine className="mt-3 border-t border-line pt-2" refs={sources ?? (meta ? [refOf(meta)] : [])} />
+      <SourceLine className="mt-3 border-t border-[#E1EDF2] pt-2" refs={sources ?? (meta ? [refOf(meta)] : [])} />
     </section>
   );
 }

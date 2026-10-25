@@ -62,7 +62,7 @@ function Legend({ items }: { items: { label: string; colour: string }[] }) {
 const tooltip = (theme: ChartTheme) => ({
   backgroundColor: theme.mode === 'dark' ? '#222220' : '#ffffff',
   borderColor: theme.grid,
-  textStyle: { color: theme.ink, fontFamily: 'Source Sans 3, system-ui, sans-serif' },
+  textStyle: { color: theme.ink, fontFamily: 'Inter, Helvetica Neue, Arial, sans-serif' },
   extraCssText: 'box-shadow:0 4px 16px rgba(0,0,0,0.12);border-radius:8px;',
 });
 

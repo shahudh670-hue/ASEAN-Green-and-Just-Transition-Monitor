@@ -64,9 +64,9 @@ npm test         # unit tests for the insight rules and the poverty tables
 npm run dev      # local server
 ```
 
-## Logo
+## Visual design
 
-Place the approved UNDP logo at `public/brand/undp-logo.svg`. Until it is present, the header shows a text label.
+A hybrid editorial and UNDP style: ice-blue page, flat white panels with sharp corners and thin borders, a 4px UNDP blue band with a blank red geometric tag at the top left, Inter for titles, menus and numbers, PT Serif for narrative subtitles, and charts with transparent backgrounds, horizontal gridlines only and square bar ends. No logos are used.
 
 ## Notes
 
